@@ -41,6 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstracciones\IBarrioRepositorio.cs" />
+    <Compile Include="Abstracciones\IBaseRepositorio.cs" />
+    <Compile Include="Abstracciones\ICantonRepositorio.cs" />
+    <Compile Include="Abstracciones\ICaracteristicaRepositorio.cs" />
+    <Compile Include="Abstracciones\IClienteRepositorio.cs" />
+    <Compile Include="Abstracciones\IImagenRepositorio.cs" />
+    <Compile Include="Abstracciones\IParroquiaRepositorio.cs" />
+    <Compile Include="Abstracciones\IPropiedadRepositorio.cs" />
+    <Compile Include="Abstracciones\IPropietarioRepositorio.cs" />
+    <Compile Include="Abstracciones\IProvinciaRepositorio.cs" />
+    <Compile Include="Abstracciones\IRolRepositorio.cs" />
+    <Compile Include="Abstracciones\ITipoPropiedadRepositorio.cs" />
+    <Compile Include="Abstracciones\IUsuarioRepositorio.cs" />
     <Compile Include="Entidades\BARRIO.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -85,7 +98,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Abstracciones\" />
     <Folder Include="ObjetosValor\" />
   </ItemGroup>
   <ItemGroup>

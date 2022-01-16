@@ -41,11 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaseServicioEntidades\BarrioServicio.cs" />
+    <Compile Include="ClaseServicioEntidades\CantonServicio.cs" />
+    <Compile Include="ClaseServicioEntidades\CaracteristicaServicio.cs" />
+    <Compile Include="ClaseServicioEntidades\ClienteServicio.cs" />
+    <Compile Include="ClaseServicioEntidades\ImagenServicio.cs" />
+    <Compile Include="ClaseServicioEntidades\ParroquiaServicio.cs" />
+    <Compile Include="ClaseServicioEntidades\PropiedadServicio.cs" />
+    <Compile Include="ClaseServicioEntidades\PropietarioServicio.cs" />
+    <Compile Include="ClaseServicioEntidades\ProvinciaServicio.cs" />
+    <Compile Include="ClaseServicioEntidades\RolServicio.cs" />
+    <Compile Include="ClaseServicioEntidades\TipoPropiedadServicio.cs" />
+    <Compile Include="ClaseServicioEntidades\UsuarioServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ClaseServicioEntidades\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Inmobiliaria.Dominio.Modelo\Inmobiliaria.Dominio.Modelo.csproj">
       <Project>{0c22d81f-c5db-4c00-8b1a-189d15b46c04}</Project>
