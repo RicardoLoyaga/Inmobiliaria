@@ -12,22 +12,22 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
     using System;
     using System.Collections.Generic;
     
-    public partial class USUARIO
+    public partial class LOGIN
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public USUARIO()
+        public LOGIN()
         {
-            this.PROPIEDAD = new HashSet<PROPIEDAD>();
+            this.USUARIO1 = new HashSet<USUARIO>();
         }
     
-        public int IDUSUARIO { get; set; }
-        public Nullable<int> IDLOGIN { get; set; }
-        public string NOMBREUSUARIO { get; set; }
-        public string IDENTIFICACIONUSUARIO { get; set; }
+        public int IDLOGIN { get; set; }
+        public Nullable<int> IDROL { get; set; }
+        public string USUARIO { get; set; }
+        public string CONTRASENA { get; set; }
         public int ESTADO { get; set; }
     
-        public virtual LOGIN LOGIN { get; set; }
+        public virtual ROL ROL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PROPIEDAD> PROPIEDAD { get; set; }
+        public virtual ICollection<USUARIO> USUARIO1 { get; set; }
     }
 }

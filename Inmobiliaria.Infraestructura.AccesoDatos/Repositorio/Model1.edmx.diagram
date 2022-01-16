@@ -4,30 +4,32 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4d66583e29bb47bda8fed8601cbf2930" Name="Diagram1">
-        <EntityTypeShape EntityType="INMOBILIARIAModel.BARRIO" Width="1.5" PointX="7.5" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="INMOBILIARIAModel.CANTON" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="INMOBILIARIAModel.CARACTERISTICA" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="INMOBILIARIAModel.CLIENTE" Width="1.5" PointX="0.75" PointY="12.625" IsExpanded="true" />
+      <Diagram DiagramId="2c992a786f45464eb5f56c0f45faff76" Name="Diagram1">
+        <EntityTypeShape EntityType="INMOBILIARIAModel.BARRIO" Width="1.5" PointX="7.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INMOBILIARIAModel.CANTON" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="INMOBILIARIAModel.CARACTERISTICA" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="INMOBILIARIAModel.CLIENTE" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
         <EntityTypeShape EntityType="INMOBILIARIAModel.IMAGEN" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="INMOBILIARIAModel.PARROQUIA" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="INMOBILIARIAModel.LOGIN" Width="1.5" PointX="1.5" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="INMOBILIARIAModel.PARROQUIA" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="INMOBILIARIAModel.PROPIEDAD" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="INMOBILIARIAModel.PROPIETARIO" Width="1.5" PointX="0.75" PointY="23.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="INMOBILIARIAModel.PROVINCIA" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="INMOBILIARIAModel.ROL" Width="1.5" PointX="1.5" PointY="20.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="INMOBILIARIAModel.TIPO_PROPIEDAD" Width="1.5" PointX="0.75" PointY="26.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="INMOBILIARIAModel.USUARIO" Width="1.5" PointX="1.5" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INMOBILIARIAModel.PROPIETARIO" Width="1.5" PointX="0.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="INMOBILIARIAModel.PROVINCIA" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INMOBILIARIAModel.ROL" Width="1.5" PointX="1.5" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INMOBILIARIAModel.TIPO_PROPIEDAD" Width="1.5" PointX="0.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="INMOBILIARIAModel.USUARIO" Width="1.5" PointX="0.75" PointY="21.5" IsExpanded="true" />
         <AssociationConnector Association="INMOBILIARIAModel.FK_BARRIO_PARROQUIA_PARROQUI" ManuallyRouted="false" />
         <AssociationConnector Association="INMOBILIARIAModel.FK_CANTON_PROVINCIA_PROVINCI" ManuallyRouted="false" />
         <AssociationConnector Association="INMOBILIARIAModel.FK_PARROQUI_CANTON_PA_CANTON" ManuallyRouted="false" />
         <AssociationConnector Association="INMOBILIARIAModel.FK_PROPIEDA_CARACTERI_CARACTER" ManuallyRouted="false" />
-        <AssociationConnector Association="INMOBILIARIAModel.FK_CLIENTE_USUARIO_C_USUARIO" ManuallyRouted="false" />
-        <AssociationConnector Association="INMOBILIARIAModel.FK_PROPIEDA_CLIENTE_P_CLIENTE" ManuallyRouted="false" />
         <AssociationConnector Association="INMOBILIARIAModel.FK_IMAGEN_PROPIEDAD_PROPIEDA" ManuallyRouted="false" />
+        <AssociationConnector Association="INMOBILIARIAModel.FK_LOGIN_ROL_USUAR_ROL" ManuallyRouted="false" />
+        <AssociationConnector Association="INMOBILIARIAModel.FK_USUARIO_LOGIN_USU_LOGIN" ManuallyRouted="false" />
         <AssociationConnector Association="INMOBILIARIAModel.FK_PROPIEDA_PROPIETAR_PROPIETA" ManuallyRouted="false" />
         <AssociationConnector Association="INMOBILIARIAModel.FK_PROPIEDA_PROVINCIA_PROVINCI" ManuallyRouted="false" />
         <AssociationConnector Association="INMOBILIARIAModel.FK_PROPIEDA_TIPOPROPI_TIPO_PRO" ManuallyRouted="false" />
-        <AssociationConnector Association="INMOBILIARIAModel.FK_USUARIO_ROL_USUAR_ROL" ManuallyRouted="false" />
+        <AssociationConnector Association="INMOBILIARIAModel.FK_PROPIEDA_USUARIO_P_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="INMOBILIARIAModel.CLIENTE_PROPIEDAD" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

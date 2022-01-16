@@ -31,6 +31,7 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
         public virtual DbSet<CARACTERISTICA> CARACTERISTICA { get; set; }
         public virtual DbSet<CLIENTE> CLIENTE { get; set; }
         public virtual DbSet<IMAGEN> IMAGEN { get; set; }
+        public virtual DbSet<LOGIN> LOGIN { get; set; }
         public virtual DbSet<PARROQUIA> PARROQUIA { get; set; }
         public virtual DbSet<PROPIEDAD> PROPIEDAD { get; set; }
         public virtual DbSet<PROPIETARIO> PROPIETARIO { get; set; }

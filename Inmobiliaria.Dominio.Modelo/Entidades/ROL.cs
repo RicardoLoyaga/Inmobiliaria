@@ -17,7 +17,7 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ROL()
         {
-            this.USUARIO = new HashSet<USUARIO>();
+            this.LOGIN = new HashSet<LOGIN>();
         }
     
         public int IDROL { get; set; }
@@ -25,6 +25,6 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
         public int ESTADOROL { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<USUARIO> USUARIO { get; set; }
+        public virtual ICollection<LOGIN> LOGIN { get; set; }
     }
 }

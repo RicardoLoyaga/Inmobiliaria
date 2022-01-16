@@ -18,23 +18,26 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
         public PROPIEDAD()
         {
             this.IMAGEN = new HashSet<IMAGEN>();
+            this.CLIENTE = new HashSet<CLIENTE>();
         }
     
         public int IDPROPIEDAD { get; set; }
-        public Nullable<int> IDCLIENTE { get; set; }
         public Nullable<int> IDCARACTERISTICA { get; set; }
         public Nullable<int> IDPROVINCIA { get; set; }
         public Nullable<int> IDTIPOPROPIEDAD { get; set; }
         public Nullable<int> IDPROPIETARIO { get; set; }
+        public Nullable<int> IDUSUARIO { get; set; }
         public decimal PRECIO { get; set; }
         public int ESTADOPROPIEDAD { get; set; }
     
         public virtual CARACTERISTICA CARACTERISTICA { get; set; }
-        public virtual CLIENTE CLIENTE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<IMAGEN> IMAGEN { get; set; }
         public virtual PROPIETARIO PROPIETARIO { get; set; }
         public virtual PROVINCIA PROVINCIA { get; set; }
         public virtual TIPO_PROPIEDAD TIPO_PROPIEDAD { get; set; }
+        public virtual USUARIO USUARIO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CLIENTE> CLIENTE { get; set; }
     }
 }

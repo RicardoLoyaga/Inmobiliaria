@@ -21,14 +21,12 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
         }
     
         public int IDCLIENTE { get; set; }
-        public Nullable<int> IDUSUARIO { get; set; }
         public string NOMBRECLIENTE { get; set; }
         public string DIRECCIONCLIENTE { get; set; }
         public string CELULARCLIENTE { get; set; }
         public string CORREOCLIENTE { get; set; }
         public int ESTADOCLIENTE { get; set; }
     
-        public virtual USUARIO USUARIO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PROPIEDAD> PROPIEDAD { get; set; }
     }
