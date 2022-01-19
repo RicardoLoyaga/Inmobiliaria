@@ -46,8 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControladorAplicacion\BarrioControlador.cs" />
+    <Compile Include="ControladorAplicacion\CantonControlador.cs" />
+    <Compile Include="ControladorAplicacion\CaracteristicaControlador.cs" />
+    <Compile Include="ControladorAplicacion\ClienteControlador.cs" />
+    <Compile Include="ControladorAplicacion\ImagenControlador.cs" />
+    <Compile Include="ControladorAplicacion\LoginControlador.cs" />
+    <Compile Include="ControladorAplicacion\ParroquiaControlador.cs" />
+    <Compile Include="ControladorAplicacion\PropiedadControlador.cs" />
+    <Compile Include="ControladorAplicacion\PropietarioControlador.cs" />
+    <Compile Include="ControladorAplicacion\ProvinciaControlador.cs" />
+    <Compile Include="ControladorAplicacion\RolControlador.cs" />
+    <Compile Include="ControladorAplicacion\TipoPropiedadControlador.cs" />
+    <Compile Include="ControladorAplicacion\UsuarioControlador.cs" />
+    <Compile Include="Formulario\FrmBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmBarrio.Designer.cs">
+      <DependentUpon>FrmBarrio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VistaModelo\BarrioVistaModelo.cs" />
+    <Compile Include="VistaModelo\CantonVistaModelo.cs" />
+    <Compile Include="VistaModelo\CaracteristicaVistaModelo.cs" />
+    <Compile Include="VistaModelo\ClienteVistaModelo.cs" />
+    <Compile Include="VistaModelo\ImagenVistaModelo.cs" />
+    <Compile Include="VistaModelo\LoginVistaModelo.cs" />
+    <Compile Include="VistaModelo\ParroquiaVistaModelo.cs" />
+    <Compile Include="VistaModelo\PropiedadVistaModelo.cs" />
+    <Compile Include="VistaModelo\PropietarioVistaModelo.cs" />
+    <Compile Include="VistaModelo\ProvinciaVistaModelo.cs" />
+    <Compile Include="VistaModelo\RolVistaModelo.cs" />
+    <Compile Include="VistaModelo\TipoPropiedadVistaModelo.cs" />
+    <Compile Include="VistaModelo\UsuarioVistaModelo.cs" />
+    <EmbeddedResource Include="Formulario\FrmBarrio.resx">
+      <DependentUpon>FrmBarrio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -70,11 +105,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ControladorAplicacion\" />
-    <Folder Include="Formulario\" />
-    <Folder Include="VistaModelo\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Inmobiliaria.Aplicacion\Inmobiliaria.Aplicacion.csproj">
       <Project>{57a05e93-7b32-4cf0-bff4-19cb3c79730c}</Project>
