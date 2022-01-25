@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,7 +36,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,8 +59,115 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControladorAplicacion\BarrioControlador.cs" />
+    <Compile Include="ControladorAplicacion\CantonControlador.cs" />
+    <Compile Include="ControladorAplicacion\CaracteristicaControlador.cs" />
+    <Compile Include="ControladorAplicacion\ClienteControlador.cs" />
+    <Compile Include="ControladorAplicacion\ImagenControlador.cs" />
+    <Compile Include="ControladorAplicacion\LoginControlador.cs" />
+    <Compile Include="ControladorAplicacion\ParroquiaControlador.cs" />
+    <Compile Include="ControladorAplicacion\PropiedadControlador.cs" />
+    <Compile Include="ControladorAplicacion\PropietarioControlador.cs" />
+    <Compile Include="ControladorAplicacion\ProvinciaControlador.cs" />
+    <Compile Include="ControladorAplicacion\RolControlador.cs" />
+    <Compile Include="ControladorAplicacion\TipoPropiedadControlador.cs" />
+    <Compile Include="ControladorAplicacion\UsuarioControlador.cs" />
+    <Compile Include="Formulario\FrmBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmBarrio.Designer.cs">
+      <DependentUpon>FrmBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FrmCaracteristica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmCanton.Designer.cs">
+      <DependentUpon>FrmCaracteristica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FrmPropiedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmPropiedad.Designer.cs">
+      <DependentUpon>FrmPropiedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FrmProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmProvincia.Designer.cs">
+      <DependentUpon>FrmProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FrmRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmRol.Designer.cs">
+      <DependentUpon>FrmRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FrmTipoPropiedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmTipoPropiedad.Designer.cs">
+      <DependentUpon>FrmTipoPropiedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VistaModelo\BarrioVistaModelo.cs" />
+    <Compile Include="VistaModelo\CantonVistaModelo.cs" />
+    <Compile Include="VistaModelo\CaracteristicaVistaModelo.cs" />
+    <Compile Include="VistaModelo\ClienteVistaModelo.cs" />
+    <Compile Include="VistaModelo\ImagenVistaModelo.cs" />
+    <Compile Include="VistaModelo\LoginVistaModelo.cs" />
+    <Compile Include="VistaModelo\ParroquiaVistaModelo.cs" />
+    <Compile Include="VistaModelo\PropiedadVistaModelo.cs" />
+    <Compile Include="VistaModelo\PropietarioVistaModelo.cs" />
+    <Compile Include="VistaModelo\ProvinciaVistaModelo.cs" />
+    <Compile Include="VistaModelo\RolVistaModelo.cs" />
+    <Compile Include="VistaModelo\TipoPropiedadVistaModelo.cs" />
+    <Compile Include="VistaModelo\UsuarioVistaModelo.cs" />
+    <EmbeddedResource Include="Formulario\FrmBarrio.resx">
+      <DependentUpon>FrmBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmCaracteristica.resx">
+      <DependentUpon>FrmCaracteristica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmPropiedad.resx">
+      <DependentUpon>FrmPropiedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmProvincia.resx">
+      <DependentUpon>FrmProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmRol.resx">
+      <DependentUpon>FrmRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmTipoPropiedad.resx">
+      <DependentUpon>FrmTipoPropiedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -56,7 +176,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -71,9 +193,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ControladorAplicacion\" />
-    <Folder Include="Formulario\" />
-    <Folder Include="VistaModelo\" />
+    <Folder Include="Formulario\Recursos\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Inmobiliaria.Aplicacion\Inmobiliaria.Aplicacion.csproj">
@@ -89,5 +209,16 @@
       <Name>Inmobiliaria.Dominio.Servicios</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

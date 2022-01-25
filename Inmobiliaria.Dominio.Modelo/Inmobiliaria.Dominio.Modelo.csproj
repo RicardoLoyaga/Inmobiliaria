@@ -41,12 +41,77 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstracciones\IBarrioRepositorio.cs" />
+    <Compile Include="Abstracciones\IBaseRepositorio.cs" />
+    <Compile Include="Abstracciones\ICantonRepositorio.cs" />
+    <Compile Include="Abstracciones\ICaracteristicaRepositorio.cs" />
+    <Compile Include="Abstracciones\IClienteRepositorio.cs" />
+    <Compile Include="Abstracciones\IImagenRepositorio.cs" />
+    <Compile Include="Abstracciones\ILoginRepositorio.cs" />
+    <Compile Include="Abstracciones\IParroquiaRepositorio.cs" />
+    <Compile Include="Abstracciones\IPropiedadRepositorio.cs" />
+    <Compile Include="Abstracciones\IPropietarioRepositorio.cs" />
+    <Compile Include="Abstracciones\IProvinciaRepositorio.cs" />
+    <Compile Include="Abstracciones\IRolRepositorio.cs" />
+    <Compile Include="Abstracciones\ITipoPropiedadRepositorio.cs" />
+    <Compile Include="Abstracciones\IUsuarioRepositorio.cs" />
+    <Compile Include="Entidades\BARRIO.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\CANTON.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\CARACTERISTICA.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\CLIENTE.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\IMAGEN.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\LOGIN.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Model2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\PARROQUIA.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\PROPIEDAD.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\PROPIETARIO.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\PROVINCIA.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\ROL.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\TIPO_PROPIEDAD.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\USUARIO.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Abstracciones\" />
-    <Folder Include="Entidades\" />
     <Folder Include="ObjetosValor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entidades\Model2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model2.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
