@@ -9,5 +9,6 @@ namespace Inmobiliaria.Dominio.Modelo.Abstracciones
 {
     public interface ILoginRepositorio:IBaseRepositorio<LOGIN>
     {
+        List<ROL> poblarCboRol();
     }
 }

@@ -23,7 +23,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             BARRIO barrio = new BARRIO();
             try
             {
-                barrio.BARRIO1 = barrioVistaModelo.Barrio1;
+                barrio.NOMBREBARRIO = barrioVistaModelo.Barrio1;
                 barrio.ESTADOBARRIO = barrioVistaModelo.EstadoBarrio;
                 barrioServicio.InsertarBarrio(barrio);
                 return true;
@@ -40,7 +40,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             BARRIO barrio = new BARRIO();
             try
             {
-                barrio.BARRIO1 = barrioVistaModelo.Barrio1;
+                barrio.NOMBREBARRIO = barrioVistaModelo.Barrio1;
                 barrio.ESTADOBARRIO = barrioVistaModelo.EstadoBarrio;
                 barrioServicio.ModificarBarrio(barrio);
                 return true;
@@ -63,7 +63,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
                 {
                     IdBarrio = item.IDBARRIO,
                     IdParroquia = item.IDPARROQUIA,
-                    Barrio1 = item.BARRIO1,
+                    Barrio1 = item.NOMBREBARRIO,
                     EstadoBarrio = item.ESTADOBARRIO
                 });
             }

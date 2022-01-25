@@ -14,10 +14,10 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class INMOBILIARIAEntities : DbContext
+    public partial class INMOBILIARIAEntities1 : DbContext
     {
-        public INMOBILIARIAEntities()
-            : base("name=INMOBILIARIAEntities")
+        public INMOBILIARIAEntities1()
+            : base("name=INMOBILIARIAEntities1")
         {
         }
     

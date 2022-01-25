@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Inmobiliaria.IU.Windows.Formulario;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Inmobiliaria.IU.Windows
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmInciarSesion());
         }
     }
 }

@@ -22,7 +22,7 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
         }
     
         public int IDPROVINCIA { get; set; }
-        public string PROVINCIA1 { get; set; }
+        public string NOMBREPROVINCIA { get; set; }
         public int ESTADOPROVINCIA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

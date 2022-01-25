@@ -22,7 +22,7 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
     
         public int IDPARROQUIA { get; set; }
         public Nullable<int> IDCANTON { get; set; }
-        public string PARROQUIA1 { get; set; }
+        public string NOMBREPARROQUIA { get; set; }
         public int ESTADOPARROQUIA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

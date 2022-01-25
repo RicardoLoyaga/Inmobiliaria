@@ -24,6 +24,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             try
             {
                 login.USUARIO = loginVistaModelo.Usuario;
+                login.IDROL = loginVistaModelo.IdRol;
                 login.CONTRASENA = loginVistaModelo.Contrasena;
                 login.ESTADO = loginVistaModelo.Estado;
                 loginServicio.InsertarLogin(login);
@@ -56,7 +57,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
 
         public IEnumerable<LoginVistaModelo> GetLoginAll()
         {
-            var loginList = loginServicio.ListarLogin();
+            var loginList =  loginServicio.ListarLogin();
             List<LoginVistaModelo> vistaModelos = new List<LoginVistaModelo>();
 
             foreach (LOGIN item in loginList)
@@ -68,6 +69,22 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
                     Usuario = item.USUARIO,
                     Contrasena = item.CONTRASENA,
                     Estado = item.ESTADO
+                });
+            }
+            return vistaModelos;
+        }
+
+        public List<RolVistaModelo> poblarCboRol()
+        {
+            var loginListRol = loginServicio.poblarCboRol();
+            List<RolVistaModelo> vistaModelos = new List<RolVistaModelo>();
+
+            foreach (ROL item in loginListRol)
+            {
+                vistaModelos.Add(new RolVistaModelo
+                {
+                    IdRol = item.IDROL,
+                    Rol1 = item.NOMBREROL
                 });
             }
             return vistaModelos;

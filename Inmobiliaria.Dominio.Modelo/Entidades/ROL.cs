@@ -21,7 +21,7 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
         }
     
         public int IDROL { get; set; }
-        public string ROL1 { get; set; }
+        public string NOMBREROL { get; set; }
         public int ESTADOROL { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

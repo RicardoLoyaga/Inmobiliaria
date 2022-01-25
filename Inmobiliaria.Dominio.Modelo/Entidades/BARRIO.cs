@@ -16,7 +16,7 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
     {
         public int IDBARRIO { get; set; }
         public Nullable<int> IDPARROQUIA { get; set; }
-        public string BARRIO1 { get; set; }
+        public string NOMBREBARRIO { get; set; }
         public int ESTADOBARRIO { get; set; }
     
         public virtual PARROQUIA PARROQUIA { get; set; }

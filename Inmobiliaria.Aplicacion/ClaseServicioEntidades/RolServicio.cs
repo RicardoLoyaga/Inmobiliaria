@@ -45,5 +45,10 @@ namespace Inmobiliaria.Aplicacion.ClaseServicioEntidades
         {
             rolRepositorio.Delete(id);
         }
+
+        /*public List<ROL> poblarCboRol()
+        {
+            return rolRepositorio.poblarCboRol();
+        }*/
     }
 }

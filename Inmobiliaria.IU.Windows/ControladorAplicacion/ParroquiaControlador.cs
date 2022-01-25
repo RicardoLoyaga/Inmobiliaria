@@ -23,7 +23,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             PARROQUIA parroquia = new PARROQUIA();
             try
             {
-                parroquia.PARROQUIA1 = parroquiaVistaModelo.Parroquia1;
+                parroquia.NOMBREPARROQUIA = parroquiaVistaModelo.Parroquia1;
                 parroquia.ESTADOPARROQUIA = parroquiaVistaModelo.EstadoParroquia;
                 parroquiaServicio.InsertarParroquia(parroquia);
                 return true;
@@ -40,7 +40,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             PARROQUIA parroquia = new PARROQUIA();
             try
             {
-                parroquia.PARROQUIA1 = parroquiaVistaModelo.Parroquia1;
+                parroquia.NOMBREPARROQUIA = parroquiaVistaModelo.Parroquia1;
                 parroquia.ESTADOPARROQUIA = parroquiaVistaModelo.EstadoParroquia;
                 parroquiaServicio.ModificarParroquia(parroquia);
                 return true;
@@ -63,7 +63,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
                 {
                     IdParroquia = item.IDPARROQUIA,
                     IdCanton = item.IDCANTON,
-                    Parroquia1 = item.PARROQUIA1,
+                    Parroquia1 = item.NOMBREPARROQUIA,
                     EstadoParroquia = item.ESTADOPARROQUIA
                 });
             }

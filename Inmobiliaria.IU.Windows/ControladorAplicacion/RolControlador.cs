@@ -23,7 +23,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             ROL rol = new ROL();
             try
             {
-                rol.ROL1 = rolVistaModelo.Rol1;
+                rol.NOMBREROL = rolVistaModelo.Rol1;
                 rol.ESTADOROL = rolVistaModelo.EstadoRol;
                 rolServicio.InsertarRol(rol);
                 return true;
@@ -40,7 +40,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             ROL rol = new ROL();
             try
             {
-                rol.ROL1 = rolVistaModelo.Rol1;
+                rol.NOMBREROL = rolVistaModelo.Rol1;
                 rol.ESTADOROL = rolVistaModelo.EstadoRol;
                 rolServicio.ModificarRol(rol);
                 return true;
@@ -62,11 +62,27 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
                 vistaModelos.Add(new RolVistaModelo
                 {
                     IdRol = item.IDROL,
-                    Rol1 = item.ROL1,
+                    Rol1 = item.NOMBREROL,
                     EstadoRol = item.ESTADOROL
                 });
             }
             return vistaModelos;
         }
+
+        /*public List<ROL> poblarCboRol()
+        {
+            var listRol = rolServicio.poblarCboRol();
+            List<RolVistaModelo> vistaModelos = new List<RolVistaModelo>();
+
+            foreach (ROL item in listRol)
+            {
+                vistaModelos.Add(new RolVistaModelo
+                {
+                    IdRol = item.IDROL,
+                    Rol1 = item.NOMBREROL
+                });
+            }
+            return vistaModelos;
+        }*/
     }
 }

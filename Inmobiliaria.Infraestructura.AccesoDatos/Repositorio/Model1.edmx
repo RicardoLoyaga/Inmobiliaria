@@ -11,7 +11,7 @@
           </Key>
           <Property Name="IDBARRIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IDPARROQUIA" Type="int" />
-          <Property Name="BARRIO" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="NOMBREBARRIO" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="ESTADOBARRIO" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CANTON">
@@ -80,7 +80,7 @@
           </Key>
           <Property Name="IDPARROQUIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IDCANTON" Type="int" />
-          <Property Name="PARROQUIA" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NOMBREPARROQUIA" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="ESTADOPARROQUIA" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="PROPIEDAD">
@@ -112,7 +112,7 @@
             <PropertyRef Name="IDPROVINCIA" />
           </Key>
           <Property Name="IDPROVINCIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PROVINCIA" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NOMBREPROVINCIA" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="ESTADOPROVINCIA" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="ROL">
@@ -120,7 +120,7 @@
             <PropertyRef Name="IDROL" />
           </Key>
           <Property Name="IDROL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ROL" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NOMBREROL" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ESTADOROL" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="TIPO_PROPIEDAD">
@@ -376,7 +376,7 @@
           </Key>
           <Property Name="IDBARRIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IDPARROQUIA" Type="Int32" />
-          <Property Name="BARRIO1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBREBARRIO" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ESTADOBARRIO" Type="Int32" Nullable="false" />
           <NavigationProperty Name="PARROQUIA" Relationship="Self.FK_BARRIO_PARROQUIA_PARROQUI" FromRole="BARRIO" ToRole="PARROQUIA" />
         </EntityType>
@@ -445,7 +445,7 @@
           </Key>
           <Property Name="IDPARROQUIA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IDCANTON" Type="Int32" />
-          <Property Name="PARROQUIA1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBREPARROQUIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ESTADOPARROQUIA" Type="Int32" Nullable="false" />
           <NavigationProperty Name="BARRIO" Relationship="Self.FK_BARRIO_PARROQUIA_PARROQUI" FromRole="PARROQUIA" ToRole="BARRIO" />
           <NavigationProperty Name="CANTON" Relationship="Self.FK_PARROQUI_CANTON_PA_CANTON" FromRole="PARROQUIA" ToRole="CANTON" />
@@ -487,7 +487,7 @@
             <PropertyRef Name="IDPROVINCIA" />
           </Key>
           <Property Name="IDPROVINCIA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PROVINCIA1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBREPROVINCIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ESTADOPROVINCIA" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CANTON" Relationship="Self.FK_CANTON_PROVINCIA_PROVINCI" FromRole="PROVINCIA" ToRole="CANTON" />
           <NavigationProperty Name="PROPIEDAD" Relationship="Self.FK_PROPIEDA_PROVINCIA_PROVINCI" FromRole="PROVINCIA" ToRole="PROPIEDAD" />
@@ -497,7 +497,7 @@
             <PropertyRef Name="IDROL" />
           </Key>
           <Property Name="IDROL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ROL1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBREROL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ESTADOROL" Type="Int32" Nullable="false" />
           <NavigationProperty Name="LOGIN" Relationship="Self.FK_LOGIN_ROL_USUAR_ROL" FromRole="ROL" ToRole="LOGIN" />
         </EntityType>
@@ -658,7 +658,7 @@
           <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
           <End Role="PROPIEDAD" Type="Self.PROPIEDAD" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="INMOBILIARIAEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="INMOBILIARIAEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BARRIO" EntityType="Self.BARRIO" />
           <EntitySet Name="CANTON" EntityType="Self.CANTON" />
           <EntitySet Name="CARACTERISTICA" EntityType="Self.CARACTERISTICA" />
@@ -726,13 +726,13 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="INMOBILIARIAModelStoreContainer" CdmEntityContainer="INMOBILIARIAEntities">
+        <EntityContainerMapping StorageEntityContainer="INMOBILIARIAModelStoreContainer" CdmEntityContainer="INMOBILIARIAEntities1">
           <EntitySetMapping Name="BARRIO">
             <EntityTypeMapping TypeName="INMOBILIARIAModel.BARRIO">
               <MappingFragment StoreEntitySet="BARRIO">
                 <ScalarProperty Name="IDBARRIO" ColumnName="IDBARRIO" />
                 <ScalarProperty Name="IDPARROQUIA" ColumnName="IDPARROQUIA" />
-                <ScalarProperty Name="BARRIO1" ColumnName="BARRIO" />
+                <ScalarProperty Name="NOMBREBARRIO" ColumnName="NOMBREBARRIO" />
                 <ScalarProperty Name="ESTADOBARRIO" ColumnName="ESTADOBARRIO" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -799,7 +799,7 @@
               <MappingFragment StoreEntitySet="PARROQUIA">
                 <ScalarProperty Name="IDPARROQUIA" ColumnName="IDPARROQUIA" />
                 <ScalarProperty Name="IDCANTON" ColumnName="IDCANTON" />
-                <ScalarProperty Name="PARROQUIA1" ColumnName="PARROQUIA" />
+                <ScalarProperty Name="NOMBREPARROQUIA" ColumnName="NOMBREPARROQUIA" />
                 <ScalarProperty Name="ESTADOPARROQUIA" ColumnName="ESTADOPARROQUIA" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -834,7 +834,7 @@
             <EntityTypeMapping TypeName="INMOBILIARIAModel.PROVINCIA">
               <MappingFragment StoreEntitySet="PROVINCIA">
                 <ScalarProperty Name="IDPROVINCIA" ColumnName="IDPROVINCIA" />
-                <ScalarProperty Name="PROVINCIA1" ColumnName="PROVINCIA" />
+                <ScalarProperty Name="NOMBREPROVINCIA" ColumnName="NOMBREPROVINCIA" />
                 <ScalarProperty Name="ESTADOPROVINCIA" ColumnName="ESTADOPROVINCIA" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -843,7 +843,7 @@
             <EntityTypeMapping TypeName="INMOBILIARIAModel.ROL">
               <MappingFragment StoreEntitySet="ROL">
                 <ScalarProperty Name="IDROL" ColumnName="IDROL" />
-                <ScalarProperty Name="ROL1" ColumnName="ROL" />
+                <ScalarProperty Name="NOMBREROL" ColumnName="NOMBREROL" />
                 <ScalarProperty Name="ESTADOROL" ColumnName="ESTADOROL" />
               </MappingFragment>
             </EntityTypeMapping>
