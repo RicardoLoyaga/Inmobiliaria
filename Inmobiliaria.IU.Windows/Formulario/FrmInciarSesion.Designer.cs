@@ -43,7 +43,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(45, 313);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 90);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(165, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -56,7 +56,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(57, 80);
+            this.materialLabel1.Location = new System.Drawing.Point(266, 76);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(61, 19);
@@ -69,7 +69,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(57, 156);
+            this.materialLabel2.Location = new System.Drawing.Point(266, 152);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(86, 19);
@@ -80,7 +80,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             this.txtUsuarioInicioSesion.Depth = 0;
             this.txtUsuarioInicioSesion.Hint = "";
-            this.txtUsuarioInicioSesion.Location = new System.Drawing.Point(60, 120);
+            this.txtUsuarioInicioSesion.Location = new System.Drawing.Point(269, 116);
             this.txtUsuarioInicioSesion.MaxLength = 32767;
             this.txtUsuarioInicioSesion.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtUsuarioInicioSesion.Name = "txtUsuarioInicioSesion";
@@ -97,7 +97,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             this.txtContrasenaInicioSesion.Depth = 0;
             this.txtContrasenaInicioSesion.Hint = "";
-            this.txtContrasenaInicioSesion.Location = new System.Drawing.Point(61, 196);
+            this.txtContrasenaInicioSesion.Location = new System.Drawing.Point(270, 192);
             this.txtContrasenaInicioSesion.MaxLength = 32767;
             this.txtContrasenaInicioSesion.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtContrasenaInicioSesion.Name = "txtContrasenaInicioSesion";
@@ -114,10 +114,10 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(0, 292);
+            this.materialDivider1.Location = new System.Drawing.Point(204, 76);
             this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(273, 15);
+            this.materialDivider1.Size = new System.Drawing.Size(10, 207);
             this.materialDivider1.TabIndex = 5;
             this.materialDivider1.Text = "materialDivider1";
             // 
@@ -127,7 +127,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.btnIniciarSesion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnIniciarSesion.Depth = 0;
             this.btnIniciarSesion.Icon = null;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(74, 240);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(283, 236);
             this.btnIniciarSesion.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Primary = true;
@@ -140,7 +140,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(272, 450);
+            this.ClientSize = new System.Drawing.Size(478, 309);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.txtContrasenaInicioSesion);
