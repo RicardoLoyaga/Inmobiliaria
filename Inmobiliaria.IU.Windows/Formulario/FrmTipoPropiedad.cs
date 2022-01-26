@@ -26,7 +26,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             MaterialSkinManager skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            skinManager.ColorScheme = new ColorScheme(Primary.Red800, Primary.LightBlue900, Primary.Yellow700, Accent.Green700, TextShade.WHITE);
+            skinManager.ColorScheme = new ColorScheme(Primary.Red800, Primary.LightBlue900, Primary.Yellow700, Accent.Red700, TextShade.WHITE);
 
         }
 
@@ -39,7 +39,16 @@ namespace Inmobiliaria.IU.Windows.Formulario
         {
             tipoPropiedadVistaModelo = new TipoPropiedadVistaModelo();
             tipoPropiedadVistaModelo.TipoPropiedad = txtTipoPropiedad.Text;
-            
+
+            if (cbxEstadoTipoPropiedad.Checked)
+            {
+                tipoPropiedadVistaModelo.EstadoTipoPropiedad = 1;
+            }
+            else
+            {
+                tipoPropiedadVistaModelo.EstadoTipoPropiedad = 0;
+            }
+
             if (!txtIdTipoPropiedad.Text.Equals(""))
             {
                 tipoPropiedadVistaModelo.IdTipoPropiedad = int.Parse(txtIdTipoPropiedad.Text);
@@ -74,6 +83,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
         {
             txtIdTipoPropiedad.Text = "";
             txtTipoPropiedad.Text = "";
+            cbxEstadoTipoPropiedad.Text = "";
         }
 
         private void Actualizar()

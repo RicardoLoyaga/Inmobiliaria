@@ -33,8 +33,10 @@
             this.btnGuardar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCancelar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.dgvTipoPropiedad = new System.Windows.Forms.DataGridView();
-            this.txtIdTipoPropiedad = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtTipoPropiedad = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtIdTipoPropiedad = new MaterialSkin.Controls.MaterialLabel();
+            this.lblEstadoTipoPropiedad = new MaterialSkin.Controls.MaterialLabel();
+            this.cbxEstadoTipoPropiedad = new MaterialSkin.Controls.MaterialCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoPropiedad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,8 +71,8 @@
             // btnGuardar
             // 
             this.btnGuardar.Depth = 0;
-            this.btnGuardar.Location = new System.Drawing.Point(149, 244);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(144, 255);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Primary = true;
@@ -83,8 +85,8 @@
             // btnCancelar
             // 
             this.btnCancelar.Depth = 0;
-            this.btnCancelar.Location = new System.Drawing.Point(251, 244);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Location = new System.Drawing.Point(246, 255);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Primary = true;
@@ -97,36 +99,20 @@
             // dgvTipoPropiedad
             // 
             this.dgvTipoPropiedad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTipoPropiedad.Location = new System.Drawing.Point(43, 146);
-            this.dgvTipoPropiedad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTipoPropiedad.Location = new System.Drawing.Point(39, 167);
+            this.dgvTipoPropiedad.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTipoPropiedad.Name = "dgvTipoPropiedad";
             this.dgvTipoPropiedad.RowHeadersWidth = 62;
             this.dgvTipoPropiedad.RowTemplate.Height = 28;
             this.dgvTipoPropiedad.Size = new System.Drawing.Size(407, 84);
             this.dgvTipoPropiedad.TabIndex = 4;
             // 
-            // txtIdTipoPropiedad
-            // 
-            this.txtIdTipoPropiedad.Depth = 0;
-            this.txtIdTipoPropiedad.Hint = "";
-            this.txtIdTipoPropiedad.Location = new System.Drawing.Point(173, 71);
-            this.txtIdTipoPropiedad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtIdTipoPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtIdTipoPropiedad.Name = "txtIdTipoPropiedad";
-            this.txtIdTipoPropiedad.PasswordChar = '\0';
-            this.txtIdTipoPropiedad.SelectedText = "";
-            this.txtIdTipoPropiedad.SelectionLength = 0;
-            this.txtIdTipoPropiedad.SelectionStart = 0;
-            this.txtIdTipoPropiedad.Size = new System.Drawing.Size(76, 23);
-            this.txtIdTipoPropiedad.TabIndex = 2;
-            this.txtIdTipoPropiedad.UseSystemPasswordChar = false;
-            // 
             // txtTipoPropiedad
             // 
             this.txtTipoPropiedad.Depth = 0;
             this.txtTipoPropiedad.Hint = "";
-            this.txtTipoPropiedad.Location = new System.Drawing.Point(173, 103);
-            this.txtTipoPropiedad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTipoPropiedad.Location = new System.Drawing.Point(177, 101);
+            this.txtTipoPropiedad.Margin = new System.Windows.Forms.Padding(2);
             this.txtTipoPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtTipoPropiedad.Name = "txtTipoPropiedad";
             this.txtTipoPropiedad.PasswordChar = '\0';
@@ -137,19 +123,62 @@
             this.txtTipoPropiedad.TabIndex = 3;
             this.txtTipoPropiedad.UseSystemPasswordChar = false;
             // 
+            // txtIdTipoPropiedad
+            // 
+            this.txtIdTipoPropiedad.AutoSize = true;
+            this.txtIdTipoPropiedad.Depth = 0;
+            this.txtIdTipoPropiedad.Font = new System.Drawing.Font("Roboto", 11F);
+            this.txtIdTipoPropiedad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtIdTipoPropiedad.Location = new System.Drawing.Point(179, 75);
+            this.txtIdTipoPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtIdTipoPropiedad.Name = "txtIdTipoPropiedad";
+            this.txtIdTipoPropiedad.Size = new System.Drawing.Size(0, 19);
+            this.txtIdTipoPropiedad.TabIndex = 21;
+            // 
+            // lblEstadoTipoPropiedad
+            // 
+            this.lblEstadoTipoPropiedad.AutoSize = true;
+            this.lblEstadoTipoPropiedad.Depth = 0;
+            this.lblEstadoTipoPropiedad.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblEstadoTipoPropiedad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblEstadoTipoPropiedad.Location = new System.Drawing.Point(113, 133);
+            this.lblEstadoTipoPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblEstadoTipoPropiedad.Name = "lblEstadoTipoPropiedad";
+            this.lblEstadoTipoPropiedad.Size = new System.Drawing.Size(60, 19);
+            this.lblEstadoTipoPropiedad.TabIndex = 22;
+            this.lblEstadoTipoPropiedad.Text = "Estado:";
+            // 
+            // cbxEstadoTipoPropiedad
+            // 
+            this.cbxEstadoTipoPropiedad.AutoSize = true;
+            this.cbxEstadoTipoPropiedad.Depth = 0;
+            this.cbxEstadoTipoPropiedad.Font = new System.Drawing.Font("Roboto", 10F);
+            this.cbxEstadoTipoPropiedad.Location = new System.Drawing.Point(176, 129);
+            this.cbxEstadoTipoPropiedad.Margin = new System.Windows.Forms.Padding(0);
+            this.cbxEstadoTipoPropiedad.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.cbxEstadoTipoPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cbxEstadoTipoPropiedad.Name = "cbxEstadoTipoPropiedad";
+            this.cbxEstadoTipoPropiedad.Ripple = true;
+            this.cbxEstadoTipoPropiedad.Size = new System.Drawing.Size(69, 30);
+            this.cbxEstadoTipoPropiedad.TabIndex = 23;
+            this.cbxEstadoTipoPropiedad.Text = "Activo";
+            this.cbxEstadoTipoPropiedad.UseVisualStyleBackColor = true;
+            // 
             // FrmTipoPropiedad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 300);
-            this.Controls.Add(this.txtTipoPropiedad);
+            this.Controls.Add(this.cbxEstadoTipoPropiedad);
+            this.Controls.Add(this.lblEstadoTipoPropiedad);
             this.Controls.Add(this.txtIdTipoPropiedad);
+            this.Controls.Add(this.txtTipoPropiedad);
             this.Controls.Add(this.dgvTipoPropiedad);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblTipoPropiedad);
             this.Controls.Add(this.lblIdTipoPropiedad);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmTipoPropiedad";
             this.Text = "Tipo Propiedad";
             this.Load += new System.EventHandler(this.FrmTipoPropiedad_Load);
@@ -165,7 +194,9 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnGuardar;
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelar;
         private System.Windows.Forms.DataGridView dgvTipoPropiedad;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtIdTipoPropiedad;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtTipoPropiedad;
+        private MaterialSkin.Controls.MaterialLabel txtIdTipoPropiedad;
+        private MaterialSkin.Controls.MaterialLabel lblEstadoTipoPropiedad;
+        private MaterialSkin.Controls.MaterialCheckBox cbxEstadoTipoPropiedad;
     }
 }

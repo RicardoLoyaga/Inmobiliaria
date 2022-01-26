@@ -39,8 +39,6 @@
             this.dgvPropiedad = new System.Windows.Forms.DataGridView();
             this.btnGuardarPropiedad = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCancelar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txtIdPropiedad = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.cboTipoPropiedad = new System.Windows.Forms.ComboBox();
             this.cboCaracteristica = new System.Windows.Forms.ComboBox();
             this.cboProvincia = new System.Windows.Forms.ComboBox();
@@ -53,6 +51,8 @@
             this.cboPropietario = new System.Windows.Forms.ComboBox();
             this.txtPrecio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.cbxEstadoPropiedad = new MaterialSkin.Controls.MaterialCheckBox();
+            this.txtIdPropiedad = new MaterialSkin.Controls.MaterialLabel();
+            this.cboUsuarioPropiedad = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropiedad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,7 +146,7 @@
             this.lblEstadoPropiedad.Depth = 0;
             this.lblEstadoPropiedad.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblEstadoPropiedad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEstadoPropiedad.Location = new System.Drawing.Point(81, 205);
+            this.lblEstadoPropiedad.Location = new System.Drawing.Point(81, 209);
             this.lblEstadoPropiedad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEstadoPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEstadoPropiedad.Name = "lblEstadoPropiedad";
@@ -172,7 +172,7 @@
             // 
             this.dgvPropiedad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPropiedad.Location = new System.Drawing.Point(51, 238);
-            this.dgvPropiedad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPropiedad.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPropiedad.Name = "dgvPropiedad";
             this.dgvPropiedad.RowHeadersWidth = 62;
             this.dgvPropiedad.RowTemplate.Height = 28;
@@ -183,7 +183,7 @@
             // 
             this.btnGuardarPropiedad.Depth = 0;
             this.btnGuardarPropiedad.Location = new System.Drawing.Point(238, 324);
-            this.btnGuardarPropiedad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardarPropiedad.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardarPropiedad.Name = "btnGuardarPropiedad";
             this.btnGuardarPropiedad.Primary = true;
@@ -197,7 +197,7 @@
             // 
             this.btnCancelar.Depth = 0;
             this.btnCancelar.Location = new System.Drawing.Point(341, 324);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Primary = true;
@@ -207,43 +207,11 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtIdPropiedad
-            // 
-            this.txtIdPropiedad.Depth = 0;
-            this.txtIdPropiedad.Hint = "";
-            this.txtIdPropiedad.Location = new System.Drawing.Point(147, 71);
-            this.txtIdPropiedad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtIdPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtIdPropiedad.Name = "txtIdPropiedad";
-            this.txtIdPropiedad.PasswordChar = '\0';
-            this.txtIdPropiedad.SelectedText = "";
-            this.txtIdPropiedad.SelectionLength = 0;
-            this.txtIdPropiedad.SelectionStart = 0;
-            this.txtIdPropiedad.Size = new System.Drawing.Size(97, 23);
-            this.txtIdPropiedad.TabIndex = 1;
-            this.txtIdPropiedad.UseSystemPasswordChar = false;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Depth = 0;
-            this.txtUsuario.Hint = "";
-            this.txtUsuario.Location = new System.Drawing.Point(443, 73);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.PasswordChar = '\0';
-            this.txtUsuario.SelectedText = "";
-            this.txtUsuario.SelectionLength = 0;
-            this.txtUsuario.SelectionStart = 0;
-            this.txtUsuario.Size = new System.Drawing.Size(107, 23);
-            this.txtUsuario.TabIndex = 2;
-            this.txtUsuario.UseSystemPasswordChar = false;
-            // 
             // cboTipoPropiedad
             // 
             this.cboTipoPropiedad.FormattingEnabled = true;
             this.cboTipoPropiedad.Location = new System.Drawing.Point(142, 101);
-            this.cboTipoPropiedad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboTipoPropiedad.Margin = new System.Windows.Forms.Padding(2);
             this.cboTipoPropiedad.Name = "cboTipoPropiedad";
             this.cboTipoPropiedad.Size = new System.Drawing.Size(181, 21);
             this.cboTipoPropiedad.TabIndex = 3;
@@ -251,17 +219,17 @@
             // cboCaracteristica
             // 
             this.cboCaracteristica.FormattingEnabled = true;
-            this.cboCaracteristica.Location = new System.Drawing.Point(443, 103);
-            this.cboCaracteristica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboCaracteristica.Location = new System.Drawing.Point(449, 103);
+            this.cboCaracteristica.Margin = new System.Windows.Forms.Padding(2);
             this.cboCaracteristica.Name = "cboCaracteristica";
-            this.cboCaracteristica.Size = new System.Drawing.Size(184, 21);
+            this.cboCaracteristica.Size = new System.Drawing.Size(178, 21);
             this.cboCaracteristica.TabIndex = 4;
             // 
             // cboProvincia
             // 
             this.cboProvincia.FormattingEnabled = true;
             this.cboProvincia.Location = new System.Drawing.Point(142, 127);
-            this.cboProvincia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboProvincia.Margin = new System.Windows.Forms.Padding(2);
             this.cboProvincia.Name = "cboProvincia";
             this.cboProvincia.Size = new System.Drawing.Size(215, 21);
             this.cboProvincia.TabIndex = 5;
@@ -311,17 +279,17 @@
             // cboCanton
             // 
             this.cboCanton.FormattingEnabled = true;
-            this.cboCanton.Location = new System.Drawing.Point(445, 128);
-            this.cboCanton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboCanton.Location = new System.Drawing.Point(449, 128);
+            this.cboCanton.Margin = new System.Windows.Forms.Padding(2);
             this.cboCanton.Name = "cboCanton";
-            this.cboCanton.Size = new System.Drawing.Size(181, 21);
+            this.cboCanton.Size = new System.Drawing.Size(178, 21);
             this.cboCanton.TabIndex = 6;
             // 
             // cboParroquia
             // 
             this.cboParroquia.FormattingEnabled = true;
             this.cboParroquia.Location = new System.Drawing.Point(142, 153);
-            this.cboParroquia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboParroquia.Margin = new System.Windows.Forms.Padding(2);
             this.cboParroquia.Name = "cboParroquia";
             this.cboParroquia.Size = new System.Drawing.Size(215, 21);
             this.cboParroquia.TabIndex = 7;
@@ -329,17 +297,17 @@
             // cboBarrio
             // 
             this.cboBarrio.FormattingEnabled = true;
-            this.cboBarrio.Location = new System.Drawing.Point(445, 155);
-            this.cboBarrio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboBarrio.Location = new System.Drawing.Point(449, 155);
+            this.cboBarrio.Margin = new System.Windows.Forms.Padding(2);
             this.cboBarrio.Name = "cboBarrio";
-            this.cboBarrio.Size = new System.Drawing.Size(181, 21);
+            this.cboBarrio.Size = new System.Drawing.Size(178, 21);
             this.cboBarrio.TabIndex = 8;
             // 
             // cboPropietario
             // 
             this.cboPropietario.FormattingEnabled = true;
             this.cboPropietario.Location = new System.Drawing.Point(142, 181);
-            this.cboPropietario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboPropietario.Margin = new System.Windows.Forms.Padding(2);
             this.cboPropietario.Name = "cboPropietario";
             this.cboPropietario.Size = new System.Drawing.Size(215, 21);
             this.cboPropietario.TabIndex = 9;
@@ -349,7 +317,7 @@
             this.txtPrecio.Depth = 0;
             this.txtPrecio.Hint = "";
             this.txtPrecio.Location = new System.Drawing.Point(445, 183);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.PasswordChar = '\0';
@@ -376,11 +344,33 @@
             this.cbxEstadoPropiedad.Text = "Activo";
             this.cbxEstadoPropiedad.UseVisualStyleBackColor = true;
             // 
+            // txtIdPropiedad
+            // 
+            this.txtIdPropiedad.AutoSize = true;
+            this.txtIdPropiedad.Depth = 0;
+            this.txtIdPropiedad.Font = new System.Drawing.Font("Roboto", 11F);
+            this.txtIdPropiedad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtIdPropiedad.Location = new System.Drawing.Point(148, 77);
+            this.txtIdPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtIdPropiedad.Name = "txtIdPropiedad";
+            this.txtIdPropiedad.Size = new System.Drawing.Size(0, 19);
+            this.txtIdPropiedad.TabIndex = 20;
+            // 
+            // cboUsuarioPropiedad
+            // 
+            this.cboUsuarioPropiedad.FormattingEnabled = true;
+            this.cboUsuarioPropiedad.Location = new System.Drawing.Point(449, 76);
+            this.cboUsuarioPropiedad.Name = "cboUsuarioPropiedad";
+            this.cboUsuarioPropiedad.Size = new System.Drawing.Size(177, 21);
+            this.cboUsuarioPropiedad.TabIndex = 21;
+            // 
             // FrmPropiedad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(678, 367);
+            this.Controls.Add(this.cboUsuarioPropiedad);
+            this.Controls.Add(this.txtIdPropiedad);
             this.Controls.Add(this.cbxEstadoPropiedad);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.cboPropietario);
@@ -393,8 +383,6 @@
             this.Controls.Add(this.cboProvincia);
             this.Controls.Add(this.cboCaracteristica);
             this.Controls.Add(this.cboTipoPropiedad);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.txtIdPropiedad);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardarPropiedad);
             this.Controls.Add(this.dgvPropiedad);
@@ -406,7 +394,7 @@
             this.Controls.Add(this.lblTipoPropiedad);
             this.Controls.Add(this.lblIdCaracteristica);
             this.Controls.Add(this.lblIdPropiedad);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPropiedad";
             this.Text = "Propiedad";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropiedad)).EndInit();
@@ -428,8 +416,6 @@
         private System.Windows.Forms.DataGridView dgvPropiedad;
         private MaterialSkin.Controls.MaterialRaisedButton btnGuardarPropiedad;
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelar;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtIdPropiedad;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
         private System.Windows.Forms.ComboBox cboTipoPropiedad;
         private System.Windows.Forms.ComboBox cboCaracteristica;
         private System.Windows.Forms.ComboBox cboProvincia;
@@ -442,5 +428,7 @@
         private System.Windows.Forms.ComboBox cboPropietario;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtPrecio;
         private MaterialSkin.Controls.MaterialCheckBox cbxEstadoPropiedad;
+        private MaterialSkin.Controls.MaterialLabel txtIdPropiedad;
+        private System.Windows.Forms.ComboBox cboUsuarioPropiedad;
     }
 }

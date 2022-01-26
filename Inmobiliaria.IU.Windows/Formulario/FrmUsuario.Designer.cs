@@ -31,13 +31,13 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtIdUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtIdentificacion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnGuardar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCancelar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
             this.cbxEstadoUsuario = new MaterialSkin.Controls.MaterialCheckBox();
+            this.txtIdUsuario = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,28 +83,12 @@
             this.materialLabel3.TabIndex = 2;
             this.materialLabel3.Text = "Identificación:";
             // 
-            // txtIdUsuario
-            // 
-            this.txtIdUsuario.Depth = 0;
-            this.txtIdUsuario.Hint = "";
-            this.txtIdUsuario.Location = new System.Drawing.Point(150, 71);
-            this.txtIdUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtIdUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtIdUsuario.Name = "txtIdUsuario";
-            this.txtIdUsuario.PasswordChar = '\0';
-            this.txtIdUsuario.SelectedText = "";
-            this.txtIdUsuario.SelectionLength = 0;
-            this.txtIdUsuario.SelectionStart = 0;
-            this.txtIdUsuario.Size = new System.Drawing.Size(123, 23);
-            this.txtIdUsuario.TabIndex = 4;
-            this.txtIdUsuario.UseSystemPasswordChar = false;
-            // 
             // txtUsuario
             // 
             this.txtUsuario.Depth = 0;
             this.txtUsuario.Hint = "";
             this.txtUsuario.Location = new System.Drawing.Point(150, 101);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';
@@ -120,7 +104,7 @@
             this.txtIdentificacion.Depth = 0;
             this.txtIdentificacion.Hint = "";
             this.txtIdentificacion.Location = new System.Drawing.Point(150, 133);
-            this.txtIdentificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdentificacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdentificacion.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtIdentificacion.Name = "txtIdentificacion";
             this.txtIdentificacion.PasswordChar = '\0';
@@ -135,7 +119,7 @@
             // 
             this.btnGuardar.Depth = 0;
             this.btnGuardar.Location = new System.Drawing.Point(163, 259);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Primary = true;
@@ -149,7 +133,7 @@
             // 
             this.btnCancelar.Depth = 0;
             this.btnCancelar.Location = new System.Drawing.Point(267, 259);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Primary = true;
@@ -163,7 +147,7 @@
             // 
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuario.Location = new System.Drawing.Point(35, 166);
-            this.dgvUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.RowHeadersWidth = 62;
             this.dgvUsuario.RowTemplate.Height = 28;
@@ -186,22 +170,34 @@
             this.cbxEstadoUsuario.Text = "Activo";
             this.cbxEstadoUsuario.UseVisualStyleBackColor = true;
             // 
+            // txtIdUsuario
+            // 
+            this.txtIdUsuario.AutoSize = true;
+            this.txtIdUsuario.Depth = 0;
+            this.txtIdUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtIdUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtIdUsuario.Location = new System.Drawing.Point(151, 71);
+            this.txtIdUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.Size = new System.Drawing.Size(0, 18);
+            this.txtIdUsuario.TabIndex = 12;
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 300);
+            this.Controls.Add(this.txtIdUsuario);
             this.Controls.Add(this.cbxEstadoUsuario);
             this.Controls.Add(this.dgvUsuario);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtIdentificacion);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.txtIdUsuario);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmUsuario";
             this.Text = "Usuario";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);
@@ -216,12 +212,12 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtIdUsuario;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtIdentificacion;
         private MaterialSkin.Controls.MaterialRaisedButton btnGuardar;
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelar;
         private System.Windows.Forms.DataGridView dgvUsuario;
         private MaterialSkin.Controls.MaterialCheckBox cbxEstadoUsuario;
+        private MaterialSkin.Controls.MaterialLabel txtIdUsuario;
     }
 }

@@ -33,15 +33,15 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.lblIdRolLogin = new MaterialSkin.Controls.MaterialLabel();
             this.lblUsuarioLogin = new MaterialSkin.Controls.MaterialLabel();
             this.lblConstrasenaLogin = new MaterialSkin.Controls.MaterialLabel();
-            this.lblEstadoLogin = new MaterialSkin.Controls.MaterialLabel();
-            this.txtIdLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtUsuarioLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtContrasenaLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtEstadoLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnGuardarLogin = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCancelarLogin = new MaterialSkin.Controls.MaterialRaisedButton();
             this.cboRolLogin = new System.Windows.Forms.ComboBox();
             this.dgvSeguridades = new System.Windows.Forms.DataGridView();
+            this.txtIdLogin = new MaterialSkin.Controls.MaterialLabel();
+            this.cbxEstadoLogin = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeguridades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,34 +97,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.lblConstrasenaLogin.TabIndex = 3;
             this.lblConstrasenaLogin.Text = "Contraseña: ";
             // 
-            // lblEstadoLogin
-            // 
-            this.lblEstadoLogin.AutoSize = true;
-            this.lblEstadoLogin.Depth = 0;
-            this.lblEstadoLogin.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblEstadoLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEstadoLogin.Location = new System.Drawing.Point(46, 218);
-            this.lblEstadoLogin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblEstadoLogin.Name = "lblEstadoLogin";
-            this.lblEstadoLogin.Size = new System.Drawing.Size(60, 19);
-            this.lblEstadoLogin.TabIndex = 4;
-            this.lblEstadoLogin.Text = "Estado:";
-            // 
-            // txtIdLogin
-            // 
-            this.txtIdLogin.Depth = 0;
-            this.txtIdLogin.Hint = "";
-            this.txtIdLogin.Location = new System.Drawing.Point(113, 80);
-            this.txtIdLogin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtIdLogin.Name = "txtIdLogin";
-            this.txtIdLogin.PasswordChar = '\0';
-            this.txtIdLogin.SelectedText = "";
-            this.txtIdLogin.SelectionLength = 0;
-            this.txtIdLogin.SelectionStart = 0;
-            this.txtIdLogin.Size = new System.Drawing.Size(147, 23);
-            this.txtIdLogin.TabIndex = 5;
-            this.txtIdLogin.UseSystemPasswordChar = false;
-            // 
             // txtUsuarioLogin
             // 
             this.txtUsuarioLogin.Depth = 0;
@@ -154,21 +126,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtContrasenaLogin.Size = new System.Drawing.Size(147, 23);
             this.txtContrasenaLogin.TabIndex = 7;
             this.txtContrasenaLogin.UseSystemPasswordChar = false;
-            // 
-            // txtEstadoLogin
-            // 
-            this.txtEstadoLogin.Depth = 0;
-            this.txtEstadoLogin.Hint = "";
-            this.txtEstadoLogin.Location = new System.Drawing.Point(113, 213);
-            this.txtEstadoLogin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtEstadoLogin.Name = "txtEstadoLogin";
-            this.txtEstadoLogin.PasswordChar = '\0';
-            this.txtEstadoLogin.SelectedText = "";
-            this.txtEstadoLogin.SelectionLength = 0;
-            this.txtEstadoLogin.SelectionStart = 0;
-            this.txtEstadoLogin.Size = new System.Drawing.Size(147, 23);
-            this.txtEstadoLogin.TabIndex = 8;
-            this.txtEstadoLogin.UseSystemPasswordChar = false;
             // 
             // btnGuardarLogin
             // 
@@ -216,20 +173,61 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.dgvSeguridades.TabIndex = 12;
             this.dgvSeguridades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSeguridades_CellContentClick);
             // 
+            // txtIdLogin
+            // 
+            this.txtIdLogin.AutoSize = true;
+            this.txtIdLogin.Depth = 0;
+            this.txtIdLogin.Font = new System.Drawing.Font("Roboto", 11F);
+            this.txtIdLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtIdLogin.Location = new System.Drawing.Point(112, 85);
+            this.txtIdLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtIdLogin.Name = "txtIdLogin";
+            this.txtIdLogin.Size = new System.Drawing.Size(0, 19);
+            this.txtIdLogin.TabIndex = 13;
+            // 
+            // cbxEstadoLogin
+            // 
+            this.cbxEstadoLogin.AutoSize = true;
+            this.cbxEstadoLogin.Depth = 0;
+            this.cbxEstadoLogin.Font = new System.Drawing.Font("Roboto", 10F);
+            this.cbxEstadoLogin.Location = new System.Drawing.Point(113, 216);
+            this.cbxEstadoLogin.Margin = new System.Windows.Forms.Padding(0);
+            this.cbxEstadoLogin.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.cbxEstadoLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cbxEstadoLogin.Name = "cbxEstadoLogin";
+            this.cbxEstadoLogin.Ripple = true;
+            this.cbxEstadoLogin.Size = new System.Drawing.Size(69, 30);
+            this.cbxEstadoLogin.TabIndex = 14;
+            this.cbxEstadoLogin.Text = "Activo";
+            this.cbxEstadoLogin.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(46, 220);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(60, 19);
+            this.materialLabel1.TabIndex = 15;
+            this.materialLabel1.Text = "Estado:";
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 311);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.cbxEstadoLogin);
+            this.Controls.Add(this.txtIdLogin);
             this.Controls.Add(this.dgvSeguridades);
             this.Controls.Add(this.cboRolLogin);
             this.Controls.Add(this.btnCancelarLogin);
             this.Controls.Add(this.btnGuardarLogin);
-            this.Controls.Add(this.txtEstadoLogin);
             this.Controls.Add(this.txtContrasenaLogin);
             this.Controls.Add(this.txtUsuarioLogin);
-            this.Controls.Add(this.txtIdLogin);
-            this.Controls.Add(this.lblEstadoLogin);
             this.Controls.Add(this.lblConstrasenaLogin);
             this.Controls.Add(this.lblUsuarioLogin);
             this.Controls.Add(this.lblIdRolLogin);
@@ -249,14 +247,14 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private MaterialSkin.Controls.MaterialLabel lblIdRolLogin;
         private MaterialSkin.Controls.MaterialLabel lblUsuarioLogin;
         private MaterialSkin.Controls.MaterialLabel lblConstrasenaLogin;
-        private MaterialSkin.Controls.MaterialLabel lblEstadoLogin;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtIdLogin;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuarioLogin;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtContrasenaLogin;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtEstadoLogin;
         private MaterialSkin.Controls.MaterialRaisedButton btnGuardarLogin;
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelarLogin;
         private System.Windows.Forms.ComboBox cboRolLogin;
         private System.Windows.Forms.DataGridView dgvSeguridades;
+        private MaterialSkin.Controls.MaterialLabel txtIdLogin;
+        private MaterialSkin.Controls.MaterialCheckBox cbxEstadoLogin;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }
