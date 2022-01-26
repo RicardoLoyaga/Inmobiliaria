@@ -49,6 +49,7 @@
     <Compile Include="Abstracciones\IImagenRepositorio.cs" />
     <Compile Include="Abstracciones\ILoginRepositorio.cs" />
     <Compile Include="Abstracciones\IParroquiaRepositorio.cs" />
+    <Compile Include="Abstracciones\IPoblarRepositorio.cs" />
     <Compile Include="Abstracciones\IPropiedadRepositorio.cs" />
     <Compile Include="Abstracciones\IPropietarioRepositorio.cs" />
     <Compile Include="Abstracciones\IProvinciaRepositorio.cs" />
