@@ -37,6 +37,8 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtContrasenaInicioSesion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.btnIniciarSesion = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.lblUsuarioValidacion = new System.Windows.Forms.Label();
+            this.lblContrasenaValidacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +71,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(266, 152);
+            this.materialLabel2.Location = new System.Drawing.Point(266, 157);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(86, 19);
@@ -80,7 +82,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             this.txtUsuarioInicioSesion.Depth = 0;
             this.txtUsuarioInicioSesion.Hint = "";
-            this.txtUsuarioInicioSesion.Location = new System.Drawing.Point(269, 116);
+            this.txtUsuarioInicioSesion.Location = new System.Drawing.Point(269, 98);
             this.txtUsuarioInicioSesion.MaxLength = 32767;
             this.txtUsuarioInicioSesion.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtUsuarioInicioSesion.Name = "txtUsuarioInicioSesion";
@@ -97,7 +99,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             this.txtContrasenaInicioSesion.Depth = 0;
             this.txtContrasenaInicioSesion.Hint = "";
-            this.txtContrasenaInicioSesion.Location = new System.Drawing.Point(270, 192);
+            this.txtContrasenaInicioSesion.Location = new System.Drawing.Point(269, 179);
             this.txtContrasenaInicioSesion.MaxLength = 32767;
             this.txtContrasenaInicioSesion.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtContrasenaInicioSesion.Name = "txtContrasenaInicioSesion";
@@ -127,7 +129,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.btnIniciarSesion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnIniciarSesion.Depth = 0;
             this.btnIniciarSesion.Icon = null;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(283, 236);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(284, 261);
             this.btnIniciarSesion.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Primary = true;
@@ -135,12 +137,35 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.btnIniciarSesion.TabIndex = 6;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
+            // 
+            // lblUsuarioValidacion
+            // 
+            this.lblUsuarioValidacion.AutoSize = true;
+            this.lblUsuarioValidacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioValidacion.ForeColor = System.Drawing.Color.Red;
+            this.lblUsuarioValidacion.Location = new System.Drawing.Point(267, 124);
+            this.lblUsuarioValidacion.Name = "lblUsuarioValidacion";
+            this.lblUsuarioValidacion.Size = new System.Drawing.Size(0, 13);
+            this.lblUsuarioValidacion.TabIndex = 7;
+            // 
+            // lblContrasenaValidacion
+            // 
+            this.lblContrasenaValidacion.AutoSize = true;
+            this.lblContrasenaValidacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContrasenaValidacion.ForeColor = System.Drawing.Color.Red;
+            this.lblContrasenaValidacion.Location = new System.Drawing.Point(266, 205);
+            this.lblContrasenaValidacion.Name = "lblContrasenaValidacion";
+            this.lblContrasenaValidacion.Size = new System.Drawing.Size(0, 13);
+            this.lblContrasenaValidacion.TabIndex = 8;
             // 
             // FrmInciarSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 309);
+            this.Controls.Add(this.lblContrasenaValidacion);
+            this.Controls.Add(this.lblUsuarioValidacion);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.txtContrasenaInicioSesion);
@@ -166,5 +191,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private MaterialSkin.Controls.MaterialSingleLineTextField txtContrasenaInicioSesion;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialRaisedButton btnIniciarSesion;
+        private System.Windows.Forms.Label lblUsuarioValidacion;
+        private System.Windows.Forms.Label lblContrasenaValidacion;
     }
 }

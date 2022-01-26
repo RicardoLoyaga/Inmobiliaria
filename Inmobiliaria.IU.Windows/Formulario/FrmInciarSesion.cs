@@ -22,5 +22,32 @@ namespace Inmobiliaria.IU.Windows.Formulario
             skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new ColorScheme(Primary.Red900, Primary.Blue600, Primary.Yellow700, Accent.Green700, TextShade.WHITE);
         }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtUsuarioInicioSesion.Text) && (txtUsuarioInicioSesion.MaxLength>4 && txtUsuarioInicioSesion.MaxLength <= 15))
+            {
+                if (!string.IsNullOrWhiteSpace(txtContrasenaInicioSesion.Text) && (txtUsuarioInicioSesion.MaxLength > 7 && txtUsuarioInicioSesion.MaxLength <= 15))
+                {
+                    //var valid = loginControler.ValidaUsuario(LOGIN);
+
+                    if (true)
+                    {
+
+                    }
+                }
+                else
+                {
+                    lblContrasenaValidacion.Text = "Valor Requerido";
+                }
+            }
+            else
+            {
+                lblUsuarioValidacion.Text = "Valor Requerido";
+            }
+
+            
+
+        }
     }
 }
