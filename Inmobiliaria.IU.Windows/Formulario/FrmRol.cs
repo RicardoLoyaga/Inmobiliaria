@@ -27,14 +27,23 @@ namespace Inmobiliaria.IU.Windows.Formulario
             MaterialSkinManager skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            skinManager.ColorScheme = new ColorScheme(Primary.Red900, Primary.Blue600, Primary.Yellow700, Accent.Green700, TextShade.WHITE);
+            skinManager.ColorScheme = new ColorScheme(Primary.Red600, Primary.Blue900, Primary.Yellow700, Accent.Red700, TextShade.WHITE);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             rolVistaModelo = new RolVistaModelo();
             rolVistaModelo.Rol1 = txtRol.Text;
-            rolVistaModelo.EstadoRol = int.Parse(txtEstadoRol.Text);
+
+            if (cbxEstadoRol.Checked)
+            {
+                rolVistaModelo.EstadoRol = 1;
+            }
+            else
+            {
+                rolVistaModelo.EstadoRol = 0;
+            }
+
             if (!txtIdRol.Text.Equals(""))
             {
                 rolVistaModelo.IdRol = int.Parse(txtIdRol.Text);
@@ -70,7 +79,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
         {
             txtIdRol.Text = "";
             txtRol.Text = "";
-            txtEstadoRol.Text = "";
+            cbxEstadoRol.Text = "";
         }
 
         private void Actualizar()

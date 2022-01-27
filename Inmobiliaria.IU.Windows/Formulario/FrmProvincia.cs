@@ -25,15 +25,24 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
             MaterialSkinManager skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            skinManager.ColorScheme = new ColorScheme(Primary.Red600, Primary.Red900, Primary.Yellow700, Accent.Green700, TextShade.WHITE);
+            skinManager.Theme = MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new ColorScheme(Primary.Red600, Primary.Red900, Primary.Yellow700, Accent.Red700, TextShade.WHITE);
         }
 
         private void btnGuardarProvincia_Click(object sender, EventArgs e)
         {
             provinciaVistaModelo = new ProvinciaVistaModelo();
             provinciaVistaModelo.Provincia1 = TxtProvincia.Text;
-            provinciaVistaModelo.EstadoProvincia = int.Parse(TxtEstado.Text);
+
+            if (cbxEstadoProvincia.Checked)
+            {
+                provinciaVistaModelo.EstadoProvincia = 1;
+            }
+            else
+            {
+                provinciaVistaModelo.EstadoProvincia = 0;
+            }
+
             if (!TxtIdProvincia.Text.Equals(""))
             {
                 provinciaVistaModelo.IdProvincia = int.Parse(TxtIdProvincia.Text);
@@ -81,7 +90,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
         {
             TxtIdProvincia.Text = "";
             TxtProvincia.Text = "";
-            TxtEstado.Text = "";
+            cbxEstadoProvincia.Text = "";
         }
 
         private void btnCancelarProvincia_Click(object sender, EventArgs e)

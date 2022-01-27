@@ -148,6 +148,7 @@
       <DependentUpon>Model2.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Repositorio\ParroquiaRepositorio.cs" />
+    <Compile Include="Repositorio\PoblarRepositorio.cs" />
     <Compile Include="Repositorio\PropiedadRepositorio.cs" />
     <Compile Include="Repositorio\PropietarioRepositorio.cs" />
     <Compile Include="Repositorio\ProvinciaRepositorio.cs" />

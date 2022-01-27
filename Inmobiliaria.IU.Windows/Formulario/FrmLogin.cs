@@ -26,15 +26,14 @@ namespace Inmobiliaria.IU.Windows.Formulario
             MaterialSkinManager skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new ColorScheme(Primary.Red600, Primary.Red900, Primary.Yellow700, Accent.Green700, TextShade.WHITE);
+            skinManager.ColorScheme = new ColorScheme(Primary.Red600, Primary.Red900, Primary.Yellow700, Accent.Red700, TextShade.WHITE);
 
             
         }
 
         private void cboRolLogin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //loginControlador.poblarCboRol();
-            //cboRolLogin.Items.Add("Administrador");
+            
         }
 
         private void btnGuardarLogin_Click(object sender, EventArgs e)
@@ -48,8 +47,15 @@ namespace Inmobiliaria.IU.Windows.Formulario
              
             loginVistaModelo.Usuario = txtUsuarioLogin.Text;
             loginVistaModelo.Contrasena = txtContrasenaLogin.Text;
-            loginVistaModelo.Estado = int.Parse(txtEstadoLogin.Text);
-            
+            if (cbxEstadoLogin.Checked)
+            {
+                loginVistaModelo.Estado = 1;
+            }
+            else
+            {
+                loginVistaModelo.Estado = 0;
+            }
+
             if (!txtIdLogin.Text.Equals(""))
             {
                 loginVistaModelo.IdLogin = int.Parse(txtIdLogin.Text);
@@ -86,7 +92,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             cboRolLogin.Text = "";
             txtUsuarioLogin.Text = "";
             txtContrasenaLogin.Text = "";
-            txtEstadoLogin.Text = "";
+            cbxEstadoLogin.Text = "";
         }
 
         private void Actualizar()
@@ -112,8 +118,9 @@ namespace Inmobiliaria.IU.Windows.Formulario
             ListarLogin();
             cboRolLogin.Items.Add("ADMINISTRADOR");
 
-            //cboRolLogin.Items.Add(cbo);
-            //cboRolLogin.DataSource = cbo;
+            cboRolLogin.DataSource = loginControlador.poblarCboRol();
+            cboRolLogin.DisplayMember = "Rol1";
+            cboRolLogin.ValueMember = "IDROL";
         }
 
         private void btnCancelarLogin_Click(object sender, EventArgs e)

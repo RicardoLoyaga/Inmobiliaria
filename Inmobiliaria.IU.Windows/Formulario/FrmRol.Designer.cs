@@ -34,10 +34,11 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.lblEstadoRol = new MaterialSkin.Controls.MaterialLabel();
             this.txtIdRol = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtRol = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtEstadoRol = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dgvRol = new System.Windows.Forms.DataGridView();
             this.btnGuardar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCancelar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.txtIdRol = new MaterialSkin.Controls.MaterialLabel();
+            this.cbxEstadoRol = new MaterialSkin.Controls.MaterialCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRol)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +101,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             this.txtRol.Depth = 0;
             this.txtRol.Hint = "";
-            this.txtRol.Location = new System.Drawing.Point(96, 137);
+            this.txtRol.Location = new System.Drawing.Point(96, 134);
             this.txtRol.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtRol.Name = "txtRol";
             this.txtRol.PasswordChar = '\0';
@@ -131,6 +132,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.dgvRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRol.Location = new System.Drawing.Point(344, 73);
             this.dgvRol.Name = "dgvRol";
+            this.dgvRol.RowHeadersWidth = 62;
             this.dgvRol.Size = new System.Drawing.Size(428, 226);
             this.dgvRol.TabIndex = 6;
             // 
@@ -160,11 +162,41 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // txtIdRol
+            // 
+            this.txtIdRol.AutoSize = true;
+            this.txtIdRol.Depth = 0;
+            this.txtIdRol.Font = new System.Drawing.Font("Roboto", 11F);
+            this.txtIdRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtIdRol.Location = new System.Drawing.Point(96, 97);
+            this.txtIdRol.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtIdRol.Name = "txtIdRol";
+            this.txtIdRol.Size = new System.Drawing.Size(0, 19);
+            this.txtIdRol.TabIndex = 9;
+            // 
+            // cbxEstadoRol
+            // 
+            this.cbxEstadoRol.AutoSize = true;
+            this.cbxEstadoRol.Depth = 0;
+            this.cbxEstadoRol.Font = new System.Drawing.Font("Roboto", 10F);
+            this.cbxEstadoRol.Location = new System.Drawing.Point(97, 172);
+            this.cbxEstadoRol.Margin = new System.Windows.Forms.Padding(0);
+            this.cbxEstadoRol.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.cbxEstadoRol.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cbxEstadoRol.Name = "cbxEstadoRol";
+            this.cbxEstadoRol.Ripple = true;
+            this.cbxEstadoRol.Size = new System.Drawing.Size(69, 30);
+            this.cbxEstadoRol.TabIndex = 10;
+            this.cbxEstadoRol.Text = "Activo";
+            this.cbxEstadoRol.UseVisualStyleBackColor = true;
+            // 
             // FrmRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 311);
+            this.Controls.Add(this.cbxEstadoRol);
+            this.Controls.Add(this.txtIdRol);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.dgvRol);
@@ -194,5 +226,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private System.Windows.Forms.DataGridView dgvRol;
         private MaterialSkin.Controls.MaterialRaisedButton btnGuardar;
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelar;
+        private MaterialSkin.Controls.MaterialLabel txtIdRol;
+        private MaterialSkin.Controls.MaterialCheckBox cbxEstadoRol;
     }
 }

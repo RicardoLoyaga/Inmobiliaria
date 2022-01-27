@@ -42,6 +42,9 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.btnCancelarLogin = new MaterialSkin.Controls.MaterialRaisedButton();
             this.cboRolLogin = new System.Windows.Forms.ComboBox();
             this.dgvSeguridades = new System.Windows.Forms.DataGridView();
+            this.txtIdLogin = new MaterialSkin.Controls.MaterialLabel();
+            this.cbxEstadoLogin = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeguridades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -216,11 +219,55 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.dgvSeguridades.TabIndex = 12;
             this.dgvSeguridades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSeguridades_CellContentClick);
             // 
+            // txtIdLogin
+            // 
+            this.txtIdLogin.AutoSize = true;
+            this.txtIdLogin.Depth = 0;
+            this.txtIdLogin.Font = new System.Drawing.Font("Roboto", 11F);
+            this.txtIdLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtIdLogin.Location = new System.Drawing.Point(112, 85);
+            this.txtIdLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtIdLogin.Name = "txtIdLogin";
+            this.txtIdLogin.Size = new System.Drawing.Size(0, 19);
+            this.txtIdLogin.TabIndex = 13;
+            // 
+            // cbxEstadoLogin
+            // 
+            this.cbxEstadoLogin.AutoSize = true;
+            this.cbxEstadoLogin.Depth = 0;
+            this.cbxEstadoLogin.Font = new System.Drawing.Font("Roboto", 10F);
+            this.cbxEstadoLogin.Location = new System.Drawing.Point(113, 216);
+            this.cbxEstadoLogin.Margin = new System.Windows.Forms.Padding(0);
+            this.cbxEstadoLogin.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.cbxEstadoLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cbxEstadoLogin.Name = "cbxEstadoLogin";
+            this.cbxEstadoLogin.Ripple = true;
+            this.cbxEstadoLogin.Size = new System.Drawing.Size(69, 30);
+            this.cbxEstadoLogin.TabIndex = 14;
+            this.cbxEstadoLogin.Text = "Activo";
+            this.cbxEstadoLogin.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(46, 220);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(60, 19);
+            this.materialLabel1.TabIndex = 15;
+            this.materialLabel1.Text = "Estado:";
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 311);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.cbxEstadoLogin);
+            this.Controls.Add(this.txtIdLogin);
             this.Controls.Add(this.dgvSeguridades);
             this.Controls.Add(this.cboRolLogin);
             this.Controls.Add(this.btnCancelarLogin);
@@ -258,5 +305,8 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelarLogin;
         private System.Windows.Forms.ComboBox cboRolLogin;
         private System.Windows.Forms.DataGridView dgvSeguridades;
+        private MaterialSkin.Controls.MaterialLabel txtIdLogin;
+        private MaterialSkin.Controls.MaterialCheckBox cbxEstadoLogin;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }
