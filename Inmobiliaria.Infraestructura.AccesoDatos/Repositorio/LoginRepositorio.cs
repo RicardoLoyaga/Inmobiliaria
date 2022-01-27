@@ -27,5 +27,24 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
                 throw new Exception ("Error al consultar la BDD" +ex);
             }
         }
+
+        public LOGIN username(string user)
+        {
+            try
+            {
+                using (var context = new INMOBILIARIAEntities1())
+                {
+                    var query = from login in context.LOGIN
+                                where login.USUARIO == user
+                                select login;
+                    return query.FirstOrDefault();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error al consultar la BDD" + ex);
+            }
+        }
     }
 }

@@ -32,12 +32,12 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.lblIdRol = new MaterialSkin.Controls.MaterialLabel();
             this.lblRol = new MaterialSkin.Controls.MaterialLabel();
             this.lblEstadoRol = new MaterialSkin.Controls.MaterialLabel();
-            this.txtIdRol = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            //this.txtIdRol = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtRol = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dgvRol = new System.Windows.Forms.DataGridView();
             this.btnGuardar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCancelar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txtIdRol = new MaterialSkin.Controls.MaterialLabel();
+            //this.txtIdRol = new MaterialSkin.Controls.MaterialLabel();
             this.cbxEstadoRol = new MaterialSkin.Controls.MaterialCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRol)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +83,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             // txtIdRol
             // 
-            this.txtIdRol.Depth = 0;
+            /*this.txtIdRol.Depth = 0;
             this.txtIdRol.Hint = "";
             this.txtIdRol.Location = new System.Drawing.Point(96, 93);
             this.txtIdRol.MouseState = MaterialSkin.MouseState.HOVER;
@@ -95,7 +95,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtIdRol.Size = new System.Drawing.Size(176, 23);
             this.txtIdRol.TabIndex = 3;
             this.txtIdRol.UseSystemPasswordChar = false;
-            this.txtIdRol.Click += new System.EventHandler(this.txtIdRol_Click);
+            this.txtIdRol.Click += new System.EventHandler(this.txtIdRol_Click);*/
             // 
             // txtRol
             // 
@@ -114,7 +114,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             // txtEstadoRol
             // 
-            this.txtEstadoRol.Depth = 0;
+            /*this.txtEstadoRol.Depth = 0;
             this.txtEstadoRol.Hint = "";
             this.txtEstadoRol.Location = new System.Drawing.Point(96, 172);
             this.txtEstadoRol.MouseState = MaterialSkin.MouseState.HOVER;
@@ -125,7 +125,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtEstadoRol.SelectionStart = 0;
             this.txtEstadoRol.Size = new System.Drawing.Size(176, 23);
             this.txtEstadoRol.TabIndex = 5;
-            this.txtEstadoRol.UseSystemPasswordChar = false;
+            this.txtEstadoRol.UseSystemPasswordChar = false;*/
             // 
             // dgvRol
             // 
@@ -164,7 +164,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             // txtIdRol
             // 
-            this.txtIdRol.AutoSize = true;
+            /*this.txtIdRol.AutoSize = true;
             this.txtIdRol.Depth = 0;
             this.txtIdRol.Font = new System.Drawing.Font("Roboto", 11F);
             this.txtIdRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -172,7 +172,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtIdRol.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtIdRol.Name = "txtIdRol";
             this.txtIdRol.Size = new System.Drawing.Size(0, 19);
-            this.txtIdRol.TabIndex = 9;
+            this.txtIdRol.TabIndex = 9;*/
             // 
             // cbxEstadoRol
             // 
@@ -196,13 +196,13 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 311);
             this.Controls.Add(this.cbxEstadoRol);
-            this.Controls.Add(this.txtIdRol);
+            //this.Controls.Add(this.txtIdRol);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.dgvRol);
-            this.Controls.Add(this.txtEstadoRol);
+            //this.Controls.Add(this.txtEstadoRol);
             this.Controls.Add(this.txtRol);
-            this.Controls.Add(this.txtIdRol);
+            //this.Controls.Add(this.txtIdRol);
             this.Controls.Add(this.lblEstadoRol);
             this.Controls.Add(this.lblRol);
             this.Controls.Add(this.lblIdRol);
@@ -226,7 +226,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private System.Windows.Forms.DataGridView dgvRol;
         private MaterialSkin.Controls.MaterialRaisedButton btnGuardar;
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelar;
-        private MaterialSkin.Controls.MaterialLabel txtIdRol;
+        //private MaterialSkin.Controls.MaterialLabel txtIdRol;
         private MaterialSkin.Controls.MaterialCheckBox cbxEstadoRol;
     }
 }

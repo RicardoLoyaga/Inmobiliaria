@@ -17,7 +17,7 @@ namespace Inmobiliaria.IU.Windows
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmInciarSesion());
+            Application.Run(new FrmLogin());
         }
     }
 }

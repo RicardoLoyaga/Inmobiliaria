@@ -17,6 +17,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
     {
         private LoginControlador loginControlador;
         private LoginVistaModelo loginVistaModelo;
+        private UtilControlador utilControlador;
         public FrmLogin()
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             else { loginVistaModelo.IdRol = 2; };
              
             loginVistaModelo.Usuario = txtUsuarioLogin.Text;
+            //loginVistaModelo.Contrasena = utilControlador.Encriptar(txtContrasenaLogin.Text);
             loginVistaModelo.Contrasena = txtContrasenaLogin.Text;
             if (cbxEstadoLogin.Checked)
             {
@@ -104,7 +106,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             }
             else
             {
-                MessageBox.Show("!Error al insertar seguridades!");
+                MessageBox.Show("!Error al actualizar seguridades!");
             }
         }
 
@@ -116,7 +118,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private void FrmLogin_Load(object sender, EventArgs e)
         {
             ListarLogin();
-            cboRolLogin.Items.Add("ADMINISTRADOR");
+            //cboRolLogin.Items.Add("ADMINISTRADOR");
 
             cboRolLogin.DataSource = loginControlador.poblarCboRol();
             cboRolLogin.DisplayMember = "Rol1";

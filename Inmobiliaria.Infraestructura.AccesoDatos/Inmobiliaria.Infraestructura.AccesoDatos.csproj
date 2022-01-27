@@ -155,6 +155,7 @@
     <Compile Include="Repositorio\RolRepositorio.cs" />
     <Compile Include="Repositorio\TipoPropiedadRepositorio.cs" />
     <Compile Include="Repositorio\UsuarioRepositorio.cs" />
+    <Compile Include="Repositorio\UtilRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Inmobiliaria.Dominio.Modelo\Inmobiliaria.Dominio.Modelo.csproj">

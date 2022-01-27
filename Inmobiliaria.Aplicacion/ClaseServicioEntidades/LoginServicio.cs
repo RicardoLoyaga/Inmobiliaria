@@ -50,5 +50,10 @@ namespace Inmobiliaria.Aplicacion.ClaseServicioEntidades
         {
             return loginRepositorio.poblarCboRol();
         }
+
+        public LOGIN username(string user)
+        {
+            return loginRepositorio.username(user);
+        }
     }
 }

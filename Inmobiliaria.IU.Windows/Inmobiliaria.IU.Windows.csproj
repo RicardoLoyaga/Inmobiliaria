@@ -72,6 +72,7 @@
     <Compile Include="ControladorAplicacion\RolControlador.cs" />
     <Compile Include="ControladorAplicacion\TipoPropiedadControlador.cs" />
     <Compile Include="ControladorAplicacion\UsuarioControlador.cs" />
+    <Compile Include="ControladorAplicacion\UtilControlador.cs" />
     <Compile Include="Formulario\FrmBarrio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +90,12 @@
     </Compile>
     <Compile Include="Formulario\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FrmInciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmInciarSesion.Designer.cs">
+      <DependentUpon>FrmInciarSesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulario\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -155,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmInciarSesion.resx">
+      <DependentUpon>FrmInciarSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

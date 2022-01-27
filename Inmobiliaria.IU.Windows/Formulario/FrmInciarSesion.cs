@@ -1,4 +1,7 @@
-﻿using MaterialSkin;
+﻿using Inmobiliaria.Dominio.Modelo.Entidades;
+using Inmobiliaria.IU.Windows.ControladorAplicacion;
+using Inmobiliaria.IU.Windows.VistaModelo;
+using MaterialSkin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +16,14 @@ namespace Inmobiliaria.IU.Windows.Formulario
 {
     public partial class FrmInciarSesion : MaterialSkin.Controls.MaterialForm
     {
+        private LoginControlador loginControlador;
+        private LoginVistaModelo loginVistaModelo;
+        int intentos = 0;
         public FrmInciarSesion()
         {
             InitializeComponent();
+
+            loginControlador = new LoginControlador();
 
             MaterialSkinManager skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
@@ -25,29 +33,82 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtUsuarioInicioSesion.Text) && (txtUsuarioInicioSesion.MaxLength>4 && txtUsuarioInicioSesion.MaxLength <= 15))
+        }
+
+        private void btnIniciarSesion_Click_1(object sender, EventArgs e)
+        {
+            
+            if (intentos < 3)
             {
-                if (!string.IsNullOrWhiteSpace(txtContrasenaInicioSesion.Text) && (txtUsuarioInicioSesion.MaxLength > 7 && txtUsuarioInicioSesion.MaxLength <= 15))
+                if (!string.IsNullOrWhiteSpace(txtUsuarioInicioSesion.Text))
                 {
-                    //var valid = loginControler.ValidaUsuario(LOGIN);
-
-                    if (true)
+                    if (!string.IsNullOrWhiteSpace(txtContrasenaInicioSesion.Text))
                     {
+                        try
+                        {
+                            LOGIN login = loginControlador.username(txtUsuarioInicioSesion.Text);
 
+                            if (login != null)
+                            {
+                            
+                                
+                                    if (login.USUARIO == txtUsuarioInicioSesion.Text && intentos<3)
+                                    {
+                                        if (login.CONTRASENA == txtContrasenaInicioSesion.Text && intentos<3)
+                                        {
+                                            FrmMenuPrincipal frm = new FrmMenuPrincipal();
+                                            frm.Show();
+                                        }
+                                        else
+                                        {
+                                            lblContrasenaValidacion.Text = "Contraseña incorrecta";
+                                            txtContrasenaInicioSesion.Text = "";
+                                            intentos++;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        lblUsuarioValidacion.Text = "Usuario Incorrecto";
+                                        txtUsuarioInicioSesion.Text = "";
+                                        intentos++;
+                                    }
+                            
+                            }
+                            else
+                            {
+                                MessageBox.Show("Usuario no existe");
+                                limpiar();
+                            }
+                        }
+                        catch (Exception)
+                        {
+
+                            throw;
+                        }
+
+                    }
+                    else
+                    {
+                        lblContrasenaValidacion.Text = "Contraseña no cumple con seguridad";
                     }
                 }
                 else
                 {
-                    lblContrasenaValidacion.Text = "Valor Requerido";
+                    lblUsuarioValidacion.Text = "Longitud entre 4 a 15 caracteres";
                 }
+
             }
             else
             {
-                lblUsuarioValidacion.Text = "Valor Requerido";
+                MessageBox.Show("Usuario Bloqueado!");
+                limpiar();
             }
+        }
 
-            
-
+        public void limpiar()
+        {
+            txtUsuarioInicioSesion.Text = "";
+            txtContrasenaInicioSesion.Text = "";
         }
     }
 }

@@ -36,7 +36,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.TxtProvincia = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.TxtEstado = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dgvProvincias = new System.Windows.Forms.DataGridView();
-            this.TxtIdProvincia = new MaterialSkin.Controls.MaterialLabel();
+            //this.TxtIdProvincia = new MaterialSkin.Controls.MaterialLabel();
             this.btnGuardarProvincia = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCancelarProvincia = new MaterialSkin.Controls.MaterialRaisedButton();
             this.cbxEstadoProvincia = new MaterialSkin.Controls.MaterialCheckBox();
@@ -226,7 +226,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private MaterialSkin.Controls.MaterialSingleLineTextField TxtProvincia;
         private MaterialSkin.Controls.MaterialSingleLineTextField TxtEstado;
         private System.Windows.Forms.DataGridView dgvProvincias;
-        private MaterialSkin.Controls.MaterialLabel TxtIdProvincia;
+        //private MaterialSkin.Controls.MaterialLabel TxtIdProvincia;
         private MaterialSkin.Controls.MaterialRaisedButton btnGuardarProvincia;
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelarProvincia;
         private MaterialSkin.Controls.MaterialCheckBox cbxEstadoProvincia;

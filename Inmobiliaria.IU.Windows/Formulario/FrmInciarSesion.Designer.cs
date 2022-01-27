@@ -33,12 +33,12 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtUsuarioInicioSesion = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtContrasenaInicioSesion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.btnIniciarSesion = new MaterialSkin.Controls.MaterialRaisedButton();
             this.lblUsuarioValidacion = new System.Windows.Forms.Label();
             this.lblContrasenaValidacion = new System.Windows.Forms.Label();
+            this.txtUsuarioInicioSesion = new System.Windows.Forms.TextBox();
+            this.txtContrasenaInicioSesion = new System.Windows.Forms.TextBox();
+            this.btnIniciarSesion = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,40 +78,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.materialLabel2.TabIndex = 2;
             this.materialLabel2.Text = "Contraseña";
             // 
-            // txtUsuarioInicioSesion
-            // 
-            this.txtUsuarioInicioSesion.Depth = 0;
-            this.txtUsuarioInicioSesion.Hint = "";
-            this.txtUsuarioInicioSesion.Location = new System.Drawing.Point(269, 98);
-            this.txtUsuarioInicioSesion.MaxLength = 32767;
-            this.txtUsuarioInicioSesion.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtUsuarioInicioSesion.Name = "txtUsuarioInicioSesion";
-            this.txtUsuarioInicioSesion.PasswordChar = '\0';
-            this.txtUsuarioInicioSesion.SelectedText = "";
-            this.txtUsuarioInicioSesion.SelectionLength = 0;
-            this.txtUsuarioInicioSesion.SelectionStart = 0;
-            this.txtUsuarioInicioSesion.Size = new System.Drawing.Size(149, 23);
-            this.txtUsuarioInicioSesion.TabIndex = 3;
-            this.txtUsuarioInicioSesion.TabStop = false;
-            this.txtUsuarioInicioSesion.UseSystemPasswordChar = false;
-            // 
-            // txtContrasenaInicioSesion
-            // 
-            this.txtContrasenaInicioSesion.Depth = 0;
-            this.txtContrasenaInicioSesion.Hint = "";
-            this.txtContrasenaInicioSesion.Location = new System.Drawing.Point(269, 179);
-            this.txtContrasenaInicioSesion.MaxLength = 32767;
-            this.txtContrasenaInicioSesion.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtContrasenaInicioSesion.Name = "txtContrasenaInicioSesion";
-            this.txtContrasenaInicioSesion.PasswordChar = '*';
-            this.txtContrasenaInicioSesion.SelectedText = "";
-            this.txtContrasenaInicioSesion.SelectionLength = 0;
-            this.txtContrasenaInicioSesion.SelectionStart = 0;
-            this.txtContrasenaInicioSesion.Size = new System.Drawing.Size(148, 23);
-            this.txtContrasenaInicioSesion.TabIndex = 4;
-            this.txtContrasenaInicioSesion.TabStop = false;
-            this.txtContrasenaInicioSesion.UseSystemPasswordChar = false;
-            // 
             // materialDivider1
             // 
             this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -122,22 +88,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.materialDivider1.Size = new System.Drawing.Size(10, 207);
             this.materialDivider1.TabIndex = 5;
             this.materialDivider1.Text = "materialDivider1";
-            // 
-            // btnIniciarSesion
-            // 
-            this.btnIniciarSesion.AutoSize = true;
-            this.btnIniciarSesion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnIniciarSesion.Depth = 0;
-            this.btnIniciarSesion.Icon = null;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(284, 261);
-            this.btnIniciarSesion.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Primary = true;
-            this.btnIniciarSesion.Size = new System.Drawing.Size(120, 36);
-            this.btnIniciarSesion.TabIndex = 6;
-            this.btnIniciarSesion.Text = "Iniciar Sesión";
-            this.btnIniciarSesion.UseVisualStyleBackColor = true;
-            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // lblUsuarioValidacion
             // 
@@ -159,17 +109,47 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.lblContrasenaValidacion.Size = new System.Drawing.Size(0, 13);
             this.lblContrasenaValidacion.TabIndex = 8;
             // 
+            // txtUsuarioInicioSesion
+            // 
+            this.txtUsuarioInicioSesion.Location = new System.Drawing.Point(269, 101);
+            this.txtUsuarioInicioSesion.MaxLength = 15;
+            this.txtUsuarioInicioSesion.Name = "txtUsuarioInicioSesion";
+            this.txtUsuarioInicioSesion.Size = new System.Drawing.Size(148, 20);
+            this.txtUsuarioInicioSesion.TabIndex = 9;
+            // 
+            // txtContrasenaInicioSesion
+            // 
+            this.txtContrasenaInicioSesion.Location = new System.Drawing.Point(269, 179);
+            this.txtContrasenaInicioSesion.MaxLength = 15;
+            this.txtContrasenaInicioSesion.Name = "txtContrasenaInicioSesion";
+            this.txtContrasenaInicioSesion.PasswordChar = '*';
+            this.txtContrasenaInicioSesion.Size = new System.Drawing.Size(148, 20);
+            this.txtContrasenaInicioSesion.TabIndex = 10;
+            // 
+            // btnIniciarSesion
+            // 
+            this.btnIniciarSesion.Depth = 0;
+            this.btnIniciarSesion.Location = new System.Drawing.Point(283, 241);
+            this.btnIniciarSesion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Primary = true;
+            this.btnIniciarSesion.Size = new System.Drawing.Size(117, 42);
+            this.btnIniciarSesion.TabIndex = 11;
+            this.btnIniciarSesion.Text = "Iniciar Sesión";
+            this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click_1);
+            // 
             // FrmInciarSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 309);
-            this.Controls.Add(this.lblContrasenaValidacion);
-            this.Controls.Add(this.lblUsuarioValidacion);
             this.Controls.Add(this.btnIniciarSesion);
-            this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.txtContrasenaInicioSesion);
             this.Controls.Add(this.txtUsuarioInicioSesion);
+            this.Controls.Add(this.lblContrasenaValidacion);
+            this.Controls.Add(this.lblUsuarioValidacion);
+            this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.pictureBox1);
@@ -187,11 +167,11 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuarioInicioSesion;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtContrasenaInicioSesion;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
-        private MaterialSkin.Controls.MaterialRaisedButton btnIniciarSesion;
         private System.Windows.Forms.Label lblUsuarioValidacion;
         private System.Windows.Forms.Label lblContrasenaValidacion;
+        private System.Windows.Forms.TextBox txtUsuarioInicioSesion;
+        private System.Windows.Forms.TextBox txtContrasenaInicioSesion;
+        private MaterialSkin.Controls.MaterialRaisedButton btnIniciarSesion;
     }
 }

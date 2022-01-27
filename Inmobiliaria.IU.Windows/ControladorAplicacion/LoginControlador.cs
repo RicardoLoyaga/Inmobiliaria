@@ -90,5 +90,13 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             return vistaModelos;
         }
 
+        public LOGIN username(string user)
+        {
+            LOGIN logi = new LOGIN();
+            logi = loginServicio.username(user);
+
+            return logi;
+        }
+
     }
 }

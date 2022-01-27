@@ -54,6 +54,7 @@
     <Compile Include="ClaseServicioEntidades\RolServicio.cs" />
     <Compile Include="ClaseServicioEntidades\TipoPropiedadServicio.cs" />
     <Compile Include="ClaseServicioEntidades\UsuarioServicio.cs" />
+    <Compile Include="ClaseServicioEntidades\UtilServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
