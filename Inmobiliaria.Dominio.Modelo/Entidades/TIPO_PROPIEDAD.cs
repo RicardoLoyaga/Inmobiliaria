@@ -21,7 +21,7 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
         }
     
         public int IDTIPOPROPIEDAD { get; set; }
-        public string TIPOPROPIEDAD { get; set; }
+        public string NOMBRETIPOPROPIEDAD { get; set; }
         public int ESTADOTIPOPROPIEDAD { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

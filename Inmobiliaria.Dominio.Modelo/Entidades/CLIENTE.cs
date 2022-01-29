@@ -21,10 +21,12 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
         }
     
         public int IDCLIENTE { get; set; }
+        public string IDENTIFICACIONCLIENTE { get; set; }
         public string NOMBRECLIENTE { get; set; }
         public string DIRECCIONCLIENTE { get; set; }
         public string CELULARCLIENTE { get; set; }
         public string CORREOCLIENTE { get; set; }
+        public string ASESOR { get; set; }
         public int ESTADOCLIENTE { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

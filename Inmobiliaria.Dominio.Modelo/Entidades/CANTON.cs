@@ -22,7 +22,8 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
     
         public int IDCANTON { get; set; }
         public Nullable<int> IDPROVINCIA { get; set; }
-        public string CANTON1 { get; set; }
+        public string CODCANTON { get; set; }
+        public string NOMBRECANTON { get; set; }
         public int ESTADOCANTON { get; set; }
     
         public virtual PROVINCIA PROVINCIA { get; set; }

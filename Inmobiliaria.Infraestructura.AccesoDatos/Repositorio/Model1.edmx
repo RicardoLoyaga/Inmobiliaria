@@ -20,7 +20,8 @@
           </Key>
           <Property Name="IDCANTON" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IDPROVINCIA" Type="int" />
-          <Property Name="CANTON" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CODCANTON" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="NOMBRECANTON" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="ESTADOCANTON" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CARACTERISTICA">
@@ -41,10 +42,12 @@
             <PropertyRef Name="IDCLIENTE" />
           </Key>
           <Property Name="IDCLIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDENTIFICACIONCLIENTE" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="NOMBRECLIENTE" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="DIRECCIONCLIENTE" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="CELULARCLIENTE" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="CORREOCLIENTE" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ASESOR" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="ESTADOCLIENTE" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CLIENTE_PROPIEDAD">
@@ -64,22 +67,13 @@
           <Property Name="PATH" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="ESTADOIMAGEN" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="LOGIN">
-          <Key>
-            <PropertyRef Name="IDLOGIN" />
-          </Key>
-          <Property Name="IDLOGIN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IDROL" Type="int" />
-          <Property Name="USUARIO" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="CONTRASENA" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="ESTADO" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="PARROQUIA">
           <Key>
             <PropertyRef Name="IDPARROQUIA" />
           </Key>
           <Property Name="IDPARROQUIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IDCANTON" Type="int" />
+          <Property Name="CODPARROQUIA" Type="varchar" MaxLength="6" Nullable="false" />
           <Property Name="NOMBREPARROQUIA" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="ESTADOPARROQUIA" Type="int" Nullable="false" />
         </EntityType>
@@ -94,6 +88,10 @@
           <Property Name="IDPROPIETARIO" Type="int" />
           <Property Name="IDUSUARIO" Type="int" />
           <Property Name="PRECIO" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="FECHAREGISTROPROPIEDAD" Type="datetime" Nullable="false" />
+          <Property Name="FOTOPRINCIPAL" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CALLEPRINCIPAL" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CALLESECUNDARIA" Type="varchar" MaxLength="100" />
           <Property Name="ESTADOPROPIEDAD" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="PROPIETARIO">
@@ -112,6 +110,7 @@
             <PropertyRef Name="IDPROVINCIA" />
           </Key>
           <Property Name="IDPROVINCIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CODPROVINCIA" Type="varchar" MaxLength="2" Nullable="false" />
           <Property Name="NOMBREPROVINCIA" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="ESTADOPROVINCIA" Type="int" Nullable="false" />
         </EntityType>
@@ -128,7 +127,7 @@
             <PropertyRef Name="IDTIPOPROPIEDAD" />
           </Key>
           <Property Name="IDTIPOPROPIEDAD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TIPOPROPIEDAD" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NOMBRETIPOPROPIEDAD" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ESTADOTIPOPROPIEDAD" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="USUARIO">
@@ -136,9 +135,12 @@
             <PropertyRef Name="IDUSUARIO" />
           </Key>
           <Property Name="IDUSUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IDLOGIN" Type="int" />
+          <Property Name="IDROL" Type="int" />
           <Property Name="NOMBREUSUARIO" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="IDENTIFICACIONUSUARIO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="CORREOUSUARIO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CONTRASENA" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="ESTADO" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_BARRIO_PARROQUIA_PARROQUI">
@@ -201,18 +203,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_LOGIN_ROL_USUAR_ROL">
-          <End Role="ROL" Type="Self.ROL" Multiplicity="0..1" />
-          <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ROL">
-              <PropertyRef Name="IDROL" />
-            </Principal>
-            <Dependent Role="LOGIN">
-              <PropertyRef Name="IDROL" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_PARROQUI_CANTON_PA_CANTON">
           <End Role="CANTON" Type="Self.CANTON" Multiplicity="0..1" />
           <End Role="PARROQUIA" Type="Self.PARROQUIA" Multiplicity="*" />
@@ -285,15 +275,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_USUARIO_LOGIN_USU_LOGIN">
-          <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+        <Association Name="FK_USUARIO_ROL_USUAR_ROL">
+          <End Role="ROL" Type="Self.ROL" Multiplicity="0..1" />
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="LOGIN">
-              <PropertyRef Name="IDLOGIN" />
+            <Principal Role="ROL">
+              <PropertyRef Name="IDROL" />
             </Principal>
             <Dependent Role="USUARIO">
-              <PropertyRef Name="IDLOGIN" />
+              <PropertyRef Name="IDROL" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -304,7 +294,6 @@
           <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CLIENTE_PROPIEDAD" EntityType="Self.CLIENTE_PROPIEDAD" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="IMAGEN" EntityType="Self.IMAGEN" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="LOGIN" EntityType="Self.LOGIN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PARROQUIA" EntityType="Self.PARROQUIA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PROPIEDAD" EntityType="Self.PROPIEDAD" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PROPIETARIO" EntityType="Self.PROPIETARIO" Schema="dbo" store:Type="Tables" />
@@ -332,10 +321,6 @@
             <End Role="PROPIEDAD" EntitySet="PROPIEDAD" />
             <End Role="IMAGEN" EntitySet="IMAGEN" />
           </AssociationSet>
-          <AssociationSet Name="FK_LOGIN_ROL_USUAR_ROL" Association="Self.FK_LOGIN_ROL_USUAR_ROL">
-            <End Role="ROL" EntitySet="ROL" />
-            <End Role="LOGIN" EntitySet="LOGIN" />
-          </AssociationSet>
           <AssociationSet Name="FK_PARROQUI_CANTON_PA_CANTON" Association="Self.FK_PARROQUI_CANTON_PA_CANTON">
             <End Role="CANTON" EntitySet="CANTON" />
             <End Role="PARROQUIA" EntitySet="PARROQUIA" />
@@ -360,8 +345,8 @@
             <End Role="USUARIO" EntitySet="USUARIO" />
             <End Role="PROPIEDAD" EntitySet="PROPIEDAD" />
           </AssociationSet>
-          <AssociationSet Name="FK_USUARIO_LOGIN_USU_LOGIN" Association="Self.FK_USUARIO_LOGIN_USU_LOGIN">
-            <End Role="LOGIN" EntitySet="LOGIN" />
+          <AssociationSet Name="FK_USUARIO_ROL_USUAR_ROL" Association="Self.FK_USUARIO_ROL_USUAR_ROL">
+            <End Role="ROL" EntitySet="ROL" />
             <End Role="USUARIO" EntitySet="USUARIO" />
           </AssociationSet>
         </EntityContainer>
@@ -386,7 +371,8 @@
           </Key>
           <Property Name="IDCANTON" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IDPROVINCIA" Type="Int32" />
-          <Property Name="CANTON1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CODCANTON" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRECANTON" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ESTADOCANTON" Type="Int32" Nullable="false" />
           <NavigationProperty Name="PROVINCIA" Relationship="Self.FK_CANTON_PROVINCIA_PROVINCI" FromRole="CANTON" ToRole="PROVINCIA" />
           <NavigationProperty Name="PARROQUIA" Relationship="Self.FK_PARROQUI_CANTON_PA_CANTON" FromRole="CANTON" ToRole="PARROQUIA" />
@@ -410,10 +396,12 @@
             <PropertyRef Name="IDCLIENTE" />
           </Key>
           <Property Name="IDCLIENTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDENTIFICACIONCLIENTE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NOMBRECLIENTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DIRECCIONCLIENTE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CELULARCLIENTE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CORREOCLIENTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ASESOR" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ESTADOCLIENTE" Type="Int32" Nullable="false" />
           <NavigationProperty Name="PROPIEDAD" Relationship="Self.CLIENTE_PROPIEDAD" FromRole="CLIENTE" ToRole="PROPIEDAD" />
         </EntityType>
@@ -427,24 +415,13 @@
           <Property Name="ESTADOIMAGEN" Type="Int32" Nullable="false" />
           <NavigationProperty Name="PROPIEDAD" Relationship="Self.FK_IMAGEN_PROPIEDAD_PROPIEDA" FromRole="IMAGEN" ToRole="PROPIEDAD" />
         </EntityType>
-        <EntityType Name="LOGIN">
-          <Key>
-            <PropertyRef Name="IDLOGIN" />
-          </Key>
-          <Property Name="IDLOGIN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IDROL" Type="Int32" />
-          <Property Name="USUARIO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CONTRASENA" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ESTADO" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ROL" Relationship="Self.FK_LOGIN_ROL_USUAR_ROL" FromRole="LOGIN" ToRole="ROL" />
-          <NavigationProperty Name="USUARIO1" Relationship="Self.FK_USUARIO_LOGIN_USU_LOGIN" FromRole="LOGIN" ToRole="USUARIO" />
-        </EntityType>
         <EntityType Name="PARROQUIA">
           <Key>
             <PropertyRef Name="IDPARROQUIA" />
           </Key>
           <Property Name="IDPARROQUIA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IDCANTON" Type="Int32" />
+          <Property Name="CODPARROQUIA" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NOMBREPARROQUIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ESTADOPARROQUIA" Type="Int32" Nullable="false" />
           <NavigationProperty Name="BARRIO" Relationship="Self.FK_BARRIO_PARROQUIA_PARROQUI" FromRole="PARROQUIA" ToRole="BARRIO" />
@@ -461,6 +438,10 @@
           <Property Name="IDPROPIETARIO" Type="Int32" />
           <Property Name="IDUSUARIO" Type="Int32" />
           <Property Name="PRECIO" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="FECHAREGISTROPROPIEDAD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FOTOPRINCIPAL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CALLEPRINCIPAL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CALLESECUNDARIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ESTADOPROPIEDAD" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CARACTERISTICA" Relationship="Self.FK_PROPIEDA_CARACTERI_CARACTER" FromRole="PROPIEDAD" ToRole="CARACTERISTICA" />
           <NavigationProperty Name="IMAGEN" Relationship="Self.FK_IMAGEN_PROPIEDAD_PROPIEDA" FromRole="PROPIEDAD" ToRole="IMAGEN" />
@@ -487,6 +468,7 @@
             <PropertyRef Name="IDPROVINCIA" />
           </Key>
           <Property Name="IDPROVINCIA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CODPROVINCIA" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NOMBREPROVINCIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ESTADOPROVINCIA" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CANTON" Relationship="Self.FK_CANTON_PROVINCIA_PROVINCI" FromRole="PROVINCIA" ToRole="CANTON" />
@@ -499,14 +481,14 @@
           <Property Name="IDROL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NOMBREROL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ESTADOROL" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="LOGIN" Relationship="Self.FK_LOGIN_ROL_USUAR_ROL" FromRole="ROL" ToRole="LOGIN" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.FK_USUARIO_ROL_USUAR_ROL" FromRole="ROL" ToRole="USUARIO" />
         </EntityType>
         <EntityType Name="TIPO_PROPIEDAD">
           <Key>
             <PropertyRef Name="IDTIPOPROPIEDAD" />
           </Key>
           <Property Name="IDTIPOPROPIEDAD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TIPOPROPIEDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRETIPOPROPIEDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ESTADOTIPOPROPIEDAD" Type="Int32" Nullable="false" />
           <NavigationProperty Name="PROPIEDAD" Relationship="Self.FK_PROPIEDA_TIPOPROPI_TIPO_PRO" FromRole="TIPO_PROPIEDAD" ToRole="PROPIEDAD" />
         </EntityType>
@@ -515,12 +497,15 @@
             <PropertyRef Name="IDUSUARIO" />
           </Key>
           <Property Name="IDUSUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IDLOGIN" Type="Int32" />
+          <Property Name="IDROL" Type="Int32" />
           <Property Name="NOMBREUSUARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="IDENTIFICACIONUSUARIO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CORREOUSUARIO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CONTRASENA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ESTADO" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="LOGIN" Relationship="Self.FK_USUARIO_LOGIN_USU_LOGIN" FromRole="USUARIO" ToRole="LOGIN" />
           <NavigationProperty Name="PROPIEDAD" Relationship="Self.FK_PROPIEDA_USUARIO_P_USUARIO" FromRole="USUARIO" ToRole="PROPIEDAD" />
+          <NavigationProperty Name="ROL" Relationship="Self.FK_USUARIO_ROL_USUAR_ROL" FromRole="USUARIO" ToRole="ROL" />
         </EntityType>
         <Association Name="FK_BARRIO_PARROQUIA_PARROQUI">
           <End Role="PARROQUIA" Type="Self.PARROQUIA" Multiplicity="0..1" />
@@ -582,30 +567,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_LOGIN_ROL_USUAR_ROL">
-          <End Role="ROL" Type="Self.ROL" Multiplicity="0..1" />
-          <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ROL">
-              <PropertyRef Name="IDROL" />
-            </Principal>
-            <Dependent Role="LOGIN">
-              <PropertyRef Name="IDROL" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_USUARIO_LOGIN_USU_LOGIN">
-          <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
-          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="LOGIN">
-              <PropertyRef Name="IDLOGIN" />
-            </Principal>
-            <Dependent Role="USUARIO">
-              <PropertyRef Name="IDLOGIN" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_PROPIEDA_PROPIETAR_PROPIETA">
           <End Role="PROPIETARIO" Type="Self.PROPIETARIO" Multiplicity="0..1" />
           <End Role="PROPIEDAD" Type="Self.PROPIEDAD" Multiplicity="*" />
@@ -654,17 +615,28 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_USUARIO_ROL_USUAR_ROL">
+          <End Role="ROL" Type="Self.ROL" Multiplicity="0..1" />
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROL">
+              <PropertyRef Name="IDROL" />
+            </Principal>
+            <Dependent Role="USUARIO">
+              <PropertyRef Name="IDROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="CLIENTE_PROPIEDAD">
           <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
           <End Role="PROPIEDAD" Type="Self.PROPIEDAD" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="INMOBILIARIAEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="INMOBILIARIAEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BARRIO" EntityType="Self.BARRIO" />
           <EntitySet Name="CANTON" EntityType="Self.CANTON" />
           <EntitySet Name="CARACTERISTICA" EntityType="Self.CARACTERISTICA" />
           <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
           <EntitySet Name="IMAGEN" EntityType="Self.IMAGEN" />
-          <EntitySet Name="LOGIN" EntityType="Self.LOGIN" />
           <EntitySet Name="PARROQUIA" EntityType="Self.PARROQUIA" />
           <EntitySet Name="PROPIEDAD" EntityType="Self.PROPIEDAD" />
           <EntitySet Name="PROPIETARIO" EntityType="Self.PROPIETARIO" />
@@ -692,14 +664,6 @@
             <End Role="PROPIEDAD" EntitySet="PROPIEDAD" />
             <End Role="IMAGEN" EntitySet="IMAGEN" />
           </AssociationSet>
-          <AssociationSet Name="FK_LOGIN_ROL_USUAR_ROL" Association="Self.FK_LOGIN_ROL_USUAR_ROL">
-            <End Role="ROL" EntitySet="ROL" />
-            <End Role="LOGIN" EntitySet="LOGIN" />
-          </AssociationSet>
-          <AssociationSet Name="FK_USUARIO_LOGIN_USU_LOGIN" Association="Self.FK_USUARIO_LOGIN_USU_LOGIN">
-            <End Role="LOGIN" EntitySet="LOGIN" />
-            <End Role="USUARIO" EntitySet="USUARIO" />
-          </AssociationSet>
           <AssociationSet Name="FK_PROPIEDA_PROPIETAR_PROPIETA" Association="Self.FK_PROPIEDA_PROPIETAR_PROPIETA">
             <End Role="PROPIETARIO" EntitySet="PROPIETARIO" />
             <End Role="PROPIEDAD" EntitySet="PROPIEDAD" />
@@ -716,6 +680,10 @@
             <End Role="USUARIO" EntitySet="USUARIO" />
             <End Role="PROPIEDAD" EntitySet="PROPIEDAD" />
           </AssociationSet>
+          <AssociationSet Name="FK_USUARIO_ROL_USUAR_ROL" Association="Self.FK_USUARIO_ROL_USUAR_ROL">
+            <End Role="ROL" EntitySet="ROL" />
+            <End Role="USUARIO" EntitySet="USUARIO" />
+          </AssociationSet>
           <AssociationSet Name="CLIENTE_PROPIEDAD" Association="Self.CLIENTE_PROPIEDAD">
             <End Role="CLIENTE" EntitySet="CLIENTE" />
             <End Role="PROPIEDAD" EntitySet="PROPIEDAD" />
@@ -726,7 +694,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="INMOBILIARIAModelStoreContainer" CdmEntityContainer="INMOBILIARIAEntities1">
+        <EntityContainerMapping StorageEntityContainer="INMOBILIARIAModelStoreContainer" CdmEntityContainer="INMOBILIARIAEntities">
           <EntitySetMapping Name="BARRIO">
             <EntityTypeMapping TypeName="INMOBILIARIAModel.BARRIO">
               <MappingFragment StoreEntitySet="BARRIO">
@@ -742,7 +710,8 @@
               <MappingFragment StoreEntitySet="CANTON">
                 <ScalarProperty Name="IDCANTON" ColumnName="IDCANTON" />
                 <ScalarProperty Name="IDPROVINCIA" ColumnName="IDPROVINCIA" />
-                <ScalarProperty Name="CANTON1" ColumnName="CANTON" />
+                <ScalarProperty Name="CODCANTON" ColumnName="CODCANTON" />
+                <ScalarProperty Name="NOMBRECANTON" ColumnName="NOMBRECANTON" />
                 <ScalarProperty Name="ESTADOCANTON" ColumnName="ESTADOCANTON" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -765,10 +734,12 @@
             <EntityTypeMapping TypeName="INMOBILIARIAModel.CLIENTE">
               <MappingFragment StoreEntitySet="CLIENTE">
                 <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+                <ScalarProperty Name="IDENTIFICACIONCLIENTE" ColumnName="IDENTIFICACIONCLIENTE" />
                 <ScalarProperty Name="NOMBRECLIENTE" ColumnName="NOMBRECLIENTE" />
                 <ScalarProperty Name="DIRECCIONCLIENTE" ColumnName="DIRECCIONCLIENTE" />
                 <ScalarProperty Name="CELULARCLIENTE" ColumnName="CELULARCLIENTE" />
                 <ScalarProperty Name="CORREOCLIENTE" ColumnName="CORREOCLIENTE" />
+                <ScalarProperty Name="ASESOR" ColumnName="ASESOR" />
                 <ScalarProperty Name="ESTADOCLIENTE" ColumnName="ESTADOCLIENTE" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -783,22 +754,12 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="LOGIN">
-            <EntityTypeMapping TypeName="INMOBILIARIAModel.LOGIN">
-              <MappingFragment StoreEntitySet="LOGIN">
-                <ScalarProperty Name="IDLOGIN" ColumnName="IDLOGIN" />
-                <ScalarProperty Name="IDROL" ColumnName="IDROL" />
-                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
-                <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
-                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="PARROQUIA">
             <EntityTypeMapping TypeName="INMOBILIARIAModel.PARROQUIA">
               <MappingFragment StoreEntitySet="PARROQUIA">
                 <ScalarProperty Name="IDPARROQUIA" ColumnName="IDPARROQUIA" />
                 <ScalarProperty Name="IDCANTON" ColumnName="IDCANTON" />
+                <ScalarProperty Name="CODPARROQUIA" ColumnName="CODPARROQUIA" />
                 <ScalarProperty Name="NOMBREPARROQUIA" ColumnName="NOMBREPARROQUIA" />
                 <ScalarProperty Name="ESTADOPARROQUIA" ColumnName="ESTADOPARROQUIA" />
               </MappingFragment>
@@ -814,6 +775,10 @@
                 <ScalarProperty Name="IDPROPIETARIO" ColumnName="IDPROPIETARIO" />
                 <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
                 <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+                <ScalarProperty Name="FECHAREGISTROPROPIEDAD" ColumnName="FECHAREGISTROPROPIEDAD" />
+                <ScalarProperty Name="FOTOPRINCIPAL" ColumnName="FOTOPRINCIPAL" />
+                <ScalarProperty Name="CALLEPRINCIPAL" ColumnName="CALLEPRINCIPAL" />
+                <ScalarProperty Name="CALLESECUNDARIA" ColumnName="CALLESECUNDARIA" />
                 <ScalarProperty Name="ESTADOPROPIEDAD" ColumnName="ESTADOPROPIEDAD" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -834,6 +799,7 @@
             <EntityTypeMapping TypeName="INMOBILIARIAModel.PROVINCIA">
               <MappingFragment StoreEntitySet="PROVINCIA">
                 <ScalarProperty Name="IDPROVINCIA" ColumnName="IDPROVINCIA" />
+                <ScalarProperty Name="CODPROVINCIA" ColumnName="CODPROVINCIA" />
                 <ScalarProperty Name="NOMBREPROVINCIA" ColumnName="NOMBREPROVINCIA" />
                 <ScalarProperty Name="ESTADOPROVINCIA" ColumnName="ESTADOPROVINCIA" />
               </MappingFragment>
@@ -852,7 +818,7 @@
             <EntityTypeMapping TypeName="INMOBILIARIAModel.TIPO_PROPIEDAD">
               <MappingFragment StoreEntitySet="TIPO_PROPIEDAD">
                 <ScalarProperty Name="IDTIPOPROPIEDAD" ColumnName="IDTIPOPROPIEDAD" />
-                <ScalarProperty Name="TIPOPROPIEDAD" ColumnName="TIPOPROPIEDAD" />
+                <ScalarProperty Name="NOMBRETIPOPROPIEDAD" ColumnName="NOMBRETIPOPROPIEDAD" />
                 <ScalarProperty Name="ESTADOTIPOPROPIEDAD" ColumnName="ESTADOTIPOPROPIEDAD" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -861,9 +827,12 @@
             <EntityTypeMapping TypeName="INMOBILIARIAModel.USUARIO">
               <MappingFragment StoreEntitySet="USUARIO">
                 <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
-                <ScalarProperty Name="IDLOGIN" ColumnName="IDLOGIN" />
+                <ScalarProperty Name="IDROL" ColumnName="IDROL" />
                 <ScalarProperty Name="NOMBREUSUARIO" ColumnName="NOMBREUSUARIO" />
                 <ScalarProperty Name="IDENTIFICACIONUSUARIO" ColumnName="IDENTIFICACIONUSUARIO" />
+                <ScalarProperty Name="CORREOUSUARIO" ColumnName="CORREOUSUARIO" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
                 <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
               </MappingFragment>
             </EntityTypeMapping>

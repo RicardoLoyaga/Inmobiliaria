@@ -14,10 +14,10 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class INMOBILIARIAEntities1 : DbContext
+    public partial class INMOBILIARIAEntities : DbContext
     {
-        public INMOBILIARIAEntities1()
-            : base("name=INMOBILIARIAEntities1")
+        public INMOBILIARIAEntities()
+            : base("name=INMOBILIARIAEntities")
         {
         }
     
@@ -31,7 +31,6 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
         public virtual DbSet<CARACTERISTICA> CARACTERISTICA { get; set; }
         public virtual DbSet<CLIENTE> CLIENTE { get; set; }
         public virtual DbSet<IMAGEN> IMAGEN { get; set; }
-        public virtual DbSet<LOGIN> LOGIN { get; set; }
         public virtual DbSet<PARROQUIA> PARROQUIA { get; set; }
         public virtual DbSet<PROPIEDAD> PROPIEDAD { get; set; }
         public virtual DbSet<PROPIETARIO> PROPIETARIO { get; set; }

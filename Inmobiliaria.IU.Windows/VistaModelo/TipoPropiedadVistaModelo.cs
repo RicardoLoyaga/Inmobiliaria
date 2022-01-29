@@ -9,7 +9,7 @@ namespace Inmobiliaria.IU.Windows.VistaModelo
     public class TipoPropiedadVistaModelo
     {
         public int IdTipoPropiedad { get; set; }
-        public string TipoPropiedad { get; set; }
+        public string NombreTipoPropiedad { get; set; }
         public int EstadoTipoPropiedad { get; set; }
     }
 }

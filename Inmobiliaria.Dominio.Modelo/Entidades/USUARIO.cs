@@ -21,13 +21,16 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
         }
     
         public int IDUSUARIO { get; set; }
-        public Nullable<int> IDLOGIN { get; set; }
+        public Nullable<int> IDROL { get; set; }
         public string NOMBREUSUARIO { get; set; }
         public string IDENTIFICACIONUSUARIO { get; set; }
+        public string CORREOUSUARIO { get; set; }
+        public string USERNAME { get; set; }
+        public string CONTRASENA { get; set; }
         public int ESTADO { get; set; }
     
-        public virtual LOGIN LOGIN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PROPIEDAD> PROPIEDAD { get; set; }
+        public virtual ROL ROL { get; set; }
     }
 }

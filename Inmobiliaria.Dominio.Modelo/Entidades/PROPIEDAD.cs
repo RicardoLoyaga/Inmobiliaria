@@ -28,6 +28,10 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
         public Nullable<int> IDPROPIETARIO { get; set; }
         public Nullable<int> IDUSUARIO { get; set; }
         public decimal PRECIO { get; set; }
+        public System.DateTime FECHAREGISTROPROPIEDAD { get; set; }
+        public string FOTOPRINCIPAL { get; set; }
+        public string CALLEPRINCIPAL { get; set; }
+        public string CALLESECUNDARIA { get; set; }
         public int ESTADOPROPIEDAD { get; set; }
     
         public virtual CARACTERISTICA CARACTERISTICA { get; set; }

@@ -9,7 +9,8 @@ namespace Inmobiliaria.IU.Windows.VistaModelo
     public class ProvinciaVistaModelo
     {
         public int IdProvincia { get; set; }
-        public string Provincia1 { get; set; }
+        public string CodProvincia { get; set; }
+        public string NombreProvincia { get; set; }
         public int EstadoProvincia { get; set; }
     }
 }

@@ -22,6 +22,7 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
     
         public int IDPARROQUIA { get; set; }
         public Nullable<int> IDCANTON { get; set; }
+        public string CODPARROQUIA { get; set; }
         public string NOMBREPARROQUIA { get; set; }
         public int ESTADOPARROQUIA { get; set; }
     

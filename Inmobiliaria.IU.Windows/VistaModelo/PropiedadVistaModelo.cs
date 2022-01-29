@@ -15,6 +15,11 @@ namespace Inmobiliaria.IU.Windows.VistaModelo
         public Nullable<int> IdPropietario { get; set; }
         public Nullable<int> IdUsuario { get; set; }
         public decimal Precio { get; set; }
+        public System.DateTime FechaRegistroPropiedad { get; set; }
+        public string FotoPrincipal { get; set; }
+        public string CallePrincipal { get; set; }
+        public string CalleSecundaria { get; set; }
         public int EstadoPropiedad { get; set; }
+       
     }
 }

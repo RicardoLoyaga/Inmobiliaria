@@ -22,6 +22,7 @@ namespace Inmobiliaria.Dominio.Modelo.Entidades
         }
     
         public int IDPROVINCIA { get; set; }
+        public string CODPROVINCIA { get; set; }
         public string NOMBREPROVINCIA { get; set; }
         public int ESTADOPROVINCIA { get; set; }
     
