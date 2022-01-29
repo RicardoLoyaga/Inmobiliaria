@@ -45,6 +45,8 @@
             this.btnCancelar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.cbxEstadoCliente = new MaterialSkin.Controls.MaterialCheckBox();
             this.txtIdCliente = new MaterialSkin.Controls.MaterialLabel();
+            this.lblAsesor = new MaterialSkin.Controls.MaterialLabel();
+            this.txtAsesor = new MaterialSkin.Controls.MaterialSingleLineTextField();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +70,7 @@
             this.lblIdentificacion.Depth = 0;
             this.lblIdentificacion.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblIdentificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblIdentificacion.Location = new System.Drawing.Point(395, 75);
+            this.lblIdentificacion.Location = new System.Drawing.Point(6, 103);
             this.lblIdentificacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIdentificacion.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblIdentificacion.Name = "lblIdentificacion";
@@ -82,7 +84,7 @@
             this.lblNombre.Depth = 0;
             this.lblNombre.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNombre.Location = new System.Drawing.Point(41, 100);
+            this.lblNombre.Location = new System.Drawing.Point(42, 136);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNombre.Name = "lblNombre";
@@ -96,7 +98,7 @@
             this.lblDireccion.Depth = 0;
             this.lblDireccion.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDireccion.Location = new System.Drawing.Point(33, 127);
+            this.lblDireccion.Location = new System.Drawing.Point(32, 166);
             this.lblDireccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDireccion.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblDireccion.Name = "lblDireccion";
@@ -110,7 +112,7 @@
             this.lblTelefono.Depth = 0;
             this.lblTelefono.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTelefono.Location = new System.Drawing.Point(423, 100);
+            this.lblTelefono.Location = new System.Drawing.Point(37, 194);
             this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTelefono.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTelefono.Name = "lblTelefono";
@@ -124,7 +126,7 @@
             this.lblEmail.Depth = 0;
             this.lblEmail.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEmail.Location = new System.Drawing.Point(58, 154);
+            this.lblEmail.Location = new System.Drawing.Point(58, 224);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEmail.Name = "lblEmail";
@@ -138,7 +140,7 @@
             this.lblEstadoCliente.Depth = 0;
             this.lblEstadoCliente.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblEstadoCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEstadoCliente.Location = new System.Drawing.Point(437, 153);
+            this.lblEstadoCliente.Location = new System.Drawing.Point(49, 287);
             this.lblEstadoCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEstadoCliente.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEstadoCliente.Name = "lblEstadoCliente";
@@ -150,15 +152,15 @@
             // 
             this.txtIdentificacion.Depth = 0;
             this.txtIdentificacion.Hint = "";
-            this.txtIdentificacion.Location = new System.Drawing.Point(502, 75);
-            this.txtIdentificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdentificacion.Location = new System.Drawing.Point(120, 99);
+            this.txtIdentificacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdentificacion.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtIdentificacion.Name = "txtIdentificacion";
             this.txtIdentificacion.PasswordChar = '\0';
             this.txtIdentificacion.SelectedText = "";
             this.txtIdentificacion.SelectionLength = 0;
             this.txtIdentificacion.SelectionStart = 0;
-            this.txtIdentificacion.Size = new System.Drawing.Size(144, 23);
+            this.txtIdentificacion.Size = new System.Drawing.Size(628, 23);
             this.txtIdentificacion.TabIndex = 2;
             this.txtIdentificacion.UseSystemPasswordChar = false;
             // 
@@ -166,15 +168,15 @@
             // 
             this.txtNombre.Depth = 0;
             this.txtNombre.Hint = "";
-            this.txtNombre.Location = new System.Drawing.Point(109, 97);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Location = new System.Drawing.Point(119, 132);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.SelectedText = "";
             this.txtNombre.SelectionLength = 0;
             this.txtNombre.SelectionStart = 0;
-            this.txtNombre.Size = new System.Drawing.Size(310, 23);
+            this.txtNombre.Size = new System.Drawing.Size(629, 23);
             this.txtNombre.TabIndex = 3;
             this.txtNombre.UseSystemPasswordChar = false;
             // 
@@ -182,15 +184,15 @@
             // 
             this.txtDireccion.Depth = 0;
             this.txtDireccion.Hint = "";
-            this.txtDireccion.Location = new System.Drawing.Point(109, 125);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Location = new System.Drawing.Point(119, 162);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.PasswordChar = '\0';
             this.txtDireccion.SelectedText = "";
             this.txtDireccion.SelectionLength = 0;
             this.txtDireccion.SelectionStart = 0;
-            this.txtDireccion.Size = new System.Drawing.Size(537, 23);
+            this.txtDireccion.Size = new System.Drawing.Size(629, 23);
             this.txtDireccion.TabIndex = 5;
             this.txtDireccion.UseSystemPasswordChar = false;
             // 
@@ -198,15 +200,15 @@
             // 
             this.txtTelefono.Depth = 0;
             this.txtTelefono.Hint = "";
-            this.txtTelefono.Location = new System.Drawing.Point(502, 100);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Location = new System.Drawing.Point(119, 190);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.SelectedText = "";
             this.txtTelefono.SelectionLength = 0;
             this.txtTelefono.SelectionStart = 0;
-            this.txtTelefono.Size = new System.Drawing.Size(144, 23);
+            this.txtTelefono.Size = new System.Drawing.Size(629, 23);
             this.txtTelefono.TabIndex = 4;
             this.txtTelefono.UseSystemPasswordChar = false;
             // 
@@ -214,34 +216,34 @@
             // 
             this.txtEmail.Depth = 0;
             this.txtEmail.Hint = "";
-            this.txtEmail.Location = new System.Drawing.Point(109, 153);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Location = new System.Drawing.Point(119, 220);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.SelectedText = "";
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
-            this.txtEmail.Size = new System.Drawing.Size(323, 23);
+            this.txtEmail.Size = new System.Drawing.Size(629, 23);
             this.txtEmail.TabIndex = 6;
             this.txtEmail.UseSystemPasswordChar = false;
             // 
             // dgvCliente
             // 
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Location = new System.Drawing.Point(39, 182);
-            this.dgvCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvCliente.Location = new System.Drawing.Point(49, 333);
+            this.dgvCliente.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.RowHeadersWidth = 62;
             this.dgvCliente.RowTemplate.Height = 28;
-            this.dgvCliente.Size = new System.Drawing.Size(597, 114);
+            this.dgvCliente.Size = new System.Drawing.Size(699, 194);
             this.dgvCliente.TabIndex = 8;
             // 
             // btnGuardar
             // 
             this.btnGuardar.Depth = 0;
-            this.btnGuardar.Location = new System.Drawing.Point(243, 309);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(306, 283);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Primary = true;
@@ -254,8 +256,8 @@
             // btnCancelar
             // 
             this.btnCancelar.Depth = 0;
-            this.btnCancelar.Location = new System.Drawing.Point(347, 309);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Location = new System.Drawing.Point(477, 283);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Primary = true;
@@ -270,7 +272,7 @@
             this.cbxEstadoCliente.AutoSize = true;
             this.cbxEstadoCliente.Depth = 0;
             this.cbxEstadoCliente.Font = new System.Drawing.Font("Roboto", 10F);
-            this.cbxEstadoCliente.Location = new System.Drawing.Point(502, 149);
+            this.cbxEstadoCliente.Location = new System.Drawing.Point(120, 283);
             this.cbxEstadoCliente.Margin = new System.Windows.Forms.Padding(0);
             this.cbxEstadoCliente.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbxEstadoCliente.MouseState = MaterialSkin.MouseState.HOVER;
@@ -293,11 +295,41 @@
             this.txtIdCliente.Size = new System.Drawing.Size(0, 19);
             this.txtIdCliente.TabIndex = 18;
             // 
+            // lblAsesor
+            // 
+            this.lblAsesor.AutoSize = true;
+            this.lblAsesor.Depth = 0;
+            this.lblAsesor.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblAsesor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblAsesor.Location = new System.Drawing.Point(48, 255);
+            this.lblAsesor.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAsesor.Name = "lblAsesor";
+            this.lblAsesor.Size = new System.Drawing.Size(61, 19);
+            this.lblAsesor.TabIndex = 19;
+            this.lblAsesor.Text = "Asesor:";
+            // 
+            // txtAsesor
+            // 
+            this.txtAsesor.Depth = 0;
+            this.txtAsesor.Hint = "";
+            this.txtAsesor.Location = new System.Drawing.Point(119, 251);
+            this.txtAsesor.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtAsesor.Name = "txtAsesor";
+            this.txtAsesor.PasswordChar = '\0';
+            this.txtAsesor.SelectedText = "";
+            this.txtAsesor.SelectionLength = 0;
+            this.txtAsesor.SelectionStart = 0;
+            this.txtAsesor.Size = new System.Drawing.Size(629, 23);
+            this.txtAsesor.TabIndex = 20;
+            this.txtAsesor.UseSystemPasswordChar = false;
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 367);
+            this.ClientSize = new System.Drawing.Size(805, 549);
+            this.Controls.Add(this.txtAsesor);
+            this.Controls.Add(this.lblAsesor);
             this.Controls.Add(this.txtIdCliente);
             this.Controls.Add(this.cbxEstadoCliente);
             this.Controls.Add(this.btnCancelar);
@@ -315,7 +347,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblIdentificacion);
             this.Controls.Add(this.lblIdCliente);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmCliente";
             this.Text = "Cliente";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
@@ -344,5 +376,7 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelar;
         private MaterialSkin.Controls.MaterialCheckBox cbxEstadoCliente;
         private MaterialSkin.Controls.MaterialLabel txtIdCliente;
+        private MaterialSkin.Controls.MaterialLabel lblAsesor;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtAsesor;
     }
 }

@@ -17,6 +17,17 @@ namespace Inmobiliaria.IU.Windows.Formulario
     {
         private PropiedadControlador propiedadControlador;
         private PropiedadVistaModelo propiedadVistaModelo;
+
+        private static FrmPropiedad instancia = null;
+        public static FrmPropiedad ValidaForm()
+        {
+            if (instancia == null)
+            {
+                instancia = new FrmPropiedad();
+                return instancia;
+            }
+            return instancia;
+        }
         public FrmPropiedad()
         {
             InitializeComponent();
@@ -38,11 +49,11 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private void btnGuardarPropiedad_Click(object sender, EventArgs e)
         {
             propiedadVistaModelo = new PropiedadVistaModelo();
-            propiedadVistaModelo.IdPropietario = int.Parse(cboPropietario.Text);
-            propiedadVistaModelo.IdCaracteristica = int.Parse(cboCaracteristica.Text);
+            //propiedadVistaModelo.IdPropietario = int.Parse(cboPropietario.Text);
+            //propiedadVistaModelo.IdCaracteristica = int.Parse(cboCaracteristica.Text);
             propiedadVistaModelo.IdProvincia = int.Parse(cboProvincia.Text);
             propiedadVistaModelo.IdTipoPropiedad = int.Parse(cboTipoPropiedad.Text);
-            propiedadVistaModelo.IdUsuario = int.Parse(cboUsuarioPropiedad.Text);
+            //propiedadVistaModelo.IdUsuario = int.Parse(cboUsuarioPropiedad.Text);
             propiedadVistaModelo.Precio = decimal.Parse(txtPrecio.Text);
             
             if (cbxEstadoPropiedad.Checked)
@@ -100,11 +111,11 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private void actualizarForm()
         {
             txtIdPropiedad.Text = "";
-            cboCaracteristica.Text = "";
-            cboPropietario.Text = "";
+            //cboCaracteristica.Text = "";
+            //cboPropietario.Text = "";
             cboProvincia.Text = "";
             cboTipoPropiedad.Text = "";
-            cboUsuarioPropiedad.Text = "";
+            //cboUsuarioPropiedad.Text = "";
             txtPrecio.Text = "";
             cbxEstadoPropiedad.Text = "";
         }

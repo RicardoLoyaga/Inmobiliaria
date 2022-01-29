@@ -17,6 +17,17 @@ namespace Inmobiliaria.IU.Windows.Formulario
     {
         private ClienteControlador clienteControlador;
         private ClienteVistaModelo clienteVistaModelo;
+
+        private static FrmCliente instancia = null;
+        public static FrmCliente ValidaForm()
+        {
+            if (instancia == null)
+            {
+                instancia = new FrmCliente();
+                return instancia;
+            }
+            return instancia;
+        }
         public FrmCliente()
         {
             InitializeComponent();
