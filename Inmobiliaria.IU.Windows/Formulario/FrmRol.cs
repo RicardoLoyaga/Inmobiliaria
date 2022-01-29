@@ -33,7 +33,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             rolVistaModelo = new RolVistaModelo();
-            rolVistaModelo.Rol1 = txtRol.Text;
+            rolVistaModelo.NombreRol = txtRol.Text;
 
             if (cbxEstadoRol.Checked)
             {
@@ -44,9 +44,9 @@ namespace Inmobiliaria.IU.Windows.Formulario
                 rolVistaModelo.EstadoRol = 0;
             }
 
-            if (!txtIdRol.Text.Equals(""))
+            if (!txtIdRol2.Text.Equals(""))
             {
-                rolVistaModelo.IdRol = int.Parse(txtIdRol.Text);
+                rolVistaModelo.IdRol = int.Parse(txtIdRol2.Text);
                 Actualizar();
             }
             else
@@ -77,9 +77,9 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void actualizarForm()
         {
-            txtIdRol.Text = "";
+            txtIdRol2.Text = "";
             txtRol.Text = "";
-            cbxEstadoRol.Text = "";
+            cbxEstadoRol.Checked=false;
         }
 
         private void Actualizar()

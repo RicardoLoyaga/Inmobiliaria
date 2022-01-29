@@ -17,8 +17,11 @@ namespace Inmobiliaria.IU.Windows.Formulario
     {
         private PropiedadControlador propiedadControlador;
         private PropiedadVistaModelo propiedadVistaModelo;
+        private CaracteristicaControlador caracteristicaControlador;
+        private CaracteristicaVistaModelo caracteristicaVistaModelo;
 
         private static FrmPropiedad instancia = null;
+
         public static FrmPropiedad ValidaForm()
         {
             if (instancia == null)
@@ -33,6 +36,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             InitializeComponent();
 
             propiedadControlador = new PropiedadControlador();
+            caracteristicaControlador = new CaracteristicaControlador();
 
             MaterialSkinManager skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
@@ -49,12 +53,15 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private void btnGuardarPropiedad_Click(object sender, EventArgs e)
         {
             propiedadVistaModelo = new PropiedadVistaModelo();
-            //propiedadVistaModelo.IdPropietario = int.Parse(cboPropietario.Text);
-            //propiedadVistaModelo.IdCaracteristica = int.Parse(cboCaracteristica.Text);
-            propiedadVistaModelo.IdProvincia = int.Parse(cboProvincia.Text);
-            propiedadVistaModelo.IdTipoPropiedad = int.Parse(cboTipoPropiedad.Text);
-            //propiedadVistaModelo.IdUsuario = int.Parse(cboUsuarioPropiedad.Text);
+            propiedadVistaModelo.IdProvincia = int.Parse(cboProvincia.SelectedValue.ToString());
+            propiedadVistaModelo.IdTipoPropiedad = int.Parse(cboTipoPropiedad.SelectedValue.ToString());
+            //propiedadVistaModelo.IdCaracteristica= int.Parse(cbo.SelectedValue.ToString());
+            //propiedadVistaModelo.IdPropietario = int.Parse()
             propiedadVistaModelo.Precio = decimal.Parse(txtPrecio.Text);
+            propiedadVistaModelo.CallePrincipal = txtCallePrincipal.Text;
+            propiedadVistaModelo.CalleSecundaria = txtCalleSecundaria.Text;
+            propiedadVistaModelo.FechaRegistroPropiedad = dtpFechaRegistro.Value;
+            propiedadVistaModelo.FotoPrincipal = picFoto.ImageLocation;
             
             if (cbxEstadoPropiedad.Checked)
             {
@@ -74,7 +81,52 @@ namespace Inmobiliaria.IU.Windows.Formulario
             {
                 Insertar();
             }
+
+            caracteristicaVistaModelo.MetrosCuadrados = int.Parse(txtMetros.Text);
+            caracteristicaVistaModelo.Plantas = int.Parse(txtNroPlantas.Text);
+            caracteristicaVistaModelo.Habitaciones = decimal.Parse(txtHabitaciones.Text);
+            caracteristicaVistaModelo.Banios = decimal.Parse(txtNroBanios.Text);
+            caracteristicaVistaModelo.Parqueaderos = int.Parse(txtParqueaderos.Text);
+            caracteristicaVistaModelo.Servicios = txtServicios.Text;
+            caracteristicaVistaModelo.Otros = txtOtros.Text;
+
+            if (!txtIdCaracteristica.Text.Equals(""))
+            {
+                caracteristicaVistaModelo.IdCaracteristica = int.Parse(txtIdCaracteristica.Text);
+                ActualizarCaracteristica();
+            }
+            else
+            {
+                InsertarCaracteristica();
+            }
+
             ListarPropiedad();
+        }
+
+        private void InsertarCaracteristica()
+        {
+            if (caracteristicaControlador.InsertarCaracteristica(caracteristicaVistaModelo))
+            {
+                MessageBox.Show("Registro guardado exitosamente!!");
+                actualizarForm();
+            }
+            else
+            {
+                MessageBox.Show("!Error al insertar la Caracteristica!");
+            }
+        }
+
+        private void ActualizarCaracteristica()
+        {
+            if (caracteristicaControlador.ActualizarCaracteristica(caracteristicaVistaModelo))
+            {
+                MessageBox.Show("Registro guardado exitosamente!!");
+                actualizarForm();
+            }
+            else
+            {
+                MessageBox.Show("!Error al actualizar la Caracteristica!");
+            }
         }
 
         private void ListarPropiedad()
@@ -110,14 +162,107 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void actualizarForm()
         {
-            txtIdPropiedad.Text = "";
-            //cboCaracteristica.Text = "";
-            //cboPropietario.Text = "";
-            cboProvincia.Text = "";
-            cboTipoPropiedad.Text = "";
-            //cboUsuarioPropiedad.Text = "";
-            txtPrecio.Text = "";
-            cbxEstadoPropiedad.Text = "";
+            cboProvincia.ValueMember = string.Empty;
+            cboCanton.ValueMember = string.Empty;
+            cboParroquia.ValueMember = string.Empty;
+            cboBarrio.ValueMember = string.Empty;
+            txtCallePrincipal.Text = string.Empty;
+            txtCalleSecundaria.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
+            dtpFechaRegistro.Value = DateTime.Today;
+            picFoto.Image = null;
+        }
+
+        private void FrmPropiedad_Load(object sender, EventArgs e)
+        {
+            ListarPropiedad();
+            cargarProvincia();
+            cargarTipoPropiedad();
+        }
+
+        public void cargarProvincia()
+        {
+            cboProvincia.DataSource = propiedadControlador.poblarCboProvincia();
+            cboProvincia.DisplayMember = "NombreProvincia";
+            cboProvincia.ValueMember = "IdProvincia";
+        }
+
+        public void cargarCanton(int id)
+        {
+            //cboCanton.DataSource = propiedadControlador.poblarCboCanton(int.Parse(cboProvincia.SelectedValue.ToString()));
+            cboCanton.DataSource = propiedadControlador.poblarCboCanton(id);
+            cboCanton.DisplayMember = "NombreCanton";
+            cboCanton.ValueMember = "IdCanton";
+        }
+
+        public void cargarParroquia(int idCa)
+        {
+            //cboCanton.DataSource = propiedadControlador.poblarCboCanton(int.Parse(cboProvincia.SelectedValue.ToString()));
+            cboParroquia.DataSource = propiedadControlador.poblarCboParroquia(idCa);
+            cboParroquia.DisplayMember = "NombreParroquia";
+            cboParroquia.ValueMember = "IdParroquia";
+        }
+
+        public void cargarBarrio(int idPar)
+        {
+            //cboCanton.DataSource = propiedadControlador.poblarCboCanton(int.Parse(cboProvincia.SelectedValue.ToString()));
+            cboBarrio.DataSource = propiedadControlador.poblarCboBarrio(idPar);
+            cboBarrio.DisplayMember = "Barrio1";
+            cboBarrio.ValueMember = "IdBarrio";
+        }
+
+        public void cargarTipoPropiedad()
+        {
+            cboTipoPropiedad.DataSource = propiedadControlador.poblarCboTipoPropiedad();
+            cboTipoPropiedad.DisplayMember = "NombreTipoPropiedad";
+            cboTipoPropiedad.ValueMember = "IdTipoPropiedad";
+        }
+
+        private void cboProvincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idProv = int.Parse(cboProvincia.SelectedValue.ToString());
+                cargarCanton(idProv);
+            }
+            catch (FormatException)
+            {
+            }
+            
+        }
+
+        private void cboCanton_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idCanton = int.Parse(cboCanton.SelectedValue.ToString());
+                cargarParroquia(idCanton);
+            }
+            catch (FormatException)
+            {
+            }
+        }
+
+        private void btnCargarImagen_Click(object sender, EventArgs e)
+        {
+            ofdFoto.FileName = string.Empty;
+            if (ofdFoto.ShowDialog()==DialogResult.OK)
+            {
+                picFoto.Load(ofdFoto.FileName);
+            }
+            ofdFoto.FileName = string.Empty;
+        }
+
+        private void cboParroquia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idParroquia = int.Parse(cboParroquia.SelectedValue.ToString());
+                cargarBarrio(idParroquia);
+            }
+            catch (FormatException)
+            {
+            }
         }
     }
 }

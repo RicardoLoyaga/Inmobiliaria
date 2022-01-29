@@ -14,7 +14,7 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
         {
             try
             {
-                using (var context = new INMOBILIARIAEntities1())
+                using (var context = new INMOBILIARIAEntities())
                 {
                     context.Set<TEntity>().Add(entity);
                     context.SaveChanges();
@@ -31,7 +31,7 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
         {
             try
             {
-                using (var context = new INMOBILIARIAEntities1())
+                using (var context = new INMOBILIARIAEntities())
                 {
                     var entity = context.Set<TEntity>().Find(id);
                     context.Set<TEntity>().Remove(entity);
@@ -49,7 +49,7 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
         {
             try
             {
-                using (var context = new INMOBILIARIAEntities1())
+                using (var context = new INMOBILIARIAEntities())
                 {
                     return context.Set<TEntity>().ToList();
                 }
@@ -65,7 +65,7 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
         {
             try
             {
-                using (var context = new INMOBILIARIAEntities1())
+                using (var context = new INMOBILIARIAEntities())
                 {
                     return context.Set<TEntity>().Find(id);
                 }
@@ -81,7 +81,7 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
         {
             try
             {
-                using (var context = new INMOBILIARIAEntities1())
+                using (var context = new INMOBILIARIAEntities())
                 {
                     context.Entry(entity).State = EntityState.Modified; ;
                     context.SaveChanges();

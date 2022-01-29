@@ -18,6 +18,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private UsuarioControlador usuarioControlador;
         private UsuarioVistaModelo usuarioVistaModelo;
+        private UtilControlador utilControlador;
 
         private static FrmUsuario instancia = null;
         public static FrmUsuario ValidaForm()
@@ -50,8 +51,13 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             usuarioVistaModelo = new UsuarioVistaModelo();
-            usuarioVistaModelo.NombreUsuario = txtUsuario.Text;
-            usuarioVistaModelo.IdentificacionUsuario = txtIdentificacion.Text;
+            usuarioVistaModelo.NombreUsuario = txtUsuario.Text.Trim();
+            usuarioVistaModelo.IdentificacionUsuario = txtIdentificacion.Text.Trim();
+            usuarioVistaModelo.CorreoUsuario = txtCorreoUsuario.Text.Trim();
+            usuarioVistaModelo.Username = txtUsername.Text.Trim();
+            usuarioVistaModelo.Contrasena = usuarioControlador.Encriptar(txtContrasena.Text.Trim());
+            usuarioVistaModelo.IdRol = int.Parse(cboRolUsuario.SelectedValue.ToString());
+            
             if (cbxEstadoUsuario.Checked)
             {
                 usuarioVistaModelo.Estado = 1;
@@ -106,15 +112,31 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void actualizarForm()
         {
-            txtIdUsuario.Text = "";
-            txtUsuario.Text = "";
-            txtIdentificacion.Text = "";
-            cbxEstadoUsuario.Text = "";
+            txtIdUsuario.Text = string.Empty;
+            txtUsuario.Text = string.Empty;
+            txtIdentificacion.Text = string.Empty;
+            txtCorreoUsuario.Text = string.Empty;
+            txtUsername.Text = string.Empty;
+            txtContrasena.Text = string.Empty;
+            cbxEstadoUsuario.Checked=false;
         }
 
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
             ListarUsuarios();
+            cboRolUsuario.DataSource = usuarioControlador.poblarCboRol();
+            cboRolUsuario.DisplayMember = "NombreRol";
+            cboRolUsuario.ValueMember = "IdRol";
+        }
+
+        private void dgvUsuario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIdUsuario.Text = dgvUsuario.CurrentRow.Cells["idUsuario"].Value.ToString();
+            txtUsuario.Text = dgvUsuario.CurrentRow.Cells["NombreUsuario"].Value.ToString();
+            txtIdentificacion.Text = dgvUsuario.CurrentRow.Cells["IdentificacionUsuario"].Value.ToString();
+            txtCorreoUsuario.Text = dgvUsuario.CurrentRow.Cells["CorreoUsuario"].Value.ToString();
+            txtUsername.Text = dgvUsuario.CurrentRow.Cells["Username"].Value.ToString();
+            //cboRolUsuario.ValueMember = dgvUsuario.CurrentRow.Cells["IdRol"].Value.ToString();
         }
     }
 }

@@ -46,7 +46,6 @@
     <Compile Include="ClaseServicioEntidades\CaracteristicaServicio.cs" />
     <Compile Include="ClaseServicioEntidades\ClienteServicio.cs" />
     <Compile Include="ClaseServicioEntidades\ImagenServicio.cs" />
-    <Compile Include="ClaseServicioEntidades\LoginServicio.cs" />
     <Compile Include="ClaseServicioEntidades\ParroquiaServicio.cs" />
     <Compile Include="ClaseServicioEntidades\PropiedadServicio.cs" />
     <Compile Include="ClaseServicioEntidades\PropietarioServicio.cs" />

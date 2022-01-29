@@ -64,7 +64,6 @@
     <Compile Include="ControladorAplicacion\CaracteristicaControlador.cs" />
     <Compile Include="ControladorAplicacion\ClienteControlador.cs" />
     <Compile Include="ControladorAplicacion\ImagenControlador.cs" />
-    <Compile Include="ControladorAplicacion\LoginControlador.cs" />
     <Compile Include="ControladorAplicacion\ParroquiaControlador.cs" />
     <Compile Include="ControladorAplicacion\PropiedadControlador.cs" />
     <Compile Include="ControladorAplicacion\PropietarioControlador.cs" />
@@ -96,12 +95,6 @@
     </Compile>
     <Compile Include="Formulario\FrmInciarSesion.Designer.cs">
       <DependentUpon>FrmInciarSesion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formulario\FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formulario\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulario\FrmMenu.cs">
       <SubType>Form</SubType>
@@ -152,7 +145,6 @@
     <Compile Include="VistaModelo\CaracteristicaVistaModelo.cs" />
     <Compile Include="VistaModelo\ClienteVistaModelo.cs" />
     <Compile Include="VistaModelo\ImagenVistaModelo.cs" />
-    <Compile Include="VistaModelo\LoginVistaModelo.cs" />
     <Compile Include="VistaModelo\ParroquiaVistaModelo.cs" />
     <Compile Include="VistaModelo\PropiedadVistaModelo.cs" />
     <Compile Include="VistaModelo\PropietarioVistaModelo.cs" />
@@ -171,9 +163,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FrmInciarSesion.resx">
       <DependentUpon>FrmInciarSesion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formulario\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>

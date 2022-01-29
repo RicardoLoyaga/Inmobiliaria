@@ -38,7 +38,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             tipoPropiedadVistaModelo = new TipoPropiedadVistaModelo();
-            tipoPropiedadVistaModelo.TipoPropiedad = txtTipoPropiedad.Text;
+            tipoPropiedadVistaModelo.NombreTipoPropiedad = txtTipoPropiedad.Text;
 
             if (cbxEstadoTipoPropiedad.Checked)
             {
@@ -81,9 +81,9 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void actualizarForm()
         {
-            txtIdTipoPropiedad.Text = "";
-            txtTipoPropiedad.Text = "";
-            cbxEstadoTipoPropiedad.Text = "";
+            txtIdTipoPropiedad.Text = string.Empty;
+            txtTipoPropiedad.Text = string.Empty;
+            cbxEstadoTipoPropiedad.Checked = false;
         }
 
         private void Actualizar()

@@ -23,7 +23,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             CANTON canton = new CANTON();
             try
             {
-                canton.CANTON1 = cantonVistaModelo.Canton1;
+                canton.NOMBRECANTON = cantonVistaModelo.NombreCanton;
                 canton.ESTADOCANTON = cantonVistaModelo.EstadoCanton;
                 cantonServicio.InsertarCanton(canton);
                 return true;
@@ -40,7 +40,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             CANTON canton = new CANTON();
             try
             {
-                canton.CANTON1 = cantonVistaModelo.Canton1;
+                canton.NOMBRECANTON = cantonVistaModelo.NombreCanton;
                 canton.ESTADOCANTON = cantonVistaModelo.EstadoCanton;
                 cantonServicio.ModificarCanton(canton);
                 return true;
@@ -63,7 +63,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
                 {
                     IdCanton = item.IDCANTON,
                     IdProvincia = item.IDPROVINCIA,
-                    Canton1 = item.CANTON1,
+                    NombreCanton = item.NOMBRECANTON,
                     EstadoCanton = item.ESTADOCANTON
                 });
             }

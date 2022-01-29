@@ -47,7 +47,6 @@
     <Compile Include="Abstracciones\ICaracteristicaRepositorio.cs" />
     <Compile Include="Abstracciones\IClienteRepositorio.cs" />
     <Compile Include="Abstracciones\IImagenRepositorio.cs" />
-    <Compile Include="Abstracciones\ILoginRepositorio.cs" />
     <Compile Include="Abstracciones\IUtilRepositorio.cs" />
     <Compile Include="Abstracciones\IParroquiaRepositorio.cs" />
     <Compile Include="Abstracciones\IPoblarRepositorio.cs" />

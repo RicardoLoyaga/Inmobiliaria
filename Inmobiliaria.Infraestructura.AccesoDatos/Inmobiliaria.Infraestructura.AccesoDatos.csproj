@@ -136,7 +136,6 @@
     <Compile Include="Repositorio\CaracteristicaRepositorio.cs" />
     <Compile Include="Repositorio\ClienteRepositorio.cs" />
     <Compile Include="Repositorio\ImagenRepositorio.cs" />
-    <Compile Include="Repositorio\LoginRepositorio.cs" />
     <Compile Include="Repositorio\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

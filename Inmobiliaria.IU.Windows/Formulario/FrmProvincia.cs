@@ -32,7 +32,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private void btnGuardarProvincia_Click(object sender, EventArgs e)
         {
             provinciaVistaModelo = new ProvinciaVistaModelo();
-            provinciaVistaModelo.Provincia1 = TxtProvincia.Text;
+            provinciaVistaModelo.NombreProvincia = TxtProvincia.Text;
 
             if (cbxEstadoProvincia.Checked)
             {

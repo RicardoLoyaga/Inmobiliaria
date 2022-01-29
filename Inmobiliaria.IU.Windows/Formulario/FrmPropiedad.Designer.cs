@@ -70,8 +70,12 @@
             this.lblFotoPrincipal = new MaterialSkin.Controls.MaterialLabel();
             this.btnCargarImagen = new System.Windows.Forms.Button();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
+            this.ofdFoto = new System.Windows.Forms.OpenFileDialog();
+            this.picFoto = new System.Windows.Forms.PictureBox();
+            this.txtIdCaracteristica = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropiedad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIdPropiedad
@@ -152,7 +156,7 @@
             this.dgvPropiedad.Name = "dgvPropiedad";
             this.dgvPropiedad.RowHeadersWidth = 62;
             this.dgvPropiedad.RowTemplate.Height = 28;
-            this.dgvPropiedad.Size = new System.Drawing.Size(731, 132);
+            this.dgvPropiedad.Size = new System.Drawing.Size(996, 132);
             this.dgvPropiedad.TabIndex = 12;
             // 
             // btnGuardarPropiedad
@@ -201,6 +205,7 @@
             this.cboProvincia.Name = "cboProvincia";
             this.cboProvincia.Size = new System.Drawing.Size(275, 21);
             this.cboProvincia.TabIndex = 5;
+            this.cboProvincia.SelectedIndexChanged += new System.EventHandler(this.cboProvincia_SelectedIndexChanged);
             // 
             // lblCanton
             // 
@@ -253,6 +258,7 @@
             this.cboCanton.Name = "cboCanton";
             this.cboCanton.Size = new System.Drawing.Size(261, 21);
             this.cboCanton.TabIndex = 6;
+            this.cboCanton.SelectedIndexChanged += new System.EventHandler(this.cboCanton_SelectedIndexChanged);
             // 
             // cboParroquia
             // 
@@ -263,6 +269,7 @@
             this.cboParroquia.Name = "cboParroquia";
             this.cboParroquia.Size = new System.Drawing.Size(275, 21);
             this.cboParroquia.TabIndex = 7;
+            this.cboParroquia.SelectedIndexChanged += new System.EventHandler(this.cboParroquia_SelectedIndexChanged);
             // 
             // cboBarrio
             // 
@@ -632,6 +639,7 @@
             this.btnCargarImagen.TabIndex = 45;
             this.btnCargarImagen.Text = "Cargar Imágen";
             this.btnCargarImagen.UseVisualStyleBackColor = false;
+            this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
             // 
             // materialLabel4
             // 
@@ -646,19 +654,46 @@
             this.materialLabel4.TabIndex = 46;
             this.materialLabel4.Text = "Fecha Registro:";
             // 
-            // dateTimePicker1
+            // dtpFechaRegistro
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(564, 211);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 47;
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(564, 211);
+            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaRegistro.TabIndex = 47;
+            // 
+            // ofdFoto
+            // 
+            this.ofdFoto.FileName = "ofdFoto";
+            // 
+            // picFoto
+            // 
+            this.picFoto.Location = new System.Drawing.Point(813, 113);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(245, 184);
+            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFoto.TabIndex = 48;
+            this.picFoto.TabStop = false;
+            // 
+            // txtIdCaracteristica
+            // 
+            this.txtIdCaracteristica.AutoSize = true;
+            this.txtIdCaracteristica.Depth = 0;
+            this.txtIdCaracteristica.Font = new System.Drawing.Font("Roboto", 11F);
+            this.txtIdCaracteristica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtIdCaracteristica.Location = new System.Drawing.Point(470, 278);
+            this.txtIdCaracteristica.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtIdCaracteristica.Name = "txtIdCaracteristica";
+            this.txtIdCaracteristica.Size = new System.Drawing.Size(0, 19);
+            this.txtIdCaracteristica.TabIndex = 49;
             // 
             // FrmPropiedad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 695);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(1070, 695);
+            this.Controls.Add(this.txtIdCaracteristica);
+            this.Controls.Add(this.picFoto);
+            this.Controls.Add(this.dtpFechaRegistro);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.btnCargarImagen);
             this.Controls.Add(this.lblFotoPrincipal);
@@ -704,7 +739,9 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPropiedad";
             this.Text = "Propiedad";
+            this.Load += new System.EventHandler(this.FrmPropiedad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropiedad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -754,6 +791,9 @@
         private MaterialSkin.Controls.MaterialLabel lblFotoPrincipal;
         private System.Windows.Forms.Button btnCargarImagen;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaRegistro;
+        private System.Windows.Forms.OpenFileDialog ofdFoto;
+        private System.Windows.Forms.PictureBox picFoto;
+        private MaterialSkin.Controls.MaterialLabel txtIdCaracteristica;
     }
 }

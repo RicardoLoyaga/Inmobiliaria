@@ -16,14 +16,16 @@ namespace Inmobiliaria.IU.Windows.Formulario
 {
     public partial class FrmInciarSesion : MaterialSkin.Controls.MaterialForm
     {
-        private LoginControlador loginControlador;
-        private LoginVistaModelo loginVistaModelo;
+        private UsuarioControlador usuarioControlador;
+        private UsuarioVistaModelo usuarioVistaModelo;
+        private UtilControlador utilControlador;
+        
         int intentos = 0;
         public FrmInciarSesion()
         {
             InitializeComponent();
 
-            loginControlador = new LoginControlador();
+            usuarioControlador = new UsuarioControlador();
 
             MaterialSkinManager skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
@@ -46,18 +48,30 @@ namespace Inmobiliaria.IU.Windows.Formulario
                     {
                         try
                         {
-                            LOGIN login = loginControlador.username(txtUsuarioInicioSesion.Text);
+                            USUARIO login = usuarioControlador.username(txtUsuarioInicioSesion.Text);
 
                             if (login != null)
                             {
-                            
-                                
-                                    if (login.USUARIO == txtUsuarioInicioSesion.Text && intentos<3)
+                                    if (login.USERNAME == txtUsuarioInicioSesion.Text && intentos<3)
                                     {
-                                        if (login.CONTRASENA == txtContrasenaInicioSesion.Text && intentos<3)
+                                        if (login.CONTRASENA == usuarioControlador.Encriptar(txtContrasenaInicioSesion.Text.Trim()) && intentos<3)
                                         {
-                                            FrmMenuPrincipal frm = new FrmMenuPrincipal();
-                                            frm.Show();
+                                            if (login.IDROL == 1)
+                                            {
+                                            FrmMenu frm = new FrmMenu();
+                                                frm.Show();
+                                            }
+                                            else if (login.IDROL == 2)
+                                            {
+                                                FrmMenu frm = new FrmMenu();
+                                                frm.Show();
+                                            }
+                                            else
+                                            {
+                                                FrmMenuPrincipal frm = new FrmMenuPrincipal();
+                                                frm.Show();
+                                            }
+                                            
                                         }
                                         else
                                         {

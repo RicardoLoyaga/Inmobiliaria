@@ -20,7 +20,7 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
         {
             try
             {
-                using (var context = new INMOBILIARIAEntities1())
+                using (var context = new INMOBILIARIAEntities())
                 {
                     return context.Set<TEntity>().ToList();
                 }
@@ -36,7 +36,7 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
         {
             try
             {
-                using (var context = new INMOBILIARIAEntities1())
+                using (var context = new INMOBILIARIAEntities())
                 {
                     return context.Set<TEntity>().ToList();
                 }

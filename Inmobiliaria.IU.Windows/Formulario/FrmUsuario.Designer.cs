@@ -105,7 +105,7 @@
             this.txtUsuario.SelectionLength = 0;
             this.txtUsuario.SelectionStart = 0;
             this.txtUsuario.Size = new System.Drawing.Size(605, 23);
-            this.txtUsuario.TabIndex = 5;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.UseSystemPasswordChar = false;
             // 
             // txtIdentificacion
@@ -121,7 +121,7 @@
             this.txtIdentificacion.SelectionLength = 0;
             this.txtIdentificacion.SelectionStart = 0;
             this.txtIdentificacion.Size = new System.Drawing.Size(605, 23);
-            this.txtIdentificacion.TabIndex = 6;
+            this.txtIdentificacion.TabIndex = 2;
             this.txtIdentificacion.UseSystemPasswordChar = false;
             // 
             // btnGuardar
@@ -133,7 +133,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Primary = true;
             this.btnGuardar.Size = new System.Drawing.Size(91, 34);
-            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -147,7 +147,7 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Primary = true;
             this.btnCancelar.Size = new System.Drawing.Size(91, 34);
-            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -160,8 +160,9 @@
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.RowHeadersWidth = 62;
             this.dgvUsuario.RowTemplate.Height = 28;
-            this.dgvUsuario.Size = new System.Drawing.Size(720, 232);
+            this.dgvUsuario.Size = new System.Drawing.Size(876, 232);
             this.dgvUsuario.TabIndex = 8;
+            this.dgvUsuario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellDoubleClick);
             // 
             // cbxEstadoUsuario
             // 
@@ -175,7 +176,7 @@
             this.cbxEstadoUsuario.Name = "cbxEstadoUsuario";
             this.cbxEstadoUsuario.Ripple = true;
             this.cbxEstadoUsuario.Size = new System.Drawing.Size(69, 30);
-            this.cbxEstadoUsuario.TabIndex = 11;
+            this.cbxEstadoUsuario.TabIndex = 6;
             this.cbxEstadoUsuario.Text = "Activo";
             this.cbxEstadoUsuario.UseVisualStyleBackColor = true;
             // 
@@ -216,7 +217,7 @@
             this.txtCorreoUsuario.SelectionLength = 0;
             this.txtCorreoUsuario.SelectionStart = 0;
             this.txtCorreoUsuario.Size = new System.Drawing.Size(605, 23);
-            this.txtCorreoUsuario.TabIndex = 14;
+            this.txtCorreoUsuario.TabIndex = 3;
             this.txtCorreoUsuario.UseSystemPasswordChar = false;
             // 
             // lblRolUsuario
@@ -266,7 +267,7 @@
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.Size = new System.Drawing.Size(605, 23);
-            this.txtUsername.TabIndex = 18;
+            this.txtUsername.TabIndex = 4;
             this.txtUsername.UseSystemPasswordChar = false;
             // 
             // materialLabel5
@@ -294,7 +295,7 @@
             this.txtContrasena.SelectionLength = 0;
             this.txtContrasena.SelectionStart = 0;
             this.txtContrasena.Size = new System.Drawing.Size(605, 23);
-            this.txtContrasena.TabIndex = 20;
+            this.txtContrasena.TabIndex = 5;
             this.txtContrasena.UseSystemPasswordChar = false;
             // 
             // lblEstado
@@ -314,7 +315,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 549);
+            this.ClientSize = new System.Drawing.Size(950, 549);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.materialLabel5);

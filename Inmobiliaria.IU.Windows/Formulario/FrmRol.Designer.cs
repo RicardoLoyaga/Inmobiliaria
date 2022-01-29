@@ -32,13 +32,12 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.lblIdRol = new MaterialSkin.Controls.MaterialLabel();
             this.lblRol = new MaterialSkin.Controls.MaterialLabel();
             this.lblEstadoRol = new MaterialSkin.Controls.MaterialLabel();
-            //this.txtIdRol = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtRol = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dgvRol = new System.Windows.Forms.DataGridView();
             this.btnGuardar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCancelar = new MaterialSkin.Controls.MaterialRaisedButton();
-            //this.txtIdRol = new MaterialSkin.Controls.MaterialLabel();
             this.cbxEstadoRol = new MaterialSkin.Controls.MaterialCheckBox();
+            this.txtIdRol2 = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRol)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,22 +80,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.lblEstadoRol.TabIndex = 2;
             this.lblEstadoRol.Text = "Estado: ";
             // 
-            // txtIdRol
-            // 
-            /*this.txtIdRol.Depth = 0;
-            this.txtIdRol.Hint = "";
-            this.txtIdRol.Location = new System.Drawing.Point(96, 93);
-            this.txtIdRol.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtIdRol.Name = "txtIdRol";
-            this.txtIdRol.PasswordChar = '\0';
-            this.txtIdRol.SelectedText = "";
-            this.txtIdRol.SelectionLength = 0;
-            this.txtIdRol.SelectionStart = 0;
-            this.txtIdRol.Size = new System.Drawing.Size(176, 23);
-            this.txtIdRol.TabIndex = 3;
-            this.txtIdRol.UseSystemPasswordChar = false;
-            this.txtIdRol.Click += new System.EventHandler(this.txtIdRol_Click);*/
-            // 
             // txtRol
             // 
             this.txtRol.Depth = 0;
@@ -111,21 +94,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtRol.Size = new System.Drawing.Size(176, 23);
             this.txtRol.TabIndex = 4;
             this.txtRol.UseSystemPasswordChar = false;
-            // 
-            // txtEstadoRol
-            // 
-            /*this.txtEstadoRol.Depth = 0;
-            this.txtEstadoRol.Hint = "";
-            this.txtEstadoRol.Location = new System.Drawing.Point(96, 172);
-            this.txtEstadoRol.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtEstadoRol.Name = "txtEstadoRol";
-            this.txtEstadoRol.PasswordChar = '\0';
-            this.txtEstadoRol.SelectedText = "";
-            this.txtEstadoRol.SelectionLength = 0;
-            this.txtEstadoRol.SelectionStart = 0;
-            this.txtEstadoRol.Size = new System.Drawing.Size(176, 23);
-            this.txtEstadoRol.TabIndex = 5;
-            this.txtEstadoRol.UseSystemPasswordChar = false;*/
             // 
             // dgvRol
             // 
@@ -162,18 +130,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtIdRol
-            // 
-            /*this.txtIdRol.AutoSize = true;
-            this.txtIdRol.Depth = 0;
-            this.txtIdRol.Font = new System.Drawing.Font("Roboto", 11F);
-            this.txtIdRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtIdRol.Location = new System.Drawing.Point(96, 97);
-            this.txtIdRol.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtIdRol.Name = "txtIdRol";
-            this.txtIdRol.Size = new System.Drawing.Size(0, 19);
-            this.txtIdRol.TabIndex = 9;*/
-            // 
             // cbxEstadoRol
             // 
             this.cbxEstadoRol.AutoSize = true;
@@ -190,19 +146,29 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.cbxEstadoRol.Text = "Activo";
             this.cbxEstadoRol.UseVisualStyleBackColor = true;
             // 
+            // txtIdRol2
+            // 
+            this.txtIdRol2.AutoSize = true;
+            this.txtIdRol2.Depth = 0;
+            this.txtIdRol2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtIdRol2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtIdRol2.Location = new System.Drawing.Point(111, 100);
+            this.txtIdRol2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtIdRol2.Name = "txtIdRol2";
+            this.txtIdRol2.Size = new System.Drawing.Size(0, 18);
+            this.txtIdRol2.TabIndex = 11;
+            // 
             // FrmRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 311);
+            this.Controls.Add(this.txtIdRol2);
             this.Controls.Add(this.cbxEstadoRol);
-            //this.Controls.Add(this.txtIdRol);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.dgvRol);
-            //this.Controls.Add(this.txtEstadoRol);
             this.Controls.Add(this.txtRol);
-            //this.Controls.Add(this.txtIdRol);
             this.Controls.Add(this.lblEstadoRol);
             this.Controls.Add(this.lblRol);
             this.Controls.Add(this.lblIdRol);
@@ -228,5 +194,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelar;
         //private MaterialSkin.Controls.MaterialLabel txtIdRol;
         private MaterialSkin.Controls.MaterialCheckBox cbxEstadoRol;
+        private MaterialSkin.Controls.MaterialLabel txtIdRol2;
     }
 }

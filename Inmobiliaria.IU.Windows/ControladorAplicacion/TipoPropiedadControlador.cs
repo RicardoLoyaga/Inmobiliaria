@@ -23,7 +23,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             TIPO_PROPIEDAD tipoPropiedad = new TIPO_PROPIEDAD();
             try
             {
-                tipoPropiedad.TIPOPROPIEDAD = tipoPropiedadVistaModelo.TipoPropiedad;
+                tipoPropiedad.NOMBRETIPOPROPIEDAD = tipoPropiedadVistaModelo.NombreTipoPropiedad;
                 tipoPropiedad.ESTADOTIPOPROPIEDAD = tipoPropiedadVistaModelo.EstadoTipoPropiedad;
                 tipoPropiedadServicio.InsertarTipoPropiedad(tipoPropiedad);
                 return true;
@@ -40,7 +40,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             TIPO_PROPIEDAD tipoPropiedad = new TIPO_PROPIEDAD();
             try
             {
-                tipoPropiedad.TIPOPROPIEDAD = tipoPropiedadVistaModelo.TipoPropiedad;
+                tipoPropiedad.NOMBRETIPOPROPIEDAD = tipoPropiedadVistaModelo.NombreTipoPropiedad;
                 tipoPropiedad.ESTADOTIPOPROPIEDAD = tipoPropiedadVistaModelo.EstadoTipoPropiedad;
                 tipoPropiedadServicio.ModificarTipoPropiedad(tipoPropiedad);
                 return true;
@@ -62,7 +62,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
                 vistaModelos.Add(new TipoPropiedadVistaModelo
                 {
                     IdTipoPropiedad = item.IDTIPOPROPIEDAD,
-                    TipoPropiedad = item.TIPOPROPIEDAD,
+                    NombreTipoPropiedad = item.NOMBRETIPOPROPIEDAD,
                     EstadoTipoPropiedad = item.ESTADOTIPOPROPIEDAD
                 });
             }

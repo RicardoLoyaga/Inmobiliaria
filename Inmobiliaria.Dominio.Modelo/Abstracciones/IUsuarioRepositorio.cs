@@ -9,5 +9,10 @@ namespace Inmobiliaria.Dominio.Modelo.Abstracciones
 {
     public interface IUsuarioRepositorio : IBaseRepositorio<USUARIO>
     {
+        List<ROL> poblarCboRol();
+
+        USUARIO username(string user);
+
+        string Encriptar(string texto);
     }
 }

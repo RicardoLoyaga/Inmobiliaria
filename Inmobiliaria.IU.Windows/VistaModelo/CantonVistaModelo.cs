@@ -11,7 +11,7 @@ namespace Inmobiliaria.IU.Windows.VistaModelo
         public int IdCanton { get; set; }
         public Nullable<int> IdProvincia { get; set; }
         public string CodCanton { get; set; }
-        public string NonmbreCanton { get; set; }
+        public string NombreCanton { get; set; }
         public int EstadoCanton { get; set; }
 
     }

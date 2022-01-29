@@ -12,6 +12,7 @@ namespace Inmobiliaria.Aplicacion.ClaseServicioEntidades
     public class UsuarioServicio
     {
         readonly IUsuarioRepositorio usuarioRepositorio;
+        readonly IUtilRepositorio utilRepositorio;
 
         public UsuarioServicio()
         {
@@ -44,6 +45,21 @@ namespace Inmobiliaria.Aplicacion.ClaseServicioEntidades
         public void EliminarUsuario(int id)
         {
             usuarioRepositorio.Delete(id);
+        }
+
+        public List<ROL> poblarCboRol()
+        {
+            return usuarioRepositorio.poblarCboRol();
+        }
+
+        public USUARIO username(string user)
+        {
+            return usuarioRepositorio.username(user);
+        }
+
+        public string Encriptar(string texto)
+        {
+            return usuarioRepositorio.Encriptar(texto);
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             PROVINCIA provincia = new PROVINCIA();
             try
             {
-                provincia.NOMBREPROVINCIA = provinciaVistaModelo.Provincia1;
+                provincia.NOMBREPROVINCIA = provinciaVistaModelo.NombreProvincia;
                 provincia.ESTADOPROVINCIA = provinciaVistaModelo.EstadoProvincia;
                 provinciaServicio.InsertarProvincia(provincia);
                 return true;
@@ -40,7 +40,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             PROVINCIA provincia = new PROVINCIA();
             try
             {
-                provincia.NOMBREPROVINCIA = provinciaVistaModelo.Provincia1;
+                provincia.NOMBREPROVINCIA = provinciaVistaModelo.NombreProvincia;
                 provincia.ESTADOPROVINCIA = provinciaVistaModelo.EstadoProvincia;
                 provinciaServicio.ModificarProvincia(provincia);
                 return true;
@@ -62,7 +62,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
                 vistaModelos.Add(new ProvinciaVistaModelo
                 {
                     IdProvincia = item.IDPROVINCIA,
-                    Provincia1 = item.NOMBREPROVINCIA,
+                    NombreProvincia = item.NOMBREPROVINCIA,
                     EstadoProvincia = item.ESTADOPROVINCIA
                 });
             }

@@ -17,8 +17,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
         }
         public string Encriptar(string texto)
         {
-
-            var resp = utilServicio.Encriptar(texto);
+            string resp = utilServicio.Encriptar(texto);
             return resp;
         }
     }
