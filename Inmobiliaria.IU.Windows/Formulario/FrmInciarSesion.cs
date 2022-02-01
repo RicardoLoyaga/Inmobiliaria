@@ -58,7 +58,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
                                         {
                                             if (login.IDROL == 1)
                                             {
-                                            FrmMenu frm = new FrmMenu();
+                                                FrmMenuPrincipal frm = new FrmMenuPrincipal();
                                                 frm.Show();
                                             }
                                             else if (login.IDROL == 2)

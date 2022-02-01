@@ -46,7 +46,12 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             try
             {
                 usuario.NOMBREUSUARIO = usuarioVistaModelo.NombreUsuario;
+                usuario.IDUSUARIO = usuarioVistaModelo.IdUsuario;
+                usuario.IDROL = usuarioVistaModelo.IdRol;
                 usuario.IDENTIFICACIONUSUARIO = usuarioVistaModelo.IdentificacionUsuario;
+                usuario.CORREOUSUARIO = usuarioVistaModelo.CorreoUsuario;
+                usuario.USERNAME = usuarioVistaModelo.Username;
+                usuario.CONTRASENA = usuarioVistaModelo.Contrasena;
                 usuario.ESTADO = usuarioVistaModelo.Estado;
                 usuarioServicio.ModificarUsuario(usuario);
                 return true;

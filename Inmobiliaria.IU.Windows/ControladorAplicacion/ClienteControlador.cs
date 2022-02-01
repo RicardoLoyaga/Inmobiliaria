@@ -24,9 +24,11 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             try
             {
                 cliente.NOMBRECLIENTE = clienteVistaModelo.NombreCliente;
+                cliente.IDENTIFICACIONCLIENTE = clienteVistaModelo.IdentificacionCliente;
                 cliente.DIRECCIONCLIENTE = clienteVistaModelo.DireccionCliente;
                 cliente.CELULARCLIENTE = clienteVistaModelo.CelularCliente;
                 cliente.CORREOCLIENTE = clienteVistaModelo.CorreoCliente;
+                cliente.ASESOR = clienteVistaModelo.Asesor;
                 cliente.ESTADOCLIENTE = clienteVistaModelo.EstadoCliente;
                 clienteServicio.InsertarCliente(cliente);
                 return true;
@@ -43,6 +45,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             CLIENTE cliente = new CLIENTE();
             try
             {
+                cliente.IDCLIENTE = clienteVistaModelo.IdCliente;
                 cliente.NOMBRECLIENTE = clienteVistaModelo.NombreCliente;
                 cliente.DIRECCIONCLIENTE = clienteVistaModelo.DireccionCliente;
                 cliente.CELULARCLIENTE = clienteVistaModelo.CelularCliente;
@@ -68,14 +71,33 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
                 vistaModelos.Add(new ClienteVistaModelo
                 {
                     IdCliente = item.IDCLIENTE,
+                    IdentificacionCliente = item.IDENTIFICACIONCLIENTE,
                     NombreCliente = item.NOMBRECLIENTE,
                     DireccionCliente = item.DIRECCIONCLIENTE,
                     CelularCliente = item.CELULARCLIENTE,
                     CorreoCliente = item.CORREOCLIENTE,
+                    Asesor = item.ASESOR,
                     EstadoCliente = item.ESTADOCLIENTE
                 });
             }
             return vistaModelos;
+        }
+
+        public List<UsuarioVistaModelo> poblarCboAsesores()
+        {
+            var cliListAsesores = clienteServicio.poblarCboAsesores();
+            List<UsuarioVistaModelo> usuarioVistaModelos = new List<UsuarioVistaModelo>();
+
+            foreach (USUARIO item in cliListAsesores)
+            {
+                usuarioVistaModelos.Add(new UsuarioVistaModelo
+                {
+                    IdUsuario = item.IDUSUARIO,
+                    NombreUsuario = item.NOMBREUSUARIO
+                });
+
+            }
+            return usuarioVistaModelos;
         }
     }
 }

@@ -30,7 +30,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private void InitializeComponent()
         {
             this.lblIdCaracteristica = new MaterialSkin.Controls.MaterialLabel();
-            this.txtIdCaracteristica = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnGuardarCaracteristicas = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.lblMetros = new MaterialSkin.Controls.MaterialLabel();
@@ -48,6 +47,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.lblOtros = new MaterialSkin.Controls.MaterialLabel();
             this.txtOtros = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dgvCaracteristica = new System.Windows.Forms.DataGridView();
+            this.txtIdCaracteristica = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaracteristica)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,27 +65,11 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.lblIdCaracteristica.TabIndex = 0;
             this.lblIdCaracteristica.Text = "Id Característica:";
             // 
-            // txtIdCaracteristica
-            // 
-            this.txtIdCaracteristica.Depth = 0;
-            this.txtIdCaracteristica.Hint = "";
-            this.txtIdCaracteristica.Location = new System.Drawing.Point(157, 70);
-            this.txtIdCaracteristica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtIdCaracteristica.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtIdCaracteristica.Name = "txtIdCaracteristica";
-            this.txtIdCaracteristica.PasswordChar = '\0';
-            this.txtIdCaracteristica.SelectedText = "";
-            this.txtIdCaracteristica.SelectionLength = 0;
-            this.txtIdCaracteristica.SelectionStart = 0;
-            this.txtIdCaracteristica.Size = new System.Drawing.Size(143, 23);
-            this.txtIdCaracteristica.TabIndex = 1;
-            this.txtIdCaracteristica.UseSystemPasswordChar = false;
-            // 
             // btnGuardarCaracteristicas
             // 
             this.btnGuardarCaracteristicas.Depth = 0;
             this.btnGuardarCaracteristicas.Location = new System.Drawing.Point(232, 315);
-            this.btnGuardarCaracteristicas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardarCaracteristicas.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarCaracteristicas.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardarCaracteristicas.Name = "btnGuardarCaracteristicas";
             this.btnGuardarCaracteristicas.Primary = true;
@@ -99,7 +83,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Location = new System.Drawing.Point(336, 315);
-            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(2);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -142,7 +126,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtMetros.Depth = 0;
             this.txtMetros.Hint = "";
             this.txtMetros.Location = new System.Drawing.Point(543, 72);
-            this.txtMetros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMetros.Margin = new System.Windows.Forms.Padding(2);
             this.txtMetros.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtMetros.Name = "txtMetros";
             this.txtMetros.PasswordChar = '\0';
@@ -158,7 +142,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtNroPlantas.Depth = 0;
             this.txtNroPlantas.Hint = "";
             this.txtNroPlantas.Location = new System.Drawing.Point(157, 96);
-            this.txtNroPlantas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNroPlantas.Margin = new System.Windows.Forms.Padding(2);
             this.txtNroPlantas.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNroPlantas.Name = "txtNroPlantas";
             this.txtNroPlantas.PasswordChar = '\0';
@@ -188,7 +172,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtNroBanios.Depth = 0;
             this.txtNroBanios.Hint = "";
             this.txtNroBanios.Location = new System.Drawing.Point(543, 99);
-            this.txtNroBanios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNroBanios.Margin = new System.Windows.Forms.Padding(2);
             this.txtNroBanios.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNroBanios.Name = "txtNroBanios";
             this.txtNroBanios.PasswordChar = '\0';
@@ -218,7 +202,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtHabitaciones.Depth = 0;
             this.txtHabitaciones.Hint = "";
             this.txtHabitaciones.Location = new System.Drawing.Point(157, 123);
-            this.txtHabitaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHabitaciones.Margin = new System.Windows.Forms.Padding(2);
             this.txtHabitaciones.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtHabitaciones.Name = "txtHabitaciones";
             this.txtHabitaciones.PasswordChar = '\0';
@@ -248,7 +232,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtParqueaderos.Depth = 0;
             this.txtParqueaderos.Hint = "";
             this.txtParqueaderos.Location = new System.Drawing.Point(543, 123);
-            this.txtParqueaderos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtParqueaderos.Margin = new System.Windows.Forms.Padding(2);
             this.txtParqueaderos.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtParqueaderos.Name = "txtParqueaderos";
             this.txtParqueaderos.PasswordChar = '\0';
@@ -278,7 +262,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtServicios.Depth = 0;
             this.txtServicios.Hint = "";
             this.txtServicios.Location = new System.Drawing.Point(157, 149);
-            this.txtServicios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtServicios.Margin = new System.Windows.Forms.Padding(2);
             this.txtServicios.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtServicios.Name = "txtServicios";
             this.txtServicios.PasswordChar = '\0';
@@ -308,7 +292,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtOtros.Depth = 0;
             this.txtOtros.Hint = "";
             this.txtOtros.Location = new System.Drawing.Point(543, 151);
-            this.txtOtros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOtros.Margin = new System.Windows.Forms.Padding(2);
             this.txtOtros.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtOtros.Name = "txtOtros";
             this.txtOtros.PasswordChar = '\0';
@@ -323,18 +307,31 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             this.dgvCaracteristica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCaracteristica.Location = new System.Drawing.Point(40, 188);
-            this.dgvCaracteristica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvCaracteristica.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCaracteristica.Name = "dgvCaracteristica";
             this.dgvCaracteristica.RowHeadersWidth = 62;
             this.dgvCaracteristica.RowTemplate.Height = 28;
             this.dgvCaracteristica.Size = new System.Drawing.Size(575, 113);
             this.dgvCaracteristica.TabIndex = 9;
             // 
+            // txtIdCaracteristica
+            // 
+            this.txtIdCaracteristica.AutoSize = true;
+            this.txtIdCaracteristica.Depth = 0;
+            this.txtIdCaracteristica.Font = new System.Drawing.Font("Roboto", 11F);
+            this.txtIdCaracteristica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtIdCaracteristica.Location = new System.Drawing.Point(159, 73);
+            this.txtIdCaracteristica.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtIdCaracteristica.Name = "txtIdCaracteristica";
+            this.txtIdCaracteristica.Size = new System.Drawing.Size(0, 19);
+            this.txtIdCaracteristica.TabIndex = 18;
+            // 
             // FrmCaracteristica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(678, 367);
+            this.Controls.Add(this.txtIdCaracteristica);
             this.Controls.Add(this.dgvCaracteristica);
             this.Controls.Add(this.txtOtros);
             this.Controls.Add(this.lblOtros);
@@ -352,9 +349,8 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.Controls.Add(this.lblMetros);
             this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.btnGuardarCaracteristicas);
-            this.Controls.Add(this.txtIdCaracteristica);
             this.Controls.Add(this.lblIdCaracteristica);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmCaracteristica";
             this.Text = "Característica";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaracteristica)).EndInit();
@@ -366,7 +362,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
         #endregion
 
         private MaterialSkin.Controls.MaterialLabel lblIdCaracteristica;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtIdCaracteristica;
         private MaterialSkin.Controls.MaterialRaisedButton btnGuardarCaracteristicas;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialLabel lblMetros;
@@ -384,5 +379,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private MaterialSkin.Controls.MaterialLabel lblOtros;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtOtros;
         private System.Windows.Forms.DataGridView dgvCaracteristica;
+        private MaterialSkin.Controls.MaterialLabel txtIdCaracteristica;
     }
 }

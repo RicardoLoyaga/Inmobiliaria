@@ -48,16 +48,21 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void FrmCliente_Load(object sender, EventArgs e)
         {
-
+            ListarClientes();
+            cboAsesor.DataSource = clienteControlador.poblarCboAsesores();
+            cboAsesor.DisplayMember = "NombreUsuario";
+            cboAsesor.ValueMember = "IdUsuario";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             clienteVistaModelo = new ClienteVistaModelo();
             clienteVistaModelo.NombreCliente = txtNombre.Text;
+            clienteVistaModelo.IdentificacionCliente = txtIdentificacion.Text;
             clienteVistaModelo.DireccionCliente = txtDireccion.Text;
             clienteVistaModelo.CorreoCliente = txtEmail.Text;
             clienteVistaModelo.CelularCliente = txtTelefono.Text;
+            clienteVistaModelo.Asesor = cboAsesor.SelectedValue.ToString();
             
 
             if (cbxEstadoCliente.Checked)
@@ -114,12 +119,24 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void actualizarForm()
         {
-            txtIdCliente.Text = "";
-            txtNombre.Text = "";
-            txtDireccion.Text = "";
-            txtEmail.Text = "";
-            txtTelefono.Text = "";
-            cbxEstadoCliente.Text = "";
+            txtIdCliente.Text = string.Empty;
+            txtIdentificacion.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            txtDireccion.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtTelefono.Text = string.Empty;
+            cboAsesor.Text = string.Empty;
+            cbxEstadoCliente.Checked=false;
+        }
+
+        private void dgvCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIdCliente.Text = dgvCliente.CurrentRow.Cells["IdCliente"].Value.ToString();
+            txtIdentificacion.Text = dgvCliente.CurrentRow.Cells["IdentificacionCliente"].Value.ToString();
+            txtNombre.Text = dgvCliente.CurrentRow.Cells["NombreCliente"].Value.ToString();
+            txtDireccion.Text = dgvCliente.CurrentRow.Cells["DireccionCliente"].Value.ToString();
+            txtTelefono.Text = dgvCliente.CurrentRow.Cells["CelularCliente"].Value.ToString();
+            txtEmail.Text = dgvCliente.CurrentRow.Cells["CorreoCliente"].Value.ToString();
         }
     }
 }

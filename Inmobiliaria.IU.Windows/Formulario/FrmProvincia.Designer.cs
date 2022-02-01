@@ -32,14 +32,12 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.lblIdProvincia = new MaterialSkin.Controls.MaterialLabel();
             this.lblProvincia = new MaterialSkin.Controls.MaterialLabel();
             this.lblEstadoProvincia = new MaterialSkin.Controls.MaterialLabel();
-            this.TxtIdProvincia = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.TxtProvincia = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.TxtEstado = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dgvProvincias = new System.Windows.Forms.DataGridView();
-            //this.TxtIdProvincia = new MaterialSkin.Controls.MaterialLabel();
             this.btnGuardarProvincia = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCancelarProvincia = new MaterialSkin.Controls.MaterialRaisedButton();
             this.cbxEstadoProvincia = new MaterialSkin.Controls.MaterialCheckBox();
+            this.TxtIdProvincia = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProvincias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,21 +80,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.lblEstadoProvincia.TabIndex = 2;
             this.lblEstadoProvincia.Text = "Estado: ";
             // 
-            // TxtIdProvincia
-            // 
-            this.TxtIdProvincia.Depth = 0;
-            this.TxtIdProvincia.Hint = "";
-            this.TxtIdProvincia.Location = new System.Drawing.Point(124, 95);
-            this.TxtIdProvincia.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TxtIdProvincia.Name = "TxtIdProvincia";
-            this.TxtIdProvincia.PasswordChar = '\0';
-            this.TxtIdProvincia.SelectedText = "";
-            this.TxtIdProvincia.SelectionLength = 0;
-            this.TxtIdProvincia.SelectionStart = 0;
-            this.TxtIdProvincia.Size = new System.Drawing.Size(195, 23);
-            this.TxtIdProvincia.TabIndex = 3;
-            this.TxtIdProvincia.UseSystemPasswordChar = false;
-            // 
             // TxtProvincia
             // 
             this.TxtProvincia.Depth = 0;
@@ -108,51 +91,24 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.TxtProvincia.SelectedText = "";
             this.TxtProvincia.SelectionLength = 0;
             this.TxtProvincia.SelectionStart = 0;
-            this.TxtProvincia.Size = new System.Drawing.Size(195, 23);
+            this.TxtProvincia.Size = new System.Drawing.Size(617, 23);
             this.TxtProvincia.TabIndex = 4;
             this.TxtProvincia.UseSystemPasswordChar = false;
-            // 
-            // TxtEstado
-            // 
-            this.TxtEstado.Depth = 0;
-            this.TxtEstado.Hint = "";
-            this.TxtEstado.Location = new System.Drawing.Point(124, 179);
-            this.TxtEstado.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TxtEstado.Name = "TxtEstado";
-            this.TxtEstado.PasswordChar = '\0';
-            this.TxtEstado.SelectedText = "";
-            this.TxtEstado.SelectionLength = 0;
-            this.TxtEstado.SelectionStart = 0;
-            this.TxtEstado.Size = new System.Drawing.Size(195, 23);
-            this.TxtEstado.TabIndex = 5;
-            this.TxtEstado.UseSystemPasswordChar = false;
             // 
             // dgvProvincias
             // 
             this.dgvProvincias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProvincias.Location = new System.Drawing.Point(339, 74);
+            this.dgvProvincias.Location = new System.Drawing.Point(27, 219);
             this.dgvProvincias.Name = "dgvProvincias";
-            this.dgvProvincias.Size = new System.Drawing.Size(449, 264);
+            this.dgvProvincias.Size = new System.Drawing.Size(714, 324);
             this.dgvProvincias.TabIndex = 6;
-            // 
-            // TxtIdProvincia
-            // 
-            this.TxtIdProvincia.AutoSize = true;
-            this.TxtIdProvincia.Depth = 0;
-            this.TxtIdProvincia.Font = new System.Drawing.Font("Roboto", 11F);
-            this.TxtIdProvincia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TxtIdProvincia.Location = new System.Drawing.Point(124, 99);
-            this.TxtIdProvincia.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TxtIdProvincia.Name = "TxtIdProvincia";
-            this.TxtIdProvincia.Size = new System.Drawing.Size(0, 19);
-            this.TxtIdProvincia.TabIndex = 9;
+            this.dgvProvincias.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProvincias_CellDoubleClick);
             // 
             // btnGuardarProvincia
             // 
-            this.btnGuardarProvincia.AutoSize = true;
             this.btnGuardarProvincia.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnGuardarProvincia.Depth = 0;
-            this.btnGuardarProvincia.Location = new System.Drawing.Point(58, 243);
+            this.btnGuardarProvincia.Location = new System.Drawing.Point(300, 183);
             this.btnGuardarProvincia.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardarProvincia.Name = "btnGuardarProvincia";
             this.btnGuardarProvincia.Primary = true;
@@ -164,10 +120,9 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // 
             // btnCancelarProvincia
             // 
-            this.btnCancelarProvincia.AutoSize = true;
             this.btnCancelarProvincia.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancelarProvincia.Depth = 0;
-            this.btnCancelarProvincia.Location = new System.Drawing.Point(179, 243);
+            this.btnCancelarProvincia.Location = new System.Drawing.Point(421, 183);
             this.btnCancelarProvincia.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelarProvincia.Name = "btnCancelarProvincia";
             this.btnCancelarProvincia.Primary = true;
@@ -192,24 +147,35 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.cbxEstadoProvincia.Text = "Activo";
             this.cbxEstadoProvincia.UseVisualStyleBackColor = true;
             // 
+            // TxtIdProvincia
+            // 
+            this.TxtIdProvincia.AutoSize = true;
+            this.TxtIdProvincia.Depth = 0;
+            this.TxtIdProvincia.Font = new System.Drawing.Font("Roboto", 11F);
+            this.TxtIdProvincia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.TxtIdProvincia.Location = new System.Drawing.Point(124, 99);
+            this.TxtIdProvincia.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TxtIdProvincia.Name = "TxtIdProvincia";
+            this.TxtIdProvincia.Size = new System.Drawing.Size(0, 19);
+            this.TxtIdProvincia.TabIndex = 13;
+            // 
             // FrmProvincia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 350);
+            this.ClientSize = new System.Drawing.Size(805, 549);
+            this.Controls.Add(this.TxtIdProvincia);
             this.Controls.Add(this.cbxEstadoProvincia);
             this.Controls.Add(this.btnCancelarProvincia);
             this.Controls.Add(this.btnGuardarProvincia);
-            this.Controls.Add(this.TxtIdProvincia);
             this.Controls.Add(this.dgvProvincias);
-            this.Controls.Add(this.TxtEstado);
             this.Controls.Add(this.TxtProvincia);
-            this.Controls.Add(this.TxtIdProvincia);
             this.Controls.Add(this.lblEstadoProvincia);
             this.Controls.Add(this.lblProvincia);
             this.Controls.Add(this.lblIdProvincia);
             this.Name = "FrmProvincia";
             this.Text = "Información de Provincias";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmProvincia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProvincias)).EndInit();
             this.ResumeLayout(false);
@@ -222,13 +188,12 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private MaterialSkin.Controls.MaterialLabel lblIdProvincia;
         private MaterialSkin.Controls.MaterialLabel lblProvincia;
         private MaterialSkin.Controls.MaterialLabel lblEstadoProvincia;
-        private MaterialSkin.Controls.MaterialSingleLineTextField TxtIdProvincia;
         private MaterialSkin.Controls.MaterialSingleLineTextField TxtProvincia;
-        private MaterialSkin.Controls.MaterialSingleLineTextField TxtEstado;
         private System.Windows.Forms.DataGridView dgvProvincias;
         //private MaterialSkin.Controls.MaterialLabel TxtIdProvincia;
         private MaterialSkin.Controls.MaterialRaisedButton btnGuardarProvincia;
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelarProvincia;
         private MaterialSkin.Controls.MaterialCheckBox cbxEstadoProvincia;
+        private MaterialSkin.Controls.MaterialLabel TxtIdProvincia;
     }
 }

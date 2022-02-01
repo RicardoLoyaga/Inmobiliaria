@@ -290,7 +290,7 @@
             this.txtContrasena.Location = new System.Drawing.Point(150, 222);
             this.txtContrasena.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PasswordChar = '\0';
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.SelectedText = "";
             this.txtContrasena.SelectionLength = 0;
             this.txtContrasena.SelectionStart = 0;

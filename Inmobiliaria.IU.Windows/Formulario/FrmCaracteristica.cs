@@ -43,6 +43,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             caracteristicaVistaModelo.MetrosCuadrados = int.Parse(txtMetros.Text);
             caracteristicaVistaModelo.Parqueaderos = int.Parse(txtParqueaderos.Text);
             caracteristicaVistaModelo.Servicios = txtServicios.Text;
+            caracteristicaVistaModelo.Banios = int.Parse(txtNroBanios.Text);
             caracteristicaVistaModelo.Otros = txtOtros.Text;
 
             if (!txtIdCaracteristica.Text.Equals(""))

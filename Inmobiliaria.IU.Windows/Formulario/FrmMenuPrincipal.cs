@@ -16,5 +16,57 @@ namespace Inmobiliaria.IU.Windows.Formulario
         {
             InitializeComponent();
         }
+
+        private void rolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRol frmRol = new FrmRol();
+            frmRol.MdiParent = this;
+            frmRol.Show();
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuario frmUsuario = new FrmUsuario();
+            frmUsuario.MdiParent = this;
+            frmUsuario.Show();
+        }
+
+        private void tipoPropiedadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTipoPropiedad frmTipoPropiedad = new FrmTipoPropiedad();
+            frmTipoPropiedad.MdiParent = this;
+            frmTipoPropiedad.Show();
+        }
+
+        private void característicasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCaracteristica frmCaracteristica = new FrmCaracteristica();
+            frmCaracteristica.MdiParent = this;
+            frmCaracteristica.Show();
+        }
+
+        private void ubicaciónGeográficaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void provinciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProvincia frmProvincia = new FrmProvincia();
+            frmProvincia.MdiParent = this;
+            frmProvincia.Show();
+        }
+
+        private void cantónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Frm
+        }
+
+        private void administraciónClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCliente frmCliente = new FrmCliente();
+            frmCliente.MdiParent = this;
+            frmCliente.Show();
+        }
     }
 }

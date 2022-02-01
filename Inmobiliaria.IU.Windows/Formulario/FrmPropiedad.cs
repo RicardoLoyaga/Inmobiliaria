@@ -52,6 +52,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void btnGuardarPropiedad_Click(object sender, EventArgs e)
         {
+
             propiedadVistaModelo = new PropiedadVistaModelo();
             propiedadVistaModelo.IdProvincia = int.Parse(cboProvincia.SelectedValue.ToString());
             propiedadVistaModelo.IdTipoPropiedad = int.Parse(cboTipoPropiedad.SelectedValue.ToString());
@@ -62,7 +63,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             propiedadVistaModelo.CalleSecundaria = txtCalleSecundaria.Text;
             propiedadVistaModelo.FechaRegistroPropiedad = dtpFechaRegistro.Value;
             propiedadVistaModelo.FotoPrincipal = picFoto.ImageLocation;
-            
+
             if (cbxEstadoPropiedad.Checked)
             {
                 propiedadVistaModelo.EstadoPropiedad = 1;
@@ -76,13 +77,17 @@ namespace Inmobiliaria.IU.Windows.Formulario
             {
                 propiedadVistaModelo.IdPropiedad = int.Parse(txtIdPropiedad.Text);
                 Actualizar();
+                //resp = true;
+
             }
             else
             {
                 Insertar();
+                //resp = true;
             }
 
-            caracteristicaVistaModelo.MetrosCuadrados = int.Parse(txtMetros.Text);
+
+            //caracteristicaVistaModelo.MetrosCuadrados = float.Parse(txtMetros.Text);
             caracteristicaVistaModelo.Plantas = int.Parse(txtNroPlantas.Text);
             caracteristicaVistaModelo.Habitaciones = decimal.Parse(txtHabitaciones.Text);
             caracteristicaVistaModelo.Banios = decimal.Parse(txtNroBanios.Text);
@@ -93,15 +98,60 @@ namespace Inmobiliaria.IU.Windows.Formulario
             if (!txtIdCaracteristica.Text.Equals(""))
             {
                 caracteristicaVistaModelo.IdCaracteristica = int.Parse(txtIdCaracteristica.Text);
-                ActualizarCaracteristica();
+                //if (Propiedad())
+                //{
+                    ActualizarCaracteristica();
+                //}
             }
             else
             {
-                InsertarCaracteristica();
+                //if (Propiedad())
+                //{
+                    InsertarCaracteristica();
+                //}
             }
 
             ListarPropiedad();
         }
+
+        /*public bool Propiedad()
+        {
+            bool resp = false;
+
+            propiedadVistaModelo = new PropiedadVistaModelo();
+            propiedadVistaModelo.IdProvincia = int.Parse(cboProvincia.SelectedValue.ToString());
+            propiedadVistaModelo.IdTipoPropiedad = int.Parse(cboTipoPropiedad.SelectedValue.ToString());
+            //propiedadVistaModelo.IdCaracteristica= int.Parse(cbo.SelectedValue.ToString());
+            //propiedadVistaModelo.IdPropietario = int.Parse()
+            propiedadVistaModelo.Precio = decimal.Parse(txtPrecio.Text);
+            propiedadVistaModelo.CallePrincipal = txtCallePrincipal.Text;
+            propiedadVistaModelo.CalleSecundaria = txtCalleSecundaria.Text;
+            propiedadVistaModelo.FechaRegistroPropiedad = dtpFechaRegistro.Value;
+            propiedadVistaModelo.FotoPrincipal = picFoto.ImageLocation;
+
+            if (cbxEstadoPropiedad.Checked)
+            {
+                propiedadVistaModelo.EstadoPropiedad = 1;
+            }
+            else
+            {
+                propiedadVistaModelo.EstadoPropiedad = 0;
+            }
+
+            if (!txtIdPropiedad.Text.Equals(""))
+            {
+                propiedadVistaModelo.IdPropiedad = int.Parse(txtIdPropiedad.Text);
+                Actualizar();
+                resp = true;
+
+            }
+            else
+            {
+               Insertar();
+                resp = true;
+            }
+            return resp;
+        }*/
 
         private void InsertarCaracteristica()
         {

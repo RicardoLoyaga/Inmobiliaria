@@ -46,7 +46,7 @@
             this.cbxEstadoCliente = new MaterialSkin.Controls.MaterialCheckBox();
             this.txtIdCliente = new MaterialSkin.Controls.MaterialLabel();
             this.lblAsesor = new MaterialSkin.Controls.MaterialLabel();
-            this.txtAsesor = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.cboAsesor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,7 +161,7 @@
             this.txtIdentificacion.SelectionLength = 0;
             this.txtIdentificacion.SelectionStart = 0;
             this.txtIdentificacion.Size = new System.Drawing.Size(628, 23);
-            this.txtIdentificacion.TabIndex = 2;
+            this.txtIdentificacion.TabIndex = 1;
             this.txtIdentificacion.UseSystemPasswordChar = false;
             // 
             // txtNombre
@@ -177,7 +177,7 @@
             this.txtNombre.SelectionLength = 0;
             this.txtNombre.SelectionStart = 0;
             this.txtNombre.Size = new System.Drawing.Size(629, 23);
-            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabIndex = 2;
             this.txtNombre.UseSystemPasswordChar = false;
             // 
             // txtDireccion
@@ -193,7 +193,7 @@
             this.txtDireccion.SelectionLength = 0;
             this.txtDireccion.SelectionStart = 0;
             this.txtDireccion.Size = new System.Drawing.Size(629, 23);
-            this.txtDireccion.TabIndex = 5;
+            this.txtDireccion.TabIndex = 3;
             this.txtDireccion.UseSystemPasswordChar = false;
             // 
             // txtTelefono
@@ -225,7 +225,7 @@
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.Size = new System.Drawing.Size(629, 23);
-            this.txtEmail.TabIndex = 6;
+            this.txtEmail.TabIndex = 5;
             this.txtEmail.UseSystemPasswordChar = false;
             // 
             // dgvCliente
@@ -238,6 +238,7 @@
             this.dgvCliente.RowTemplate.Height = 28;
             this.dgvCliente.Size = new System.Drawing.Size(699, 194);
             this.dgvCliente.TabIndex = 8;
+            this.dgvCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellDoubleClick);
             // 
             // btnGuardar
             // 
@@ -308,27 +309,20 @@
             this.lblAsesor.TabIndex = 19;
             this.lblAsesor.Text = "Asesor:";
             // 
-            // txtAsesor
+            // cboAsesor
             // 
-            this.txtAsesor.Depth = 0;
-            this.txtAsesor.Hint = "";
-            this.txtAsesor.Location = new System.Drawing.Point(119, 251);
-            this.txtAsesor.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtAsesor.Name = "txtAsesor";
-            this.txtAsesor.PasswordChar = '\0';
-            this.txtAsesor.SelectedText = "";
-            this.txtAsesor.SelectionLength = 0;
-            this.txtAsesor.SelectionStart = 0;
-            this.txtAsesor.Size = new System.Drawing.Size(629, 23);
-            this.txtAsesor.TabIndex = 20;
-            this.txtAsesor.UseSystemPasswordChar = false;
+            this.cboAsesor.FormattingEnabled = true;
+            this.cboAsesor.Location = new System.Drawing.Point(119, 253);
+            this.cboAsesor.Name = "cboAsesor";
+            this.cboAsesor.Size = new System.Drawing.Size(629, 21);
+            this.cboAsesor.TabIndex = 20;
             // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 549);
-            this.Controls.Add(this.txtAsesor);
+            this.Controls.Add(this.cboAsesor);
             this.Controls.Add(this.lblAsesor);
             this.Controls.Add(this.txtIdCliente);
             this.Controls.Add(this.cbxEstadoCliente);
@@ -377,6 +371,6 @@
         private MaterialSkin.Controls.MaterialCheckBox cbxEstadoCliente;
         private MaterialSkin.Controls.MaterialLabel txtIdCliente;
         private MaterialSkin.Controls.MaterialLabel lblAsesor;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtAsesor;
+        private System.Windows.Forms.ComboBox cboAsesor;
     }
 }

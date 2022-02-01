@@ -62,6 +62,7 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
                 vistaModelos.Add(new ProvinciaVistaModelo
                 {
                     IdProvincia = item.IDPROVINCIA,
+                    CodProvincia = item.CODPROVINCIA,
                     NombreProvincia = item.NOMBREPROVINCIA,
                     EstadoProvincia = item.ESTADOPROVINCIA
                 });

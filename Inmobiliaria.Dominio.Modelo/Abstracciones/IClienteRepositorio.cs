@@ -9,5 +9,6 @@ namespace Inmobiliaria.Dominio.Modelo.Abstracciones
 {
     public interface IClienteRepositorio:IBaseRepositorio<CLIENTE>
     {
+        List<USUARIO> poblarCboAsesores();
     }
 }

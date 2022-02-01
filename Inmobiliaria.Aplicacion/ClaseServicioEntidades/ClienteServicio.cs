@@ -45,5 +45,10 @@ namespace Inmobiliaria.Aplicacion.ClaseServicioEntidades
         {
             clienteRepositorio.Delete(id);
         }
+
+        public List<USUARIO> poblarCboAsesores()
+        {
+            return clienteRepositorio.poblarCboAsesores();
+        }
     }
 }

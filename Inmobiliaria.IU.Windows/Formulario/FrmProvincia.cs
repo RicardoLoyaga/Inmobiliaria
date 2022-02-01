@@ -25,7 +25,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
             MaterialSkinManager skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkinManager.Themes.DARK;
+            skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new ColorScheme(Primary.Red600, Primary.Red900, Primary.Yellow700, Accent.Red700, TextShade.WHITE);
         }
 
@@ -88,9 +88,9 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void actualizarForm()
         {
-            TxtIdProvincia.Text = "";
-            TxtProvincia.Text = "";
-            cbxEstadoProvincia.Text = "";
+            TxtIdProvincia.Text = string.Empty;
+            TxtProvincia.Text = string.Empty;
+            cbxEstadoProvincia.Checked=false;
         }
 
         private void btnCancelarProvincia_Click(object sender, EventArgs e)
@@ -101,6 +101,12 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private void FrmProvincia_Load(object sender, EventArgs e)
         {
             ListarProvincias();
+        }
+
+        private void dgvProvincias_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TxtIdProvincia.Text = dgvProvincias.CurrentRow.Cells["idProvincia"].Value.ToString();
+            TxtProvincia.Text = dgvProvincias.CurrentRow.Cells["NombreProvincia"].Value.ToString();
         }
     }
 }
