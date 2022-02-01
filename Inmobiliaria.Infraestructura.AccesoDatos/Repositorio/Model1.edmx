@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="INMOBILIARIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="INMOBILIARIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BARRIO">
           <Key>
             <PropertyRef Name="IDBARRIO" />
@@ -31,8 +31,8 @@
           <Property Name="IDCARACTERISTICA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="METROSCUADRADOS" Type="float" Nullable="false" />
           <Property Name="PLANTAS" Type="int" />
-          <Property Name="BANIOS" Type="decimal" Precision="2" Scale="2" />
-          <Property Name="HABITACIONES" Type="decimal" Precision="2" Scale="2" />
+          <Property Name="BANIOS" Type="decimal" Precision="6" Scale="2" />
+          <Property Name="HABITACIONES" Type="decimal" Precision="6" Scale="2" />
           <Property Name="PARQUEADEROS" Type="int" />
           <Property Name="SERVICIOS" Type="varchar" MaxLength="100" />
           <Property Name="OTROS" Type="varchar" MaxLength="150" />
@@ -350,8 +350,7 @@
             <End Role="USUARIO" EntitySet="USUARIO" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="INMOBILIARIAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -384,8 +383,8 @@
           <Property Name="IDCARACTERISTICA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="METROSCUADRADOS" Type="Double" Nullable="false" />
           <Property Name="PLANTAS" Type="Int32" />
-          <Property Name="BANIOS" Type="Decimal" Precision="2" Scale="2" />
-          <Property Name="HABITACIONES" Type="Decimal" Precision="2" Scale="2" />
+          <Property Name="BANIOS" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="HABITACIONES" Type="Decimal" Precision="6" Scale="2" />
           <Property Name="PARQUEADEROS" Type="Int32" />
           <Property Name="SERVICIOS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="OTROS" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />

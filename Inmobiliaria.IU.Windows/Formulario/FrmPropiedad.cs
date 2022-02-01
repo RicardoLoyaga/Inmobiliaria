@@ -87,12 +87,13 @@ namespace Inmobiliaria.IU.Windows.Formulario
             }
 
 
-            //caracteristicaVistaModelo.MetrosCuadrados = float.Parse(txtMetros.Text);
+            caracteristicaVistaModelo = new CaracteristicaVistaModelo();
             caracteristicaVistaModelo.Plantas = int.Parse(txtNroPlantas.Text);
-            caracteristicaVistaModelo.Habitaciones = decimal.Parse(txtHabitaciones.Text);
-            caracteristicaVistaModelo.Banios = decimal.Parse(txtNroBanios.Text);
+            caracteristicaVistaModelo.Habitaciones = int.Parse(txtHabitaciones.Text);
+            caracteristicaVistaModelo.MetrosCuadrados = int.Parse(txtMetros.Text);
             caracteristicaVistaModelo.Parqueaderos = int.Parse(txtParqueaderos.Text);
             caracteristicaVistaModelo.Servicios = txtServicios.Text;
+            caracteristicaVistaModelo.Banios = int.Parse(txtNroBanios.Text);
             caracteristicaVistaModelo.Otros = txtOtros.Text;
 
             if (!txtIdCaracteristica.Text.Equals(""))
