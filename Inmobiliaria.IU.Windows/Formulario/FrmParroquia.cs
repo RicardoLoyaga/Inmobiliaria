@@ -13,14 +13,14 @@ using System.Windows.Forms;
 
 namespace Inmobiliaria.IU.Windows.Formulario
 {
-    public partial class FrmCanton : MaterialSkin.Controls.MaterialForm
+    public partial class FrmParroquia : MaterialSkin.Controls.MaterialForm
     {
-        private CantonControlador cantonControlador;
-        private CantonVistaModelo crovinciaVistaModelo;
-        public FrmCanton()
+        private ParroquiaControlador parroquiaControlador;
+        private ParroquiaVistaModelo parroquiaVistaModelo;
+        public FrmParroquia()
         {
             InitializeComponent();
-            cantonControlador = new CantonControlador();
+            parroquiaControlador = new ParroquiaControlador();
 
             MaterialSkinManager skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
