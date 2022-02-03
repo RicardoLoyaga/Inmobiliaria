@@ -109,5 +109,11 @@ namespace Inmobiliaria.IU.Windows.Formulario
         {
             
         }
+
+        private void dgvRol_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtRolId.Text = dgvRol.CurrentRow.Cells["idRol"].Value.ToString();
+            txtRol.Text = dgvRol.CurrentRow.Cells["NombreRol"].Value.ToString();
+        }
     }
 }

@@ -130,6 +130,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.btnCancelarProvincia.TabIndex = 11;
             this.btnCancelarProvincia.Text = "Cancelar";
             this.btnCancelarProvincia.UseVisualStyleBackColor = true;
+            this.btnCancelarProvincia.Click += new System.EventHandler(this.btnCancelarProvincia_Click_1);
             // 
             // cbxEstadoProvincia
             // 

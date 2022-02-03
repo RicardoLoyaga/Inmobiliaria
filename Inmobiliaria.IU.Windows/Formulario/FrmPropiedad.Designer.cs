@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblIdPropiedad = new MaterialSkin.Controls.MaterialLabel();
             this.lblTipoPropiedad = new MaterialSkin.Controls.MaterialLabel();
             this.dgvPropiedad = new System.Windows.Forms.DataGridView();
@@ -45,6 +46,8 @@
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.tcoPropiedad = new System.Windows.Forms.TabControl();
             this.tpaDatosGenerales = new System.Windows.Forms.TabPage();
+            this.cbxEstadoPropiedad = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.cboBarrio = new System.Windows.Forms.ComboBox();
@@ -60,7 +63,6 @@
             this.txtCalleSecundaria = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtPrecio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tpaCaracteristica = new System.Windows.Forms.TabPage();
-            this.gboxCompleto = new System.Windows.Forms.GroupBox();
             this.gbxOficina = new System.Windows.Forms.GroupBox();
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.txtNroHabitacionesOficina = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -74,6 +76,9 @@
             this.txtMetrosOficina = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtBaniosOficina = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtIdCaracteristi = new System.Windows.Forms.TextBox();
+            this.txtId = new MaterialSkin.Controls.MaterialLabel();
+            this.gboxCompleto = new System.Windows.Forms.GroupBox();
             this.lblMetros = new MaterialSkin.Controls.MaterialLabel();
             this.lblHabitaciones = new MaterialSkin.Controls.MaterialLabel();
             this.txtHabitaciones = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -96,19 +101,26 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.txtMetrosTerreno = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dgvPropiedadCaracteristica = new System.Windows.Forms.DataGridView();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.cbxEstadoPropiedad = new MaterialSkin.Controls.MaterialCheckBox();
-            this.txtId = new MaterialSkin.Controls.MaterialLabel();
-            this.txtIdCaracteristi = new System.Windows.Forms.TextBox();
+            this.iNMOBILIARIADataSet = new Inmobiliaria.IU.Windows.INMOBILIARIADataSet();
+            this.pROPIEDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pROPIEDADTableAdapter = new Inmobiliaria.IU.Windows.INMOBILIARIADataSetTableAdapters.PROPIEDADTableAdapter();
+            this.iDPROPIEDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRECIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fOTOPRINCIPALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cALLEPRINCIPALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cALLESECUNDARIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eSTADOPROPIEDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropiedad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.tcoPropiedad.SuspendLayout();
             this.tpaDatosGenerales.SuspendLayout();
             this.tpaCaracteristica.SuspendLayout();
-            this.gboxCompleto.SuspendLayout();
             this.gbxOficina.SuspendLayout();
+            this.gboxCompleto.SuspendLayout();
             this.gbxTerreno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropiedadCaracteristica)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNMOBILIARIADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROPIEDADBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIdPropiedad
@@ -328,6 +340,35 @@
             this.tpaDatosGenerales.TabIndex = 0;
             this.tpaDatosGenerales.Text = "Datos Generales";
             // 
+            // cbxEstadoPropiedad
+            // 
+            this.cbxEstadoPropiedad.AutoSize = true;
+            this.cbxEstadoPropiedad.Depth = 0;
+            this.cbxEstadoPropiedad.Font = new System.Drawing.Font("Roboto", 10F);
+            this.cbxEstadoPropiedad.Location = new System.Drawing.Point(526, 127);
+            this.cbxEstadoPropiedad.Margin = new System.Windows.Forms.Padding(0);
+            this.cbxEstadoPropiedad.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.cbxEstadoPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cbxEstadoPropiedad.Name = "cbxEstadoPropiedad";
+            this.cbxEstadoPropiedad.Ripple = true;
+            this.cbxEstadoPropiedad.Size = new System.Drawing.Size(69, 30);
+            this.cbxEstadoPropiedad.TabIndex = 50;
+            this.cbxEstadoPropiedad.Text = "Activo";
+            this.cbxEstadoPropiedad.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel6.Location = new System.Drawing.Point(465, 133);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(60, 19);
+            this.materialLabel6.TabIndex = 49;
+            this.materialLabel6.Text = "Estado:";
+            // 
             // btnSiguiente
             // 
             this.btnSiguiente.BackColor = System.Drawing.Color.IndianRed;
@@ -532,28 +573,6 @@
             this.tpaCaracteristica.TabIndex = 1;
             this.tpaCaracteristica.Text = "Características";
             // 
-            // gboxCompleto
-            // 
-            this.gboxCompleto.Controls.Add(this.lblMetros);
-            this.gboxCompleto.Controls.Add(this.lblHabitaciones);
-            this.gboxCompleto.Controls.Add(this.txtHabitaciones);
-            this.gboxCompleto.Controls.Add(this.txtNroPlantas);
-            this.gboxCompleto.Controls.Add(this.lblParqueaderos);
-            this.gboxCompleto.Controls.Add(this.txtOtros);
-            this.gboxCompleto.Controls.Add(this.lblNroPlantas);
-            this.gboxCompleto.Controls.Add(this.txtParqueaderos);
-            this.gboxCompleto.Controls.Add(this.txtMetros);
-            this.gboxCompleto.Controls.Add(this.txtNroBanios);
-            this.gboxCompleto.Controls.Add(this.lblOtros);
-            this.gboxCompleto.Controls.Add(this.lblServicios);
-            this.gboxCompleto.Controls.Add(this.txtServicios);
-            this.gboxCompleto.Controls.Add(this.lblNroBanios);
-            this.gboxCompleto.Location = new System.Drawing.Point(3, 37);
-            this.gboxCompleto.Name = "gboxCompleto";
-            this.gboxCompleto.Size = new System.Drawing.Size(778, 123);
-            this.gboxCompleto.TabIndex = 44;
-            this.gboxCompleto.TabStop = false;
-            // 
             // gbxOficina
             // 
             this.gbxOficina.Controls.Add(this.materialLabel9);
@@ -753,6 +772,48 @@
             this.materialLabel8.Size = new System.Drawing.Size(84, 19);
             this.materialLabel8.TabIndex = 43;
             this.materialLabel8.Text = "Nro Baños:";
+            // 
+            // txtIdCaracteristi
+            // 
+            this.txtIdCaracteristi.Location = new System.Drawing.Point(167, 6);
+            this.txtIdCaracteristi.Name = "txtIdCaracteristi";
+            this.txtIdCaracteristi.ReadOnly = true;
+            this.txtIdCaracteristi.Size = new System.Drawing.Size(100, 20);
+            this.txtIdCaracteristi.TabIndex = 46;
+            // 
+            // txtId
+            // 
+            this.txtId.AutoSize = true;
+            this.txtId.Depth = 0;
+            this.txtId.Font = new System.Drawing.Font("Roboto", 11F);
+            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtId.Location = new System.Drawing.Point(148, 7);
+            this.txtId.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(0, 19);
+            this.txtId.TabIndex = 45;
+            // 
+            // gboxCompleto
+            // 
+            this.gboxCompleto.Controls.Add(this.lblMetros);
+            this.gboxCompleto.Controls.Add(this.lblHabitaciones);
+            this.gboxCompleto.Controls.Add(this.txtHabitaciones);
+            this.gboxCompleto.Controls.Add(this.txtNroPlantas);
+            this.gboxCompleto.Controls.Add(this.lblParqueaderos);
+            this.gboxCompleto.Controls.Add(this.txtOtros);
+            this.gboxCompleto.Controls.Add(this.lblNroPlantas);
+            this.gboxCompleto.Controls.Add(this.txtParqueaderos);
+            this.gboxCompleto.Controls.Add(this.txtMetros);
+            this.gboxCompleto.Controls.Add(this.txtNroBanios);
+            this.gboxCompleto.Controls.Add(this.lblOtros);
+            this.gboxCompleto.Controls.Add(this.lblServicios);
+            this.gboxCompleto.Controls.Add(this.txtServicios);
+            this.gboxCompleto.Controls.Add(this.lblNroBanios);
+            this.gboxCompleto.Location = new System.Drawing.Point(3, 37);
+            this.gboxCompleto.Name = "gboxCompleto";
+            this.gboxCompleto.Size = new System.Drawing.Size(778, 123);
+            this.gboxCompleto.TabIndex = 44;
+            this.gboxCompleto.TabStop = false;
             // 
             // lblMetros
             // 
@@ -1070,7 +1131,16 @@
             // 
             // dgvPropiedadCaracteristica
             // 
+            this.dgvPropiedadCaracteristica.AutoGenerateColumns = false;
             this.dgvPropiedadCaracteristica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPropiedadCaracteristica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDPROPIEDADDataGridViewTextBoxColumn,
+            this.pRECIODataGridViewTextBoxColumn,
+            this.fOTOPRINCIPALDataGridViewTextBoxColumn,
+            this.cALLEPRINCIPALDataGridViewTextBoxColumn,
+            this.cALLESECUNDARIADataGridViewTextBoxColumn,
+            this.eSTADOPROPIEDADDataGridViewTextBoxColumn});
+            this.dgvPropiedadCaracteristica.DataSource = this.pROPIEDADBindingSource;
             this.dgvPropiedadCaracteristica.GridColor = System.Drawing.SystemColors.Control;
             this.dgvPropiedadCaracteristica.Location = new System.Drawing.Point(22, 259);
             this.dgvPropiedadCaracteristica.Margin = new System.Windows.Forms.Padding(2);
@@ -1080,54 +1150,56 @@
             this.dgvPropiedadCaracteristica.Size = new System.Drawing.Size(872, 176);
             this.dgvPropiedadCaracteristica.TabIndex = 12;
             // 
-            // materialLabel6
+            // iNMOBILIARIADataSet
             // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(465, 133);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(60, 19);
-            this.materialLabel6.TabIndex = 49;
-            this.materialLabel6.Text = "Estado:";
+            this.iNMOBILIARIADataSet.DataSetName = "INMOBILIARIADataSet";
+            this.iNMOBILIARIADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // cbxEstadoPropiedad
+            // pROPIEDADBindingSource
             // 
-            this.cbxEstadoPropiedad.AutoSize = true;
-            this.cbxEstadoPropiedad.Depth = 0;
-            this.cbxEstadoPropiedad.Font = new System.Drawing.Font("Roboto", 10F);
-            this.cbxEstadoPropiedad.Location = new System.Drawing.Point(526, 127);
-            this.cbxEstadoPropiedad.Margin = new System.Windows.Forms.Padding(0);
-            this.cbxEstadoPropiedad.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.cbxEstadoPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cbxEstadoPropiedad.Name = "cbxEstadoPropiedad";
-            this.cbxEstadoPropiedad.Ripple = true;
-            this.cbxEstadoPropiedad.Size = new System.Drawing.Size(69, 30);
-            this.cbxEstadoPropiedad.TabIndex = 50;
-            this.cbxEstadoPropiedad.Text = "Activo";
-            this.cbxEstadoPropiedad.UseVisualStyleBackColor = true;
+            this.pROPIEDADBindingSource.DataMember = "PROPIEDAD";
+            this.pROPIEDADBindingSource.DataSource = this.iNMOBILIARIADataSet;
             // 
-            // txtId
+            // pROPIEDADTableAdapter
             // 
-            this.txtId.AutoSize = true;
-            this.txtId.Depth = 0;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtId.Location = new System.Drawing.Point(148, 7);
-            this.txtId.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(0, 18);
-            this.txtId.TabIndex = 45;
+            this.pROPIEDADTableAdapter.ClearBeforeFill = true;
             // 
-            // txtIdCaracteristi
+            // iDPROPIEDADDataGridViewTextBoxColumn
             // 
-            this.txtIdCaracteristi.Location = new System.Drawing.Point(167, 6);
-            this.txtIdCaracteristi.Name = "txtIdCaracteristi";
-            this.txtIdCaracteristi.ReadOnly = true;
-            this.txtIdCaracteristi.Size = new System.Drawing.Size(100, 20);
-            this.txtIdCaracteristi.TabIndex = 46;
+            this.iDPROPIEDADDataGridViewTextBoxColumn.DataPropertyName = "IDPROPIEDAD";
+            this.iDPROPIEDADDataGridViewTextBoxColumn.HeaderText = "IDPROPIEDAD";
+            this.iDPROPIEDADDataGridViewTextBoxColumn.Name = "iDPROPIEDADDataGridViewTextBoxColumn";
+            this.iDPROPIEDADDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pRECIODataGridViewTextBoxColumn
+            // 
+            this.pRECIODataGridViewTextBoxColumn.DataPropertyName = "PRECIO";
+            this.pRECIODataGridViewTextBoxColumn.HeaderText = "PRECIO";
+            this.pRECIODataGridViewTextBoxColumn.Name = "pRECIODataGridViewTextBoxColumn";
+            // 
+            // fOTOPRINCIPALDataGridViewTextBoxColumn
+            // 
+            this.fOTOPRINCIPALDataGridViewTextBoxColumn.DataPropertyName = "FOTOPRINCIPAL";
+            this.fOTOPRINCIPALDataGridViewTextBoxColumn.HeaderText = "FOTOPRINCIPAL";
+            this.fOTOPRINCIPALDataGridViewTextBoxColumn.Name = "fOTOPRINCIPALDataGridViewTextBoxColumn";
+            // 
+            // cALLEPRINCIPALDataGridViewTextBoxColumn
+            // 
+            this.cALLEPRINCIPALDataGridViewTextBoxColumn.DataPropertyName = "CALLEPRINCIPAL";
+            this.cALLEPRINCIPALDataGridViewTextBoxColumn.HeaderText = "CALLEPRINCIPAL";
+            this.cALLEPRINCIPALDataGridViewTextBoxColumn.Name = "cALLEPRINCIPALDataGridViewTextBoxColumn";
+            // 
+            // cALLESECUNDARIADataGridViewTextBoxColumn
+            // 
+            this.cALLESECUNDARIADataGridViewTextBoxColumn.DataPropertyName = "CALLESECUNDARIA";
+            this.cALLESECUNDARIADataGridViewTextBoxColumn.HeaderText = "CALLESECUNDARIA";
+            this.cALLESECUNDARIADataGridViewTextBoxColumn.Name = "cALLESECUNDARIADataGridViewTextBoxColumn";
+            // 
+            // eSTADOPROPIEDADDataGridViewTextBoxColumn
+            // 
+            this.eSTADOPROPIEDADDataGridViewTextBoxColumn.DataPropertyName = "ESTADOPROPIEDAD";
+            this.eSTADOPROPIEDADDataGridViewTextBoxColumn.HeaderText = "ESTADOPROPIEDAD";
+            this.eSTADOPROPIEDADDataGridViewTextBoxColumn.Name = "eSTADOPROPIEDADDataGridViewTextBoxColumn";
             // 
             // FrmPropiedad
             // 
@@ -1152,13 +1224,15 @@
             this.tpaDatosGenerales.PerformLayout();
             this.tpaCaracteristica.ResumeLayout(false);
             this.tpaCaracteristica.PerformLayout();
-            this.gboxCompleto.ResumeLayout(false);
-            this.gboxCompleto.PerformLayout();
             this.gbxOficina.ResumeLayout(false);
             this.gbxOficina.PerformLayout();
+            this.gboxCompleto.ResumeLayout(false);
+            this.gboxCompleto.PerformLayout();
             this.gbxTerreno.ResumeLayout(false);
             this.gbxTerreno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropiedadCaracteristica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNMOBILIARIADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROPIEDADBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1238,5 +1312,14 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialLabel txtId;
         private System.Windows.Forms.TextBox txtIdCaracteristi;
+        private INMOBILIARIADataSet iNMOBILIARIADataSet;
+        private System.Windows.Forms.BindingSource pROPIEDADBindingSource;
+        private INMOBILIARIADataSetTableAdapters.PROPIEDADTableAdapter pROPIEDADTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDPROPIEDADDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRECIODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fOTOPRINCIPALDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cALLEPRINCIPALDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cALLESECUNDARIADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eSTADOPROPIEDADDataGridViewTextBoxColumn;
     }
 }

@@ -20,10 +20,13 @@ namespace Inmobiliaria.IU.Windows.Formulario
         public FrmPropietario()
         {
             InitializeComponent();
+
+            propietarioControlador = new PropietarioControlador();
+
             MaterialSkinManager skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new ColorScheme(Primary.Red600, Primary.Red900, Primary.Yellow700, Accent.Green700, TextShade.WHITE);
+            skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            skinManager.ColorScheme = new ColorScheme(Primary.Red600, Primary.Red900, Primary.Yellow700, Accent.Red700, TextShade.WHITE);
         }
 
         private void materialLabel1_Click(object sender, EventArgs e)
@@ -33,31 +36,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            propietarioVistaModelo = new PropietarioVistaModelo();
-            propietarioVistaModelo.NombrePropietario = txtNombrePropietario.Text.Trim();
-            propietarioVistaModelo.DireccionPropietario = txtDireccionPropietario.Text.Trim();
-            propietarioVistaModelo.CelularPropietario = txtCelularPropietario.Text.Trim();
-            propietarioVistaModelo.CorreoPropietario = txtCorreoPropietario.Text.Trim();
-
-            if (cbxEstadoPropietario.Checked)
-            {
-                propietarioVistaModelo.EstadoPropietario = 1;
-            }
-            else
-            {
-                propietarioVistaModelo.EstadoPropietario = 0;
-            }
-
-            if (!txtIdPropietario.Text.Equals(""))
-            {
-                propietarioVistaModelo.IdPropietario = int.Parse(txtIdPropietario.Text);
-                Actualizar();
-            }
-            else
-            {
-                Insertar();
-            }
-            ListarPropietarios();
+            
         }
 
         private void ListarPropietarios()
@@ -106,6 +85,49 @@ namespace Inmobiliaria.IU.Windows.Formulario
         {
             ListarPropietarios();
 
+        }
+
+        private void btnCancelarPropietario_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnGuardarPropietario_Click(object sender, EventArgs e)
+        {
+            propietarioVistaModelo = new PropietarioVistaModelo();
+            propietarioVistaModelo.NombrePropietario = txtNombrePropietario.Text.Trim();
+            propietarioVistaModelo.DireccionPropietario = txtDireccionPropietario.Text.Trim();
+            propietarioVistaModelo.CelularPropietario = txtCelularPropietario.Text.Trim();
+            propietarioVistaModelo.CorreoPropietario = txtCorreoPropietario.Text.Trim();
+
+            if (cbxEstadoPropietario.Checked)
+            {
+                propietarioVistaModelo.EstadoPropietario = 1;
+            }
+            else
+            {
+                propietarioVistaModelo.EstadoPropietario = 0;
+            }
+
+            if (!txtIdPropietario.Text.Equals(""))
+            {
+                propietarioVistaModelo.IdPropietario = int.Parse(txtIdPropietario.Text);
+                Actualizar();
+            }
+            else
+            {
+                Insertar();
+            }
+            ListarPropietarios();
+        }
+
+        private void dgvPropietario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIdPropietario.Text = dgvPropietario.CurrentRow.Cells["idPropietario"].Value.ToString();
+            txtNombrePropietario.Text = dgvPropietario.CurrentRow.Cells["NombrePropietario"].Value.ToString();
+            txtDireccionPropietario.Text = dgvPropietario.CurrentRow.Cells["DireccionPropietario"].Value.ToString();
+            txtCorreoPropietario.Text = dgvPropietario.CurrentRow.Cells["CorreoPropietario"].Value.ToString();
+            txtCelularPropietario.Text = dgvPropietario.CurrentRow.Cells["CelularPropietario"].Value.ToString();
         }
     }
 }

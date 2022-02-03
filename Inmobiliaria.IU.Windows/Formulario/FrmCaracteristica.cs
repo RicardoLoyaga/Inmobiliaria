@@ -19,8 +19,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private TextBox txtIdCaracteristi;
         private MaterialSkin.Controls.MaterialLabel txtId;
         private MaterialSkin.Controls.MaterialLabel lblIdPropiedad;
-        private MaterialSkin.Controls.MaterialLabel lblTipoPropiedad;
-        private ComboBox cboTipoPropiedad;
         private GroupBox gboxCompleto;
         private MaterialSkin.Controls.MaterialLabel lblMetros;
         private MaterialSkin.Controls.MaterialLabel lblHabitaciones;
@@ -127,8 +125,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.txtIdCaracteristi = new System.Windows.Forms.TextBox();
             this.txtId = new MaterialSkin.Controls.MaterialLabel();
             this.lblIdPropiedad = new MaterialSkin.Controls.MaterialLabel();
-            this.lblTipoPropiedad = new MaterialSkin.Controls.MaterialLabel();
-            this.cboTipoPropiedad = new System.Windows.Forms.ComboBox();
             this.gboxCompleto = new System.Windows.Forms.GroupBox();
             this.lblMetros = new MaterialSkin.Controls.MaterialLabel();
             this.lblHabitaciones = new MaterialSkin.Controls.MaterialLabel();
@@ -182,29 +178,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.lblIdPropiedad.Size = new System.Drawing.Size(123, 19);
             this.lblIdPropiedad.TabIndex = 47;
             this.lblIdPropiedad.Text = "Id Caracteristica:";
-            // 
-            // lblTipoPropiedad
-            // 
-            this.lblTipoPropiedad.AutoSize = true;
-            this.lblTipoPropiedad.Depth = 0;
-            this.lblTipoPropiedad.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblTipoPropiedad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTipoPropiedad.Location = new System.Drawing.Point(376, 75);
-            this.lblTipoPropiedad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTipoPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblTipoPropiedad.Name = "lblTipoPropiedad";
-            this.lblTipoPropiedad.Size = new System.Drawing.Size(114, 19);
-            this.lblTipoPropiedad.TabIndex = 48;
-            this.lblTipoPropiedad.Text = "Tipo Propiedad:";
-            // 
-            // cboTipoPropiedad
-            // 
-            this.cboTipoPropiedad.FormattingEnabled = true;
-            this.cboTipoPropiedad.Location = new System.Drawing.Point(490, 74);
-            this.cboTipoPropiedad.Margin = new System.Windows.Forms.Padding(2);
-            this.cboTipoPropiedad.Name = "cboTipoPropiedad";
-            this.cboTipoPropiedad.Size = new System.Drawing.Size(249, 21);
-            this.cboTipoPropiedad.TabIndex = 49;
             // 
             // gboxCompleto
             // 
@@ -445,6 +418,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.dgvCaracteristicas.Name = "dgvCaracteristicas";
             this.dgvCaracteristicas.Size = new System.Drawing.Size(774, 150);
             this.dgvCaracteristicas.TabIndex = 53;
+            this.dgvCaracteristicas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCaracteristicas_CellDoubleClick);
             // 
             // FrmCaracteristica
             // 
@@ -454,15 +428,30 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.Controls.Add(this.txtIdCaracteristi);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblIdPropiedad);
-            this.Controls.Add(this.lblTipoPropiedad);
-            this.Controls.Add(this.cboTipoPropiedad);
             this.Name = "FrmCaracteristica";
+            this.Load += new System.EventHandler(this.FrmCaracteristica_Load);
             this.gboxCompleto.ResumeLayout(false);
             this.gboxCompleto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaracteristicas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void FrmCaracteristica_Load(object sender, EventArgs e)
+        {
+            ListarCaracteristica();
+            
+        }
+
+        private void dgvCaracteristicas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIdCaracteristi.Text = dgvCaracteristicas.CurrentRow.Cells["idCaracteristica"].Value.ToString();
+            txtMetros.Text = dgvCaracteristicas.CurrentRow.Cells["MetrosCuadrados"].Value.ToString();
+            txtNroBanios.Text = dgvCaracteristicas.CurrentRow.Cells["Banios"].Value.ToString();
+            txtHabitaciones.Text = dgvCaracteristicas.CurrentRow.Cells["Habitaciones"].Value.ToString();
+            txtNroPlantas.Text = dgvCaracteristicas.CurrentRow.Cells["Plantas"].Value.ToString();
+            txtParqueaderos.Text = dgvCaracteristicas.CurrentRow.Cells["Parqueaderos"].Value.ToString();
         }
     }
 }

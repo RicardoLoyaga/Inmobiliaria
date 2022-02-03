@@ -136,6 +136,7 @@
             this.dgvPropietario.Name = "dgvPropietario";
             this.dgvPropietario.Size = new System.Drawing.Size(768, 112);
             this.dgvPropietario.TabIndex = 11;
+            this.dgvPropietario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPropietario_CellDoubleClick);
             // 
             // lblCelularPropiertario
             // 
@@ -226,6 +227,7 @@
             this.btnGuardarPropietario.TabIndex = 18;
             this.btnGuardarPropietario.Text = "Guardar";
             this.btnGuardarPropietario.UseVisualStyleBackColor = true;
+            this.btnGuardarPropietario.Click += new System.EventHandler(this.btnGuardarPropietario_Click);
             // 
             // btnCancelarPropietario
             // 
@@ -238,6 +240,7 @@
             this.btnCancelarPropietario.TabIndex = 19;
             this.btnCancelarPropietario.Text = "Cancelar";
             this.btnCancelarPropietario.UseVisualStyleBackColor = true;
+            this.btnCancelarPropietario.Click += new System.EventHandler(this.btnCancelarPropietario_Click);
             // 
             // FrmPropietario
             // 
@@ -260,7 +263,9 @@
             this.Controls.Add(this.txtIdPropietario);
             this.Controls.Add(this.lblIdPropietario);
             this.Name = "FrmPropietario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "información Propietario";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPropietario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropietario)).EndInit();
             this.ResumeLayout(false);

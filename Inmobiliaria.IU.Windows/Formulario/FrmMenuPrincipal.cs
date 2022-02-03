@@ -83,7 +83,9 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void administraciónPropietariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmPropietario frmPropietario = new FrmPropietario();
+            frmPropietario.MdiParent = this;
+            frmPropietario.Show();
         }
     }
 }

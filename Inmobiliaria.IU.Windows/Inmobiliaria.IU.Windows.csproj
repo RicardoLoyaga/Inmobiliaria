@@ -117,6 +117,12 @@
     <Compile Include="Formulario\FrmPropiedad.Designer.cs">
       <DependentUpon>FrmPropiedad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario\FrmPropietario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmPropietario.Designer.cs">
+      <DependentUpon>FrmPropietario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulario\FrmProvincia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,11 @@
     </Compile>
     <Compile Include="Formulario\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INMOBILIARIADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>INMOBILIARIADataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -179,6 +190,9 @@
     <EmbeddedResource Include="Formulario\FrmPropiedad.resx">
       <DependentUpon>FrmPropiedad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmPropietario.resx">
+      <DependentUpon>FrmPropietario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FrmProvincia.resx">
       <DependentUpon>FrmProvincia.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +215,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="INMOBILIARIADataSet.xsc">
+      <DependentUpon>INMOBILIARIADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="INMOBILIARIADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>INMOBILIARIADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="INMOBILIARIADataSet.xss">
+      <DependentUpon>INMOBILIARIADataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

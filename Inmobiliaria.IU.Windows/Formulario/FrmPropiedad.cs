@@ -156,7 +156,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void ListarPropiedad()
         {
-            dgvPropiedad.DataSource = propiedadControlador.GetPropiedadAll();
+            dgvPropiedadCaracteristica.DataSource = propiedadControlador.GetPropiedadAll();
         }
 
         private void Insertar()
@@ -200,6 +200,8 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void FrmPropiedad_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'iNMOBILIARIADataSet.PROPIEDAD' Puede moverla o quitarla según sea necesario.
+            this.pROPIEDADTableAdapter.Fill(this.iNMOBILIARIADataSet.PROPIEDAD);
             ListarPropiedad();
             cargarProvincia();
             cargarTipoPropiedad();

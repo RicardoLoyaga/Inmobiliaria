@@ -103,5 +103,11 @@ namespace Inmobiliaria.IU.Windows.Formulario
         {
             ListarTipoPropiedad();
         }
+
+        private void dgvTipoPropiedad_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIdTipoPropiedad.Text = dgvTipoPropiedad.CurrentRow.Cells["idTipoPropiedad"].Value.ToString();
+            txtTipoPropiedad.Text = dgvTipoPropiedad.CurrentRow.Cells["NombreTipoPropiedad"].Value.ToString();
+        }
     }
 }

@@ -106,6 +106,7 @@
             this.dgvTipoPropiedad.RowTemplate.Height = 28;
             this.dgvTipoPropiedad.Size = new System.Drawing.Size(719, 203);
             this.dgvTipoPropiedad.TabIndex = 4;
+            this.dgvTipoPropiedad.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoPropiedad_CellDoubleClick);
             // 
             // txtTipoPropiedad
             // 

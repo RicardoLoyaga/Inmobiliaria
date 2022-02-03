@@ -108,5 +108,10 @@ namespace Inmobiliaria.IU.Windows.Formulario
             TxtIdProvincia.Text = dgvProvincias.CurrentRow.Cells["idProvincia"].Value.ToString();
             TxtProvincia.Text = dgvProvincias.CurrentRow.Cells["NombreProvincia"].Value.ToString();
         }
+
+        private void btnCancelarProvincia_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
