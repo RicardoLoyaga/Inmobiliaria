@@ -78,6 +78,9 @@
     <Compile Include="Formulario\FrmBarrio.Designer.cs">
       <DependentUpon>FrmBarrio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario\FrmCanton.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formulario\FrmCaracteristica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +157,9 @@
     <Compile Include="VistaModelo\UsuarioVistaModelo.cs" />
     <EmbeddedResource Include="Formulario\FrmBarrio.resx">
       <DependentUpon>FrmBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmCanton.resx">
+      <DependentUpon>FrmCanton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FrmCaracteristica.resx">
       <DependentUpon>FrmCaracteristica.cs</DependentUpon>

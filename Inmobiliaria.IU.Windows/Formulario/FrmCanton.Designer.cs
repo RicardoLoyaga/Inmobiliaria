@@ -1,7 +1,6 @@
-﻿
-namespace Inmobiliaria.IU.Windows.Formulario
+﻿namespace Inmobiliaria.IU.Windows.Formulario
 {
-    partial class FrmCaracteristica
+    partial class FrmCanton
     {
         /// <summary>
         /// Required designer variable.
@@ -29,331 +28,199 @@ namespace Inmobiliaria.IU.Windows.Formulario
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblIdCaracteristica = new MaterialSkin.Controls.MaterialLabel();
-            this.btnGuardarCaracteristicas = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.lblMetros = new MaterialSkin.Controls.MaterialLabel();
-            this.lblNroPlantas = new MaterialSkin.Controls.MaterialLabel();
-            this.txtMetros = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtNroPlantas = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.lblNroBanios = new MaterialSkin.Controls.MaterialLabel();
-            this.txtNroBanios = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.lblHabitaciones = new MaterialSkin.Controls.MaterialLabel();
-            this.txtHabitaciones = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.lblParqueaderos = new MaterialSkin.Controls.MaterialLabel();
-            this.txtParqueaderos = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.lblServicios = new MaterialSkin.Controls.MaterialLabel();
-            this.txtServicios = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.lblOtros = new MaterialSkin.Controls.MaterialLabel();
-            this.txtOtros = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.dgvCaracteristica = new System.Windows.Forms.DataGridView();
-            this.txtIdCaracteristica = new MaterialSkin.Controls.MaterialLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCaracteristica)).BeginInit();
+            this.lblProvincia = new MaterialSkin.Controls.MaterialLabel();
+            this.lblParroquia = new MaterialSkin.Controls.MaterialLabel();
+            this.lblEstadoCantón = new MaterialSkin.Controls.MaterialLabel();
+            this.dgvCantón = new System.Windows.Forms.DataGridView();
+            this.lblNombreBarrio = new MaterialSkin.Controls.MaterialLabel();
+            this.btnGuardarCantón = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnCancelarCantón = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.cbxEstadoCantón = new System.Windows.Forms.CheckBox();
+            this.cboProvincia = new System.Windows.Forms.ComboBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtIdCantón = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtParroquia = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtNombreBarrio = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCantón)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblIdCaracteristica
+            // lblProvincia
             // 
-            this.lblIdCaracteristica.AutoSize = true;
-            this.lblIdCaracteristica.Depth = 0;
-            this.lblIdCaracteristica.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblIdCaracteristica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblIdCaracteristica.Location = new System.Drawing.Point(31, 73);
-            this.lblIdCaracteristica.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblIdCaracteristica.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblIdCaracteristica.Name = "lblIdCaracteristica";
-            this.lblIdCaracteristica.Size = new System.Drawing.Size(123, 19);
-            this.lblIdCaracteristica.TabIndex = 0;
-            this.lblIdCaracteristica.Text = "Id Característica:";
+            this.lblProvincia.Depth = 0;
+            this.lblProvincia.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblProvincia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblProvincia.Location = new System.Drawing.Point(265, 75);
+            this.lblProvincia.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblProvincia.Name = "lblProvincia";
+            this.lblProvincia.Size = new System.Drawing.Size(95, 19);
+            this.lblProvincia.TabIndex = 0;
+            this.lblProvincia.Text = "Provincia:";
             // 
-            // btnGuardarCaracteristicas
+            // lblParroquia
             // 
-            this.btnGuardarCaracteristicas.Depth = 0;
-            this.btnGuardarCaracteristicas.Location = new System.Drawing.Point(232, 315);
-            this.btnGuardarCaracteristicas.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardarCaracteristicas.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnGuardarCaracteristicas.Name = "btnGuardarCaracteristicas";
-            this.btnGuardarCaracteristicas.Primary = true;
-            this.btnGuardarCaracteristicas.Size = new System.Drawing.Size(91, 34);
-            this.btnGuardarCaracteristicas.TabIndex = 3;
-            this.btnGuardarCaracteristicas.Text = "Guardar";
-            this.btnGuardarCaracteristicas.UseVisualStyleBackColor = true;
-            this.btnGuardarCaracteristicas.Click += new System.EventHandler(this.btnGuardarCaracteristicas_Click);
+            this.lblParroquia.Depth = 0;
+            this.lblParroquia.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblParroquia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblParroquia.Location = new System.Drawing.Point(522, 78);
+            this.lblParroquia.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblParroquia.Name = "lblParroquia";
+            this.lblParroquia.Size = new System.Drawing.Size(95, 19);
+            this.lblParroquia.TabIndex = 2;
+            this.lblParroquia.Text = "Parroquia:";
             // 
-            // materialRaisedButton1
+            // lblEstadoCantón
             // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(336, 315);
-            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(91, 34);
-            this.materialRaisedButton1.TabIndex = 4;
-            this.materialRaisedButton1.Text = "Cancelar";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            this.lblEstadoCantón.Depth = 0;
+            this.lblEstadoCantón.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblEstadoCantón.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblEstadoCantón.Location = new System.Drawing.Point(270, 115);
+            this.lblEstadoCantón.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblEstadoCantón.Name = "lblEstadoCantón";
+            this.lblEstadoCantón.Size = new System.Drawing.Size(64, 19);
+            this.lblEstadoCantón.TabIndex = 4;
+            this.lblEstadoCantón.Text = "Estado:";
             // 
-            // lblMetros
+            // dgvCantón
             // 
-            this.lblMetros.AutoSize = true;
-            this.lblMetros.Depth = 0;
-            this.lblMetros.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblMetros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblMetros.Location = new System.Drawing.Point(409, 75);
-            this.lblMetros.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMetros.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblMetros.Name = "lblMetros";
-            this.lblMetros.Size = new System.Drawing.Size(135, 19);
-            this.lblMetros.TabIndex = 5;
-            this.lblMetros.Text = "Metros cuadrados:";
+            this.dgvCantón.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCantón.Location = new System.Drawing.Point(12, 143);
+            this.dgvCantón.Name = "dgvCantón";
+            this.dgvCantón.Size = new System.Drawing.Size(776, 153);
+            this.dgvCantón.TabIndex = 8;
             // 
-            // lblNroPlantas
+            // lblNombreBarrio
             // 
-            this.lblNroPlantas.AutoSize = true;
-            this.lblNroPlantas.Depth = 0;
-            this.lblNroPlantas.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblNroPlantas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNroPlantas.Location = new System.Drawing.Point(60, 99);
-            this.lblNroPlantas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNroPlantas.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblNroPlantas.Name = "lblNroPlantas";
-            this.lblNroPlantas.Size = new System.Drawing.Size(92, 19);
-            this.lblNroPlantas.TabIndex = 6;
-            this.lblNroPlantas.Text = "Nro Plantas:";
+            this.lblNombreBarrio.Depth = 0;
+            this.lblNombreBarrio.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblNombreBarrio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblNombreBarrio.Location = new System.Drawing.Point(12, 115);
+            this.lblNombreBarrio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblNombreBarrio.Name = "lblNombreBarrio";
+            this.lblNombreBarrio.Size = new System.Drawing.Size(111, 19);
+            this.lblNombreBarrio.TabIndex = 9;
+            this.lblNombreBarrio.Text = "Nombre Barrio:";
             // 
-            // txtMetros
+            // btnGuardarCantón
             // 
-            this.txtMetros.Depth = 0;
-            this.txtMetros.Hint = "";
-            this.txtMetros.Location = new System.Drawing.Point(543, 72);
-            this.txtMetros.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMetros.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtMetros.Name = "txtMetros";
-            this.txtMetros.PasswordChar = '\0';
-            this.txtMetros.SelectedText = "";
-            this.txtMetros.SelectionLength = 0;
-            this.txtMetros.SelectionStart = 0;
-            this.txtMetros.Size = new System.Drawing.Size(63, 23);
-            this.txtMetros.TabIndex = 2;
-            this.txtMetros.UseSystemPasswordChar = false;
+            this.btnGuardarCantón.Depth = 0;
+            this.btnGuardarCantón.Location = new System.Drawing.Point(315, 302);
+            this.btnGuardarCantón.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnGuardarCantón.Name = "btnGuardarCantón";
+            this.btnGuardarCantón.Primary = true;
+            this.btnGuardarCantón.Size = new System.Drawing.Size(82, 36);
+            this.btnGuardarCantón.TabIndex = 20;
+            this.btnGuardarCantón.Text = "Guardar";
+            this.btnGuardarCantón.UseVisualStyleBackColor = true;
             // 
-            // txtNroPlantas
+            // btnCancelarCantón
             // 
-            this.txtNroPlantas.Depth = 0;
-            this.txtNroPlantas.Hint = "";
-            this.txtNroPlantas.Location = new System.Drawing.Point(157, 96);
-            this.txtNroPlantas.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNroPlantas.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNroPlantas.Name = "txtNroPlantas";
-            this.txtNroPlantas.PasswordChar = '\0';
-            this.txtNroPlantas.SelectedText = "";
-            this.txtNroPlantas.SelectionLength = 0;
-            this.txtNroPlantas.SelectionStart = 0;
-            this.txtNroPlantas.Size = new System.Drawing.Size(63, 23);
-            this.txtNroPlantas.TabIndex = 3;
-            this.txtNroPlantas.UseSystemPasswordChar = false;
+            this.btnCancelarCantón.Depth = 0;
+            this.btnCancelarCantón.Location = new System.Drawing.Point(434, 302);
+            this.btnCancelarCantón.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelarCantón.Name = "btnCancelarCantón";
+            this.btnCancelarCantón.Primary = true;
+            this.btnCancelarCantón.Size = new System.Drawing.Size(82, 36);
+            this.btnCancelarCantón.TabIndex = 21;
+            this.btnCancelarCantón.Text = "Cancelar";
+            this.btnCancelarCantón.UseVisualStyleBackColor = true;
             // 
-            // lblNroBanios
+            // cbxEstadoCantón
             // 
-            this.lblNroBanios.AutoSize = true;
-            this.lblNroBanios.Depth = 0;
-            this.lblNroBanios.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblNroBanios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNroBanios.Location = new System.Drawing.Point(459, 101);
-            this.lblNroBanios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNroBanios.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblNroBanios.Name = "lblNroBanios";
-            this.lblNroBanios.Size = new System.Drawing.Size(84, 19);
-            this.lblNroBanios.TabIndex = 9;
-            this.lblNroBanios.Text = "Nro Baños:";
+            this.cbxEstadoCantón.AutoSize = true;
+            this.cbxEstadoCantón.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxEstadoCantón.Location = new System.Drawing.Point(352, 116);
+            this.cbxEstadoCantón.Name = "cbxEstadoCantón";
+            this.cbxEstadoCantón.Size = new System.Drawing.Size(65, 21);
+            this.cbxEstadoCantón.TabIndex = 22;
+            this.cbxEstadoCantón.Text = "Activo";
+            this.cbxEstadoCantón.UseVisualStyleBackColor = true;
             // 
-            // txtNroBanios
+            // cboProvincia
             // 
-            this.txtNroBanios.Depth = 0;
-            this.txtNroBanios.Hint = "";
-            this.txtNroBanios.Location = new System.Drawing.Point(543, 99);
-            this.txtNroBanios.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNroBanios.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNroBanios.Name = "txtNroBanios";
-            this.txtNroBanios.PasswordChar = '\0';
-            this.txtNroBanios.SelectedText = "";
-            this.txtNroBanios.SelectionLength = 0;
-            this.txtNroBanios.SelectionStart = 0;
-            this.txtNroBanios.Size = new System.Drawing.Size(63, 23);
-            this.txtNroBanios.TabIndex = 4;
-            this.txtNroBanios.UseSystemPasswordChar = false;
+            this.cboProvincia.FormattingEnabled = true;
+            this.cboProvincia.Location = new System.Drawing.Point(366, 76);
+            this.cboProvincia.Name = "cboProvincia";
+            this.cboProvincia.Size = new System.Drawing.Size(135, 21);
+            this.cboProvincia.TabIndex = 23;
             // 
-            // lblHabitaciones
+            // materialLabel1
             // 
-            this.lblHabitaciones.AutoSize = true;
-            this.lblHabitaciones.Depth = 0;
-            this.lblHabitaciones.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblHabitaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblHabitaciones.Location = new System.Drawing.Point(23, 125);
-            this.lblHabitaciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblHabitaciones.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblHabitaciones.Name = "lblHabitaciones";
-            this.lblHabitaciones.Size = new System.Drawing.Size(131, 19);
-            this.lblHabitaciones.TabIndex = 11;
-            this.lblHabitaciones.Text = "Nro Habitaciones:";
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(12, 78);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(95, 19);
+            this.materialLabel1.TabIndex = 26;
+            this.materialLabel1.Text = "Id Cantón:";
             // 
-            // txtHabitaciones
+            // txtIdCantón
             // 
-            this.txtHabitaciones.Depth = 0;
-            this.txtHabitaciones.Hint = "";
-            this.txtHabitaciones.Location = new System.Drawing.Point(157, 123);
-            this.txtHabitaciones.Margin = new System.Windows.Forms.Padding(2);
-            this.txtHabitaciones.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtHabitaciones.Name = "txtHabitaciones";
-            this.txtHabitaciones.PasswordChar = '\0';
-            this.txtHabitaciones.SelectedText = "";
-            this.txtHabitaciones.SelectionLength = 0;
-            this.txtHabitaciones.SelectionStart = 0;
-            this.txtHabitaciones.Size = new System.Drawing.Size(63, 23);
-            this.txtHabitaciones.TabIndex = 5;
-            this.txtHabitaciones.UseSystemPasswordChar = false;
+            this.txtIdCantón.Depth = 0;
+            this.txtIdCantón.Hint = "";
+            this.txtIdCantón.Location = new System.Drawing.Point(113, 75);
+            this.txtIdCantón.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtIdCantón.Name = "txtIdCantón";
+            this.txtIdCantón.PasswordChar = '\0';
+            this.txtIdCantón.SelectedText = "";
+            this.txtIdCantón.SelectionLength = 0;
+            this.txtIdCantón.SelectionStart = 0;
+            this.txtIdCantón.Size = new System.Drawing.Size(135, 23);
+            this.txtIdCantón.TabIndex = 27;
+            this.txtIdCantón.UseSystemPasswordChar = false;
             // 
-            // lblParqueaderos
+            // txtParroquia
             // 
-            this.lblParqueaderos.AutoSize = true;
-            this.lblParqueaderos.Depth = 0;
-            this.lblParqueaderos.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblParqueaderos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblParqueaderos.Location = new System.Drawing.Point(409, 127);
-            this.lblParqueaderos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblParqueaderos.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblParqueaderos.Name = "lblParqueaderos";
-            this.lblParqueaderos.Size = new System.Drawing.Size(135, 19);
-            this.lblParqueaderos.TabIndex = 13;
-            this.lblParqueaderos.Text = "Nro Parqueaderos:";
+            this.txtParroquia.Depth = 0;
+            this.txtParroquia.Hint = "";
+            this.txtParroquia.Location = new System.Drawing.Point(635, 76);
+            this.txtParroquia.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtParroquia.Name = "txtParroquia";
+            this.txtParroquia.PasswordChar = '\0';
+            this.txtParroquia.SelectedText = "";
+            this.txtParroquia.SelectionLength = 0;
+            this.txtParroquia.SelectionStart = 0;
+            this.txtParroquia.Size = new System.Drawing.Size(135, 23);
+            this.txtParroquia.TabIndex = 28;
+            this.txtParroquia.UseSystemPasswordChar = false;
             // 
-            // txtParqueaderos
+            // txtNombreBarrio
             // 
-            this.txtParqueaderos.Depth = 0;
-            this.txtParqueaderos.Hint = "";
-            this.txtParqueaderos.Location = new System.Drawing.Point(543, 123);
-            this.txtParqueaderos.Margin = new System.Windows.Forms.Padding(2);
-            this.txtParqueaderos.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtParqueaderos.Name = "txtParqueaderos";
-            this.txtParqueaderos.PasswordChar = '\0';
-            this.txtParqueaderos.SelectedText = "";
-            this.txtParqueaderos.SelectionLength = 0;
-            this.txtParqueaderos.SelectionStart = 0;
-            this.txtParqueaderos.Size = new System.Drawing.Size(63, 23);
-            this.txtParqueaderos.TabIndex = 6;
-            this.txtParqueaderos.UseSystemPasswordChar = false;
+            this.txtNombreBarrio.Depth = 0;
+            this.txtNombreBarrio.Hint = "";
+            this.txtNombreBarrio.Location = new System.Drawing.Point(129, 111);
+            this.txtNombreBarrio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNombreBarrio.Name = "txtNombreBarrio";
+            this.txtNombreBarrio.PasswordChar = '\0';
+            this.txtNombreBarrio.SelectedText = "";
+            this.txtNombreBarrio.SelectionLength = 0;
+            this.txtNombreBarrio.SelectionStart = 0;
+            this.txtNombreBarrio.Size = new System.Drawing.Size(135, 23);
+            this.txtNombreBarrio.TabIndex = 29;
+            this.txtNombreBarrio.UseSystemPasswordChar = false;
             // 
-            // lblServicios
-            // 
-            this.lblServicios.AutoSize = true;
-            this.lblServicios.Depth = 0;
-            this.lblServicios.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblServicios.Location = new System.Drawing.Point(77, 150);
-            this.lblServicios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblServicios.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblServicios.Name = "lblServicios";
-            this.lblServicios.Size = new System.Drawing.Size(75, 19);
-            this.lblServicios.TabIndex = 15;
-            this.lblServicios.Text = "Servicios:";
-            // 
-            // txtServicios
-            // 
-            this.txtServicios.Depth = 0;
-            this.txtServicios.Hint = "";
-            this.txtServicios.Location = new System.Drawing.Point(157, 149);
-            this.txtServicios.Margin = new System.Windows.Forms.Padding(2);
-            this.txtServicios.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtServicios.Name = "txtServicios";
-            this.txtServicios.PasswordChar = '\0';
-            this.txtServicios.SelectedText = "";
-            this.txtServicios.SelectionLength = 0;
-            this.txtServicios.SelectionStart = 0;
-            this.txtServicios.Size = new System.Drawing.Size(295, 23);
-            this.txtServicios.TabIndex = 7;
-            this.txtServicios.UseSystemPasswordChar = false;
-            // 
-            // lblOtros
-            // 
-            this.lblOtros.AutoSize = true;
-            this.lblOtros.Depth = 0;
-            this.lblOtros.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblOtros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblOtros.Location = new System.Drawing.Point(492, 153);
-            this.lblOtros.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblOtros.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblOtros.Name = "lblOtros";
-            this.lblOtros.Size = new System.Drawing.Size(50, 19);
-            this.lblOtros.TabIndex = 17;
-            this.lblOtros.Text = "Otros:";
-            // 
-            // txtOtros
-            // 
-            this.txtOtros.Depth = 0;
-            this.txtOtros.Hint = "";
-            this.txtOtros.Location = new System.Drawing.Point(543, 151);
-            this.txtOtros.Margin = new System.Windows.Forms.Padding(2);
-            this.txtOtros.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtOtros.Name = "txtOtros";
-            this.txtOtros.PasswordChar = '\0';
-            this.txtOtros.SelectedText = "";
-            this.txtOtros.SelectionLength = 0;
-            this.txtOtros.SelectionStart = 0;
-            this.txtOtros.Size = new System.Drawing.Size(63, 23);
-            this.txtOtros.TabIndex = 8;
-            this.txtOtros.UseSystemPasswordChar = false;
-            // 
-            // dgvCaracteristica
-            // 
-            this.dgvCaracteristica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCaracteristica.Location = new System.Drawing.Point(40, 188);
-            this.dgvCaracteristica.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvCaracteristica.Name = "dgvCaracteristica";
-            this.dgvCaracteristica.RowHeadersWidth = 62;
-            this.dgvCaracteristica.RowTemplate.Height = 28;
-            this.dgvCaracteristica.Size = new System.Drawing.Size(575, 113);
-            this.dgvCaracteristica.TabIndex = 9;
-            // 
-            // txtIdCaracteristica
-            // 
-            this.txtIdCaracteristica.AutoSize = true;
-            this.txtIdCaracteristica.Depth = 0;
-            this.txtIdCaracteristica.Font = new System.Drawing.Font("Roboto", 11F);
-            this.txtIdCaracteristica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtIdCaracteristica.Location = new System.Drawing.Point(159, 73);
-            this.txtIdCaracteristica.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtIdCaracteristica.Name = "txtIdCaracteristica";
-            this.txtIdCaracteristica.Size = new System.Drawing.Size(0, 19);
-            this.txtIdCaracteristica.TabIndex = 18;
-            // 
-            // FrmCaracteristica
+            // FrmCanton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 367);
-            this.Controls.Add(this.txtIdCaracteristica);
-            this.Controls.Add(this.dgvCaracteristica);
-            this.Controls.Add(this.txtOtros);
-            this.Controls.Add(this.lblOtros);
-            this.Controls.Add(this.txtServicios);
-            this.Controls.Add(this.lblServicios);
-            this.Controls.Add(this.txtParqueaderos);
-            this.Controls.Add(this.lblParqueaderos);
-            this.Controls.Add(this.txtHabitaciones);
-            this.Controls.Add(this.lblHabitaciones);
-            this.Controls.Add(this.txtNroBanios);
-            this.Controls.Add(this.lblNroBanios);
-            this.Controls.Add(this.txtNroPlantas);
-            this.Controls.Add(this.txtMetros);
-            this.Controls.Add(this.lblNroPlantas);
-            this.Controls.Add(this.lblMetros);
-            this.Controls.Add(this.materialRaisedButton1);
-            this.Controls.Add(this.btnGuardarCaracteristicas);
-            this.Controls.Add(this.lblIdCaracteristica);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FrmCaracteristica";
-            this.Text = "Característica";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCaracteristica)).EndInit();
+            this.ClientSize = new System.Drawing.Size(800, 350);
+            this.Controls.Add(this.txtNombreBarrio);
+            this.Controls.Add(this.txtParroquia);
+            this.Controls.Add(this.txtIdCantón);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.cboProvincia);
+            this.Controls.Add(this.cbxEstadoCantón);
+            this.Controls.Add(this.btnCancelarCantón);
+            this.Controls.Add(this.btnGuardarCantón);
+            this.Controls.Add(this.lblNombreBarrio);
+            this.Controls.Add(this.dgvCantón);
+            this.Controls.Add(this.lblEstadoCantón);
+            this.Controls.Add(this.lblParroquia);
+            this.Controls.Add(this.lblProvincia);
+            this.Name = "FrmCanton";
+            this.Text = "Información Cantón";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCantón)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,24 +228,18 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialLabel lblIdCaracteristica;
-        private MaterialSkin.Controls.MaterialRaisedButton btnGuardarCaracteristicas;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private MaterialSkin.Controls.MaterialLabel lblMetros;
-        private MaterialSkin.Controls.MaterialLabel lblNroPlantas;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtMetros;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtNroPlantas;
-        private MaterialSkin.Controls.MaterialLabel lblNroBanios;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtNroBanios;
-        private MaterialSkin.Controls.MaterialLabel lblHabitaciones;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtHabitaciones;
-        private MaterialSkin.Controls.MaterialLabel lblParqueaderos;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtParqueaderos;
-        private MaterialSkin.Controls.MaterialLabel lblServicios;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtServicios;
-        private MaterialSkin.Controls.MaterialLabel lblOtros;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtOtros;
-        private System.Windows.Forms.DataGridView dgvCaracteristica;
-        private MaterialSkin.Controls.MaterialLabel txtIdCaracteristica;
+        private MaterialSkin.Controls.MaterialLabel lblProvincia;
+        private MaterialSkin.Controls.MaterialLabel lblParroquia;
+        private MaterialSkin.Controls.MaterialLabel lblEstadoCantón;
+        private System.Windows.Forms.DataGridView dgvCantón;
+        private MaterialSkin.Controls.MaterialLabel lblNombreBarrio;
+        private MaterialSkin.Controls.MaterialRaisedButton btnGuardarCantón;
+        private MaterialSkin.Controls.MaterialRaisedButton btnCancelarCantón;
+        private System.Windows.Forms.CheckBox cbxEstadoCantón;
+        private System.Windows.Forms.ComboBox cboProvincia;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtIdCantón;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtParroquia;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNombreBarrio;
     }
 }
