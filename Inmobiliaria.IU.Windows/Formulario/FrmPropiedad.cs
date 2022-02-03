@@ -52,77 +52,54 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void btnGuardarPropiedad_Click(object sender, EventArgs e)
         {
-
-            propiedadVistaModelo = new PropiedadVistaModelo();
-            propiedadVistaModelo.IdProvincia = int.Parse(cboProvincia.SelectedValue.ToString());
-            propiedadVistaModelo.IdTipoPropiedad = int.Parse(cboTipoPropiedad.SelectedValue.ToString());
-            //propiedadVistaModelo.IdCaracteristica= int.Parse(cbo.SelectedValue.ToString());
-            //propiedadVistaModelo.IdPropietario = int.Parse()
-            propiedadVistaModelo.Precio = decimal.Parse(txtPrecio.Text);
-            propiedadVistaModelo.CallePrincipal = txtCallePrincipal.Text;
-            propiedadVistaModelo.CalleSecundaria = txtCalleSecundaria.Text;
-            propiedadVistaModelo.FechaRegistroPropiedad = dtpFechaRegistro.Value;
-            propiedadVistaModelo.FotoPrincipal = picFoto.ImageLocation;
-
-            if (cbxEstadoPropiedad.Checked)
+            if (cboTipoPropiedad.SelectedValue.ToString() == "1")
             {
-                propiedadVistaModelo.EstadoPropiedad = 1;
+                caracteristicaVistaModelo = new CaracteristicaVistaModelo();
+                caracteristicaVistaModelo.Plantas = int.Parse(txtNroPlantas.Text);
+                caracteristicaVistaModelo.Habitaciones = int.Parse(txtHabitaciones.Text);
+                caracteristicaVistaModelo.MetrosCuadrados = float.Parse(txtMetros.Text);
+                caracteristicaVistaModelo.Parqueaderos = int.Parse(txtParqueaderos.Text);
+                caracteristicaVistaModelo.Servicios = txtServicios.Text;
+                caracteristicaVistaModelo.Banios = int.Parse(txtNroBanios.Text);
+                caracteristicaVistaModelo.Otros = txtOtros.Text;
+            }
+            else if (cboTipoPropiedad.SelectedValue.ToString() == "2")
+            {
+                caracteristicaVistaModelo = new CaracteristicaVistaModelo();
+                caracteristicaVistaModelo.MetrosCuadrados = int.Parse(txtMetrosTerreno.Text);
+                caracteristicaVistaModelo.Servicios = txtServicioTerreno.Text;
+                caracteristicaVistaModelo.Otros = txtOtroTerreno.Text;
             }
             else
             {
-                propiedadVistaModelo.EstadoPropiedad = 0;
+                caracteristicaVistaModelo = new CaracteristicaVistaModelo();
+                caracteristicaVistaModelo.MetrosCuadrados = float.Parse(txtMetrosOficina.Text);
+                caracteristicaVistaModelo.Servicios = txtServiciosOficina.Text;
+                caracteristicaVistaModelo.Banios = int.Parse(txtBaniosOficina.Text);
+                caracteristicaVistaModelo.Habitaciones = int.Parse(txtNroHabitacionesOficina.Text);
+                caracteristicaVistaModelo.Parqueaderos = int.Parse(txtNroParqueaderoOficina.Text);
+                caracteristicaVistaModelo.Otros = txtOtrosOficina.Text;
             }
-
-            if (!txtIdPropiedad.Text.Equals(""))
-            {
-                propiedadVistaModelo.IdPropiedad = int.Parse(txtIdPropiedad.Text);
-                Actualizar();
-                //resp = true;
-
-            }
-            else
-            {
-                Insertar();
-                //resp = true;
-            }
-
-
-            caracteristicaVistaModelo = new CaracteristicaVistaModelo();
-            caracteristicaVistaModelo.Plantas = int.Parse(txtNroPlantas.Text);
-            caracteristicaVistaModelo.Habitaciones = int.Parse(txtHabitaciones.Text);
-            caracteristicaVistaModelo.MetrosCuadrados = int.Parse(txtMetros.Text);
-            caracteristicaVistaModelo.Parqueaderos = int.Parse(txtParqueaderos.Text);
-            caracteristicaVistaModelo.Servicios = txtServicios.Text;
-            caracteristicaVistaModelo.Banios = int.Parse(txtNroBanios.Text);
-            caracteristicaVistaModelo.Otros = txtOtros.Text;
+            
 
             if (!txtIdCaracteristica.Text.Equals(""))
             {
                 caracteristicaVistaModelo.IdCaracteristica = int.Parse(txtIdCaracteristica.Text);
-                //if (Propiedad())
-                //{
-                    ActualizarCaracteristica();
-                //}
+                ActualizarCaracteristica();
             }
             else
             {
-                //if (Propiedad())
-                //{
-                    InsertarCaracteristica();
-                //}
+                InsertarCaracteristica();
             }
 
             ListarPropiedad();
-        }
 
-        /*public bool Propiedad()
-        {
-            bool resp = false;
 
             propiedadVistaModelo = new PropiedadVistaModelo();
-            propiedadVistaModelo.IdProvincia = int.Parse(cboProvincia.SelectedValue.ToString());
-            propiedadVistaModelo.IdTipoPropiedad = int.Parse(cboTipoPropiedad.SelectedValue.ToString());
-            //propiedadVistaModelo.IdCaracteristica= int.Parse(cbo.SelectedValue.ToString());
+            //caracteristicaVistaModelo = new CaracteristicaVistaModelo();
+            propiedadVistaModelo.IdProvincia = cboProvincia.SelectedIndex + 1;
+            propiedadVistaModelo.IdTipoPropiedad = cboTipoPropiedad.SelectedIndex+1;
+            //propiedadVistaModelo.IdCaracteristica= int.Parse(txtIdCaracteristi.Text);
             //propiedadVistaModelo.IdPropietario = int.Parse()
             propiedadVistaModelo.Precio = decimal.Parse(txtPrecio.Text);
             propiedadVistaModelo.CallePrincipal = txtCallePrincipal.Text;
@@ -143,22 +120,19 @@ namespace Inmobiliaria.IU.Windows.Formulario
             {
                 propiedadVistaModelo.IdPropiedad = int.Parse(txtIdPropiedad.Text);
                 Actualizar();
-                resp = true;
-
             }
             else
             {
-               Insertar();
-                resp = true;
+                Insertar();
             }
-            return resp;
-        }*/
+
+        }
 
         private void InsertarCaracteristica()
         {
             if (caracteristicaControlador.InsertarCaracteristica(caracteristicaVistaModelo))
             {
-                MessageBox.Show("Registro guardado exitosamente!!");
+                MessageBox.Show("Característica guardada exitosamente!!");
                 actualizarForm();
             }
             else
@@ -229,6 +203,9 @@ namespace Inmobiliaria.IU.Windows.Formulario
             ListarPropiedad();
             cargarProvincia();
             cargarTipoPropiedad();
+            //gboxCompleto.Hide();
+            gbxOficina.Hide();
+            gbxTerreno.Hide();
         }
 
         public void cargarProvincia()
@@ -271,27 +248,10 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void cboProvincia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                int idProv = int.Parse(cboProvincia.SelectedValue.ToString());
-                cargarCanton(idProv);
-            }
-            catch (FormatException)
-            {
-            }
-            
         }
 
         private void cboCanton_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                int idCanton = int.Parse(cboCanton.SelectedValue.ToString());
-                cargarParroquia(idCanton);
-            }
-            catch (FormatException)
-            {
-            }
         }
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
@@ -306,6 +266,45 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void cboParroquia_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void materialLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboProvincia_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                int idProv = int.Parse(cboProvincia.SelectedValue.ToString());
+                cargarCanton(idProv);
+            }
+            catch (FormatException)
+            {
+            }
+        }
+
+        private void cboCanton_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                int idCanton = int.Parse(cboCanton.SelectedValue.ToString());
+                cargarParroquia(idCanton);
+            }
+            catch (FormatException)
+            {
+            }
+        }
+
+        private void cboParroquia_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
             try
             {
                 int idParroquia = int.Parse(cboParroquia.SelectedValue.ToString());
@@ -314,6 +313,49 @@ namespace Inmobiliaria.IU.Windows.Formulario
             catch (FormatException)
             {
             }
+        }
+
+        private void cboBarrio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboTipoPropiedad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idTipoPropiedad = int.Parse(cboTipoPropiedad.SelectedValue.ToString());
+                switch (idTipoPropiedad)
+                {
+                    case 1: gboxCompleto.Show();
+                        gboxCompleto.BringToFront();
+                        gbxTerreno.Hide();
+                        gbxOficina.Hide();
+                        break;
+                    case 2: 
+                        gbxTerreno.Show();
+                        gbxTerreno.BringToFront();
+                        break;
+                    case 3: 
+                        gbxOficina.Show();
+                        gbxOficina.BringToFront();
+                        break;
+                    case 4:
+                        gbxOficina.Show();
+                        gbxOficina.BringToFront();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (FormatException)
+            {
+            }
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
