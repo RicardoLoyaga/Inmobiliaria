@@ -45,5 +45,10 @@ namespace Inmobiliaria.Aplicacion.ClaseServicioEntidades
         {
             cantonRepositorio.Delete(id);
         }
+
+        public List<PROVINCIA> poblarCboProvincia()
+        {
+            return cantonRepositorio.poblarCboProvincia();
+        }
     }
 }

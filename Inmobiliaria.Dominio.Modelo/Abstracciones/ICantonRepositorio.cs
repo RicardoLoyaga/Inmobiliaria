@@ -9,5 +9,6 @@ namespace Inmobiliaria.Dominio.Modelo.Abstracciones
 {
     public interface ICantonRepositorio:IBaseRepositorio<CANTON>
     {
+        List<PROVINCIA> poblarCboProvincia();
     }
 }

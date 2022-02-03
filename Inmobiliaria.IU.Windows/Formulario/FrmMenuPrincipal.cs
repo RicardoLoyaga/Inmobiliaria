@@ -59,7 +59,9 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void cantónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Frm
+            FrmCanton frmCanton = new FrmCanton();
+            frmCanton.MdiParent = this;
+            frmCanton.Show();
         }
 
         private void administraciónClientesToolStripMenuItem_Click(object sender, EventArgs e)

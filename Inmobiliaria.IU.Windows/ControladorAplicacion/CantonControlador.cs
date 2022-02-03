@@ -64,10 +64,27 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
                     IdCanton = item.IDCANTON,
                     IdProvincia = item.IDPROVINCIA,
                     NombreCanton = item.NOMBRECANTON,
-                    EstadoCanton = item.ESTADOCANTON
+                    EstadoCanton = item.ESTADOCANTON,
+                    CodCanton = item.CODCANTON
                 });
             }
             return vistaModelos;
         }
+        public List<ProvinciaVistaModelo> poblarCboProvincia()
+        {
+            var proListProvincia = cantonServicio.poblarCboProvincia();
+            List<ProvinciaVistaModelo> vistaModelos = new List<ProvinciaVistaModelo>();
+
+            foreach (PROVINCIA item in proListProvincia)
+            {
+                vistaModelos.Add(new ProvinciaVistaModelo
+                {
+                    IdProvincia = item.IDPROVINCIA,
+                    NombreProvincia = item.NOMBREPROVINCIA
+                });
+            }
+            return vistaModelos;
+        }
+
     }
 }
