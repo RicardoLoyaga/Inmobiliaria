@@ -14,5 +14,6 @@ namespace Inmobiliaria.Dominio.Modelo.Abstracciones
         List<PARROQUIA> poblarCboParroquia(int idCa);
         List<BARRIO> poblarCboBarrio(int idPar);
         List<TIPO_PROPIEDAD> poblarCboTipoPropiedad();
+        List<ReportePropiedad> listadoPropiedades();
     }
 }

@@ -129,6 +129,12 @@
     <Compile Include="Formulario\FrmProvincia.Designer.cs">
       <DependentUpon>FrmProvincia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario\FrmReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FrmReporte.designer.cs">
+      <DependentUpon>FrmReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulario\FrmRol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,7 @@
     <Compile Include="VistaModelo\PropiedadVistaModelo.cs" />
     <Compile Include="VistaModelo\PropietarioVistaModelo.cs" />
     <Compile Include="VistaModelo\ProvinciaVistaModelo.cs" />
+    <Compile Include="VistaModelo\ReportePropiedadVistaModelo.cs" />
     <Compile Include="VistaModelo\RolVistaModelo.cs" />
     <Compile Include="VistaModelo\TipoPropiedadVistaModelo.cs" />
     <Compile Include="VistaModelo\UsuarioVistaModelo.cs" />
@@ -200,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FrmProvincia.resx">
       <DependentUpon>FrmProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FrmReporte.resx">
+      <DependentUpon>FrmReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FrmRol.resx">
       <DependentUpon>FrmRol.cs</DependentUpon>

@@ -71,5 +71,10 @@ namespace Inmobiliaria.Aplicacion.ClaseServicioEntidades
             return propiedadRepositorio.poblarCboTipoPropiedad();
         }
 
+        public List<ReportePropiedad> listadoPropiedades()
+        {
+            return propiedadRepositorio.listadoPropiedades();
+        }
+
     }
 }

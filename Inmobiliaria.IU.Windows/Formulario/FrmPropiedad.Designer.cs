@@ -101,8 +101,8 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.txtMetrosTerreno = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dgvPropiedadCaracteristica = new System.Windows.Forms.DataGridView();
-            this.iNMOBILIARIADataSet = new Inmobiliaria.IU.Windows.INMOBILIARIADataSet();
             this.pROPIEDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iNMOBILIARIADataSet = new Inmobiliaria.IU.Windows.INMOBILIARIADataSet();
             this.pROPIEDADTableAdapter = new Inmobiliaria.IU.Windows.INMOBILIARIADataSetTableAdapters.PROPIEDADTableAdapter();
             this.iDPROPIEDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRECIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,8 +119,8 @@
             this.gboxCompleto.SuspendLayout();
             this.gbxTerreno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropiedadCaracteristica)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iNMOBILIARIADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROPIEDADBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNMOBILIARIADataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIdPropiedad
@@ -1150,15 +1150,15 @@
             this.dgvPropiedadCaracteristica.Size = new System.Drawing.Size(872, 176);
             this.dgvPropiedadCaracteristica.TabIndex = 12;
             // 
-            // iNMOBILIARIADataSet
-            // 
-            this.iNMOBILIARIADataSet.DataSetName = "INMOBILIARIADataSet";
-            this.iNMOBILIARIADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // pROPIEDADBindingSource
             // 
             this.pROPIEDADBindingSource.DataMember = "PROPIEDAD";
             this.pROPIEDADBindingSource.DataSource = this.iNMOBILIARIADataSet;
+            // 
+            // iNMOBILIARIADataSet
+            // 
+            this.iNMOBILIARIADataSet.DataSetName = "INMOBILIARIADataSet";
+            this.iNMOBILIARIADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pROPIEDADTableAdapter
             // 
@@ -1231,8 +1231,8 @@
             this.gbxTerreno.ResumeLayout(false);
             this.gbxTerreno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropiedadCaracteristica)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iNMOBILIARIADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROPIEDADBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNMOBILIARIADataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -107,5 +107,50 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
                 throw new Exception("Error al consultar la BDD" + ex);
             }
         }
+
+        public List<ReportePropiedad> listadoPropiedades()
+        {
+            List<ReportePropiedad> reporte = new List<ReportePropiedad>();
+            try
+            {
+                using (var context = new INMOBILIARIAEntities())
+                {
+                    var query = from tprop in context.PROPIEDAD
+                                join car in context.CARACTERISTICA
+                                on tprop.IDCARACTERISTICA equals car.IDCARACTERISTICA
+                                join prov in context.PROVINCIA
+                                on tprop.IDPROVINCIA equals prov.IDPROVINCIA
+                                join prop in context.PROPIETARIO
+                                on tprop.IDPROPIETARIO equals prop.IDPROPIETARIO
+                                select new { prov.NOMBREPROVINCIA, prop.NOMBREPROPIETARIO, tprop.PRECIO, tprop.FECHAREGISTROPROPIEDAD, tprop.FOTOPRINCIPAL, tprop.CALLEPRINCIPAL, tprop.CALLESECUNDARIA, car.METROSCUADRADOS, car.PLANTAS, car.BANIOS, car.HABITACIONES, car.PARQUEADEROS, car.SERVICIOS, car.OTROS };
+                    foreach (var item in query)
+                    {
+                        reporte.Add(new ReportePropiedad
+                        {
+                            NombreProvincia = item.NOMBREPROVINCIA,
+                            NombrePropietario = item.NOMBREPROPIETARIO,
+                            Precio = item.PRECIO,
+                            FechaRegistroPropiedad = item.FECHAREGISTROPROPIEDAD,
+                            Path = item.FOTOPRINCIPAL,
+                            CallePrincipal = item.CALLEPRINCIPAL,
+                            CalleSecundaria = item.CALLESECUNDARIA,
+                            MetrosCuadrados = item.METROSCUADRADOS,
+                            Plantas = item.PLANTAS,
+                            Banios = item.BANIOS,
+                            Habitaciones = item.HABITACIONES,
+                            Parqueaderos = item.PARQUEADEROS,
+                            Servicios = item.SERVICIOS,
+                            Otros = item.OTROS
+                        });
+                    }
+                    return reporte;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
     }
 }

@@ -133,7 +133,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             if (caracteristicaControlador.InsertarCaracteristica(caracteristicaVistaModelo))
             {
                 MessageBox.Show("Característica guardada exitosamente!!");
-                actualizarForm();
+                //actualizarForm();
             }
             else
             {
@@ -146,7 +146,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             if (caracteristicaControlador.ActualizarCaracteristica(caracteristicaVistaModelo))
             {
                 MessageBox.Show("Registro guardado exitosamente!!");
-                actualizarForm();
+                //actualizarForm();
             }
             else
             {

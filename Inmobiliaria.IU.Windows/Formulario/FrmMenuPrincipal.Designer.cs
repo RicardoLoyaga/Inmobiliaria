@@ -46,6 +46,8 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.administraciónClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.propietariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraciónPropietariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.propiedadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +59,8 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.registroDePropiedadesToolStripMenuItem,
             this.ubicaciónGeográficaToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.propietariosToolStripMenuItem});
+            this.propietariosToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.menPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menPrincipal.Name = "menPrincipal";
             this.menPrincipal.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -78,14 +81,14 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // rolToolStripMenuItem
             // 
             this.rolToolStripMenuItem.Name = "rolToolStripMenuItem";
-            this.rolToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rolToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.rolToolStripMenuItem.Text = "Rol";
             this.rolToolStripMenuItem.Click += new System.EventHandler(this.rolToolStripMenuItem_Click);
             // 
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.usuarioToolStripMenuItem.Text = "Usuario";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
@@ -117,7 +120,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
             // propiedadesToolStripMenuItem
             // 
             this.propiedadesToolStripMenuItem.Name = "propiedadesToolStripMenuItem";
-            this.propiedadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.propiedadesToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.propiedadesToolStripMenuItem.Text = "Propiedades";
             this.propiedadesToolStripMenuItem.Click += new System.EventHandler(this.propiedadesToolStripMenuItem_Click);
             // 
@@ -186,6 +189,22 @@ namespace Inmobiliaria.IU.Windows.Formulario
             this.administraciónPropietariosToolStripMenuItem.Text = "Administración propietarios";
             this.administraciónPropietariosToolStripMenuItem.Click += new System.EventHandler(this.administraciónPropietariosToolStripMenuItem_Click);
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.propiedadesToolStripMenuItem1});
+            this.reportesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportesToolStripMenuItem.Image")));
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // propiedadesToolStripMenuItem1
+            // 
+            this.propiedadesToolStripMenuItem1.Name = "propiedadesToolStripMenuItem1";
+            this.propiedadesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.propiedadesToolStripMenuItem1.Text = "Propiedades";
+            this.propiedadesToolStripMenuItem1.Click += new System.EventHandler(this.propiedadesToolStripMenuItem1_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,5 +242,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
         private System.Windows.Forms.ToolStripMenuItem administraciónClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem propietariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administraciónPropietariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem propiedadesToolStripMenuItem1;
     }
 }

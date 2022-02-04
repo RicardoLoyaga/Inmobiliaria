@@ -40,5 +40,12 @@ namespace Inmobiliaria.IU.Windows.Formulario
             frmPropiedad.Show();
             frmPropiedad.BringToFront();
         }
+
+        private void propiedadesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmReporte frmReporte = new FrmReporte();
+            frmReporte.MdiParent = this;
+            frmReporte.Show();
+        }
     }
 }

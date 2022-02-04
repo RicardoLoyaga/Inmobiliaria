@@ -78,6 +78,10 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
                     IdProvincia = item.IDPROVINCIA,
                     IdTipoPropiedad = item.IDTIPOPROPIEDAD,
                     IdPropietario = item.IDPROPIETARIO,
+                    CallePrincipal = item.CALLEPRINCIPAL,
+                    CalleSecundaria = item.CALLESECUNDARIA,
+                    FechaRegistroPropiedad = item.FECHAREGISTROPROPIEDAD,
+                    FotoPrincipal = item.FOTOPRINCIPAL,
                     IdUsuario = item.IDUSUARIO,
                     Precio = item.PRECIO,
                     EstadoPropiedad = item.ESTADOPROPIEDAD
@@ -161,6 +165,34 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
                 {
                     IdTipoPropiedad = item.IDTIPOPROPIEDAD,
                     NombreTipoPropiedad = item.NOMBRETIPOPROPIEDAD
+                });
+            }
+            return vistaModelos;
+        }
+
+        public List<ReportePropiedadVistaModelo> listadoPropiedades()
+        {
+            var proListTipoPropiedad = propiedadServicio.listadoPropiedades();
+            List<ReportePropiedadVistaModelo> vistaModelos = new List<ReportePropiedadVistaModelo>();
+
+            foreach (ReportePropiedad item in proListTipoPropiedad)
+            {
+                vistaModelos.Add(new ReportePropiedadVistaModelo
+                {
+                    NombreProvincia = item.NombreProvincia,
+                    NombrePropietario = item.NombrePropietario,
+                    Precio = item.Precio,
+                    FechaRegistroPropiedad = item.FechaRegistroPropiedad,
+                    Path = item.Path,
+                    CallePrincipal = item.CallePrincipal,
+                    CalleSecundaria = item.CalleSecundaria,
+                    MetrosCuadrados = item.MetrosCuadrados,
+                    Plantas = item.Plantas,
+                    Banios = item.Banios,
+                    Habitaciones = item.Habitaciones,
+                    Parqueaderos = item.Parqueaderos,
+                    Servicios = item.Servicios,
+                    Otros = item.Otros
                 });
             }
             return vistaModelos;

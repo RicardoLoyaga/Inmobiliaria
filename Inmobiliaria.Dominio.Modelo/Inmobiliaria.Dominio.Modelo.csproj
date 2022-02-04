@@ -88,6 +88,7 @@
     <Compile Include="Entidades\PROVINCIA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\ReportePropiedad.cs" />
     <Compile Include="Entidades\ROL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
