@@ -92,9 +92,6 @@ namespace Inmobiliaria.IU.Windows.Formulario
                 InsertarCaracteristica();
             }
 
-            ListarPropiedad();
-
-
             propiedadVistaModelo = new PropiedadVistaModelo();
             //caracteristicaVistaModelo = new CaracteristicaVistaModelo();
             propiedadVistaModelo.IdProvincia = cboProvincia.SelectedIndex + 1;
@@ -125,6 +122,8 @@ namespace Inmobiliaria.IU.Windows.Formulario
             {
                 Insertar();
             }
+
+            ListarPropiedad();
 
         }
 
