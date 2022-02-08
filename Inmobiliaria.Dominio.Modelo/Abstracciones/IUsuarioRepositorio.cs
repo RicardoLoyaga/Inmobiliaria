@@ -13,6 +13,8 @@ namespace Inmobiliaria.Dominio.Modelo.Abstracciones
 
         USUARIO username(string user);
 
+        bool validaUsuario(string mail);
+
         string Encriptar(string texto);
     }
 }

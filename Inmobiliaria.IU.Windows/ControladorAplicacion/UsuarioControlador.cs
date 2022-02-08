@@ -109,6 +109,13 @@ namespace Inmobiliaria.IU.Windows.ControladorAplicacion
             return logi;
         }
 
+        public bool validaUsuario(string mail) 
+        {
+            bool resp = usuarioServicio.validaUsuario(mail);
+
+            return resp;
+        }
+
         public string Encriptar(string texto)
         {
             string resp = usuarioServicio.Encriptar(texto);

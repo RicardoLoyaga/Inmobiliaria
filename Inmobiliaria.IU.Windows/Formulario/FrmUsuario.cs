@@ -74,7 +74,16 @@ namespace Inmobiliaria.IU.Windows.Formulario
             }
             else
             {
-                Insertar();
+                if (!usuarioControlador.validaUsuario(txtCorreoUsuario.Text.Trim()))
+                {
+                    Insertar();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario ya se encuentra registrado");
+                    actualizarForm();
+                }
+                
             }
             ListarUsuarios();
         }

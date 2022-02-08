@@ -57,6 +57,11 @@ namespace Inmobiliaria.Aplicacion.ClaseServicioEntidades
             return usuarioRepositorio.username(user);
         }
 
+        public bool validaUsuario(string mail)
+        {
+            return usuarioRepositorio.validaUsuario(mail);
+        }
+
         public string Encriptar(string texto)
         {
             return usuarioRepositorio.Encriptar(texto);

@@ -358,5 +358,10 @@ namespace Inmobiliaria.IU.Windows.Formulario
         {
 
         }
+
+        private void dtpFechaRegistro_ValueChanged(object sender, EventArgs e)
+        {
+            dtpFechaRegistro.MaxDate = DateTime.Now;
+        }
     }
 }

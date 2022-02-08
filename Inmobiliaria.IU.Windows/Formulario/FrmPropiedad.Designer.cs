@@ -101,15 +101,15 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.txtMetrosTerreno = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dgvPropiedadCaracteristica = new System.Windows.Forms.DataGridView();
-            this.pROPIEDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iNMOBILIARIADataSet = new Inmobiliaria.IU.Windows.INMOBILIARIADataSet();
-            this.pROPIEDADTableAdapter = new Inmobiliaria.IU.Windows.INMOBILIARIADataSetTableAdapters.PROPIEDADTableAdapter();
             this.iDPROPIEDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRECIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fOTOPRINCIPALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cALLEPRINCIPALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cALLESECUNDARIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eSTADOPROPIEDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROPIEDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iNMOBILIARIADataSet = new Inmobiliaria.IU.Windows.INMOBILIARIADataSet();
+            this.pROPIEDADTableAdapter = new Inmobiliaria.IU.Windows.INMOBILIARIADataSetTableAdapters.PROPIEDADTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropiedad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.tcoPropiedad.SuspendLayout();
@@ -214,10 +214,14 @@
             // 
             // dtpFechaRegistro
             // 
+            this.dtpFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaRegistro.Location = new System.Drawing.Point(244, 133);
+            this.dtpFechaRegistro.MaxDate = new System.DateTime(2022, 2, 7, 20, 8, 33, 0);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(103, 20);
             this.dtpFechaRegistro.TabIndex = 8;
+            this.dtpFechaRegistro.Value = new System.DateTime(2022, 2, 7, 0, 0, 0, 0);
+            this.dtpFechaRegistro.ValueChanged += new System.EventHandler(this.dtpFechaRegistro_ValueChanged);
             // 
             // ofdFoto
             // 
@@ -345,7 +349,7 @@
             this.cbxEstadoPropiedad.AutoSize = true;
             this.cbxEstadoPropiedad.Depth = 0;
             this.cbxEstadoPropiedad.Font = new System.Drawing.Font("Roboto", 10F);
-            this.cbxEstadoPropiedad.Location = new System.Drawing.Point(526, 127);
+            this.cbxEstadoPropiedad.Location = new System.Drawing.Point(470, 127);
             this.cbxEstadoPropiedad.Margin = new System.Windows.Forms.Padding(0);
             this.cbxEstadoPropiedad.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbxEstadoPropiedad.MouseState = MaterialSkin.MouseState.HOVER;
@@ -362,7 +366,7 @@
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(465, 133);
+            this.materialLabel6.Location = new System.Drawing.Point(409, 133);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(60, 19);
@@ -1150,20 +1154,6 @@
             this.dgvPropiedadCaracteristica.Size = new System.Drawing.Size(872, 176);
             this.dgvPropiedadCaracteristica.TabIndex = 12;
             // 
-            // pROPIEDADBindingSource
-            // 
-            this.pROPIEDADBindingSource.DataMember = "PROPIEDAD";
-            this.pROPIEDADBindingSource.DataSource = this.iNMOBILIARIADataSet;
-            // 
-            // iNMOBILIARIADataSet
-            // 
-            this.iNMOBILIARIADataSet.DataSetName = "INMOBILIARIADataSet";
-            this.iNMOBILIARIADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pROPIEDADTableAdapter
-            // 
-            this.pROPIEDADTableAdapter.ClearBeforeFill = true;
-            // 
             // iDPROPIEDADDataGridViewTextBoxColumn
             // 
             this.iDPROPIEDADDataGridViewTextBoxColumn.DataPropertyName = "IDPROPIEDAD";
@@ -1200,6 +1190,20 @@
             this.eSTADOPROPIEDADDataGridViewTextBoxColumn.DataPropertyName = "ESTADOPROPIEDAD";
             this.eSTADOPROPIEDADDataGridViewTextBoxColumn.HeaderText = "ESTADOPROPIEDAD";
             this.eSTADOPROPIEDADDataGridViewTextBoxColumn.Name = "eSTADOPROPIEDADDataGridViewTextBoxColumn";
+            // 
+            // pROPIEDADBindingSource
+            // 
+            this.pROPIEDADBindingSource.DataMember = "PROPIEDAD";
+            this.pROPIEDADBindingSource.DataSource = this.iNMOBILIARIADataSet;
+            // 
+            // iNMOBILIARIADataSet
+            // 
+            this.iNMOBILIARIADataSet.DataSetName = "INMOBILIARIADataSet";
+            this.iNMOBILIARIADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pROPIEDADTableAdapter
+            // 
+            this.pROPIEDADTableAdapter.ClearBeforeFill = true;
             // 
             // FrmPropiedad
             // 

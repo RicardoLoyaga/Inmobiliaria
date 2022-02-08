@@ -49,6 +49,25 @@ namespace Inmobiliaria.Infraestructura.AccesoDatos.Repositorio
             }
         }
 
+        public bool validaUsuario(string mail)
+        {
+            try
+            {
+                using (var context = new INMOBILIARIAEntities())
+                {
+                    var query = from user in context.USUARIO
+                                where user.CORREOUSUARIO == mail && user.ESTADO == 1
+                                select user;
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error al consultar la BDD" + ex);
+            }
+        }
+
         public string Encriptar(string texto)
         {
             //sha 256
