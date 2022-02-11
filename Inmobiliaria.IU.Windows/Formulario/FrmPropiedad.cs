@@ -15,6 +15,7 @@ namespace Inmobiliaria.IU.Windows.Formulario
 {
     public partial class FrmPropiedad : MaterialSkin.Controls.MaterialForm
     {
+        OpenFileDialog abrir = new OpenFileDialog();
         private PropiedadControlador propiedadControlador;
         private PropiedadVistaModelo propiedadVistaModelo;
         private CaracteristicaControlador caracteristicaControlador;
@@ -356,7 +357,21 @@ namespace Inmobiliaria.IU.Windows.Formulario
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+            abrir.Filter = "PNG|*.png|JPG|*.jpg";
+            abrir.Multiselect = true;
 
+            if (abrir.ShowDialog() == DialogResult.OK)
+            {
+                FrmCarrusel frmCarrusel = new FrmCarrusel();
+                frmCarrusel.pictureBox1.Image = Image.FromFile(abrir.FileNames[0].ToString());
+                frmCarrusel.pictureBox2.Image = Image.FromFile(abrir.FileNames[1].ToString());
+                frmCarrusel.pictureBox3.Image = Image.FromFile(abrir.FileNames[2].ToString());
+                frmCarrusel.pictureBox4.Image = Image.FromFile(abrir.FileNames[3].ToString());
+                frmCarrusel.pictureBox5.Image = Image.FromFile(abrir.FileNames[4].ToString());
+                frmCarrusel.pictureBox6.Image = Image.FromFile(abrir.FileNames[5].ToString());
+
+                frmCarrusel.Show();
+            }
         }
 
         private void dtpFechaRegistro_ValueChanged(object sender, EventArgs e)

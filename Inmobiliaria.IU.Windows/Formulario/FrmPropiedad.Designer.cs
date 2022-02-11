@@ -382,7 +382,7 @@
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(81, 26);
             this.btnSiguiente.TabIndex = 10;
-            this.btnSiguiente.Text = "SIGUIENTE";
+            this.btnSiguiente.Text = "AÑADIR";
             this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
